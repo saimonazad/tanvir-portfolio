@@ -4,7 +4,7 @@ const HeroSection = ({successMessage}) => {
   return (
     <>
     {/* transform ${successMessage ? '-translate-y-custom' : 'translate-y-auto'} */}
-      <div className="container md:px-16 px-5 mx-auto">
+      <div className="container md:px-16 px-5 mx-auto md:fixed inset-0 ">
         <div className={`items-center lg:flex flex md:flex-row flex-col justify-center  transition duration-500 `}>
           <div className="w-full lg:w-1/2">
             <div className="lg:max-w-lg mx-auto text-center md:text-left">
@@ -20,9 +20,9 @@ const HeroSection = ({successMessage}) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center w-full  lg:mt-0 lg:w-1/2">
+          <div className="flex items-center justify-center w-full lg:mt-0 lg:w-1/2">
             <img
-              className="w-full h-full lg:max-w-xl xl:max-w-full xl:max-h-full"
+              className="w-full h-full lg:max-w-xl xl:max-w-full xl:max-h-full min-h-screen"
               src={ProfilePic}
               alt="Profile Pic"
             />

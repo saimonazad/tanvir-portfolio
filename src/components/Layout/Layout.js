@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
           setSuccessMessage(!successMessage);
           setSwitchPage("about");
         }}
-        className={`absolute left-10% ${
+        className={`absolute left-10% bottom-0 ${
           switchPage !== "home" ? "hidden" : "block"
         }`}
       >
