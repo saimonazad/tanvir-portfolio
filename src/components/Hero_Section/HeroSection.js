@@ -1,11 +1,11 @@
 import React from "react";
 import ProfilePic from "../../images/hero-image.png";
 const HeroSection = ({successMessage}) => {
-  let height = window.innerHeight;
+ 
   return (
     <>
     {/* transform ${successMessage ? '-translate-y-custom' : 'translate-y-auto'} */}
-      <div className="container md:px-16 px-5 mx-auto lg:fixed inset-0 ">
+      <div className="container md:px-16 px-5 mx-auto lg:fixed inset-0 md:h-[45vw]">
         <div className={`items-center lg:flex flex lg:min-h-screen md:h-96 md:flex-row flex-col justify-center  transition duration-500 `}>
           <div className="w-full lg:w-1/2">
             <div className="mx-auto text-center md:text-left">
@@ -21,10 +21,9 @@ const HeroSection = ({successMessage}) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center w-full lg:mt-0 lg:w-1/2 md:1/2">
+          <div className="flex items-center justify-center w-full lg:mt-0 lg:w-1/2 md:1/2 ">
             <img
               className="w-full lg:object-cover object-fill"
-              style={{height:`${height}px`}}
               src={ProfilePic}
               alt="Profile Pic"
             />

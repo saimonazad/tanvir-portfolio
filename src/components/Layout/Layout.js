@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   const [successMessage, setSuccessMessage] = useState(false);
 
   return (
-    <div className="">
+    <div className="h-fit">
       {switchPage !== "home" && (
         <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} />
       )}
@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
           setSuccessMessage(!successMessage);
           setSwitchPage("about");
         }}
-        className={`absolute md:top-75% top-85% lg:bottom-0 md:left-4% left-2% lg:top-85%  ${
+        className={`absolute md:top-auto top-85% lg:bottom-0 md:left-4% left-2% lg:top-85%  ${
           switchPage !== "home" ? "hidden" : "block"
         }`}
       >
