@@ -10,15 +10,16 @@ import Nav from "../Nav/Nav";
 const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [successMessage, setSuccessMessage] = useState(false);
+
   return (
-    <div>
+    <div className="">
       {switchPage !== "home" && (
         <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} />
       )}
       <div
         className={`${
           switchPage !== "home" ? "hidden" : "block"
-        } flex gap-5 justify-center md:justify-start mt-6 absolute left-10%`}
+        } flex gap-5 justify-center md:justify-start lg:mt-2 fixed md:left-4% lg:top-1 xl:top-10 md:top-4 top-2 inset-x-0`}
       >
         <span>
           <Facebook color={switchPage === "home" ? "#2D3038" : "#326AFF"} />
@@ -63,7 +64,7 @@ const Layout = ({ children }) => {
         </div>
         <div className="lg:pt-16 pt-5">
           {/* {children} */}
-          {switchPage === 'home' && <Home successMessage={successMessage} />}
+          {switchPage === "home" && <Home successMessage={successMessage} />}
           {switchPage === "about" && <About />}
           {switchPage === "milestone" && <Milestone />}
           {switchPage === "contribution" && <Contribution />}
@@ -77,7 +78,7 @@ const Layout = ({ children }) => {
           setSuccessMessage(!successMessage);
           setSwitchPage("about");
         }}
-        className={`absolute left-10% bottom-0 ${
+        className={`absolute md:top-75% top-85% lg:bottom-0 md:left-4% left-2% lg:top-85%  ${
           switchPage !== "home" ? "hidden" : "block"
         }`}
       >

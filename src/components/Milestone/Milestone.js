@@ -52,12 +52,12 @@ const Milestone = () => {
       <div className="flex justify-center ">
         <img src={MilestoneImage} alt="" className="w-full" />
       </div>
-      <div className="overflow-auto grid md:grid-cols-3 xl:grid-cols-6 gap-4 md:px-16 w-full mx-auto auto-rows-max place-items-center">
+      <div className="overflow-auto grid md:grid-cols-3 xl:grid-cols-6 gap-4 md:px-16 w-full mx-auto auto-rows-max place-items-center lg:h-[30vw]">
         {years.map((item, i) => {
           return (
             <>
               <div className="">
-                <p className="text-aboutTitle md:text-base font-Poppins lg:text-xl font-semibold">
+                <p className="text-aboutTitle md:text-base font-Poppins lg:text-2xl text-xl font-semibold">
                   Year- 0{i+1}
                 </p>
                 <div className="w-full">

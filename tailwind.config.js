@@ -15,21 +15,28 @@ module.exports = {
         bodyBg: '#F6F6F6',
       },
       borderRadius:{
-        aboutBorderRadius: '40px'
+        aboutBorderRadius: '30px'
       },
       fontFamily: {
         Sacramento: ['Sacramento', 'cursive'],
         Montserrat: ['Montserrat', 'sans-serif'],
-        Impact: ['Maximum Impact', 'sans-serif'],
+        // Impact: ['Maximum Impact', 'sans-serif'],
         PT_Serif: ['PT Serif', 'serif'],
         Poppins: ['Poppins', 'sans-serif'],
         Open_Sans: ['Open Sans', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
+        impact: ['impact', 'sans-serif'],
        },
        spacing: {
         'custom': '140%',
       },
       inset: {
         '10%': '10%',
+        '2%': '2%',
+        '4%': '4%',
+        '85%': '85%',
+        '75%': '75%',
+        '60%': '60%',
       }
     },
   },
