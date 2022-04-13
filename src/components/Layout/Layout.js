@@ -14,8 +14,14 @@ const Layout = ({ children }) => {
   return (
     <div className="">
       {switchPage !== "home" && (
-        <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} />
+        <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} bg_color={'bg-navbar'} />
       )}
+      {/* <Nav
+        setSwitchPage={setSwitchPage}
+        switchPage={switchPage}
+        bg_color={"bg-navbar"}
+      /> */}
+
       <div
         className={`${
           switchPage !== "home" ? "hidden" : "block"

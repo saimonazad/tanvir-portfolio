@@ -41,20 +41,20 @@ import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 
-function Nav({ setSwitchPage, switchPage }) {
+function Nav({ setSwitchPage, switchPage,bg_color }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className="bg-navbar md:fixed fixed md:top-auto top-0 md:bottom-0 w-full z-50">
+      <nav className={`${bg_color}  md:fixed fixed md:top-auto top-0 md:bottom-0 w-full z-50`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16">
             <div className="flex items-center">
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4 uppercase">
+                <div className="ml-10 flex items-baseline space-x-4 uppercase font-Poppins font-medium gap-12 justify-center">
                   <a
                     href="#"
                     onClick={() => setSwitchPage("home")}
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     Home
                   </a>
@@ -62,7 +62,7 @@ function Nav({ setSwitchPage, switchPage }) {
                   <a
                     href="#"
                     onClick={() => setSwitchPage("about")}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     About
                   </a>
@@ -70,7 +70,7 @@ function Nav({ setSwitchPage, switchPage }) {
                   <a
                     href="#"
                     onClick={() => setSwitchPage("milestone")}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     Milestone
                   </a>
@@ -78,7 +78,7 @@ function Nav({ setSwitchPage, switchPage }) {
                   <a
                     href="#"
                     onClick={() => setSwitchPage("contribution")}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     Contribution
                   </a>
@@ -86,14 +86,14 @@ function Nav({ setSwitchPage, switchPage }) {
                   <a
                     href="#"
                     onClick={() => setSwitchPage("more")}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     More
                   </a>
                   <a
                     href="#"
                     onClick={() => setSwitchPage("contact")}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 rounded-md text-sm `}
                   >
                     Let get in touch
                   </a>
@@ -162,7 +162,8 @@ function Nav({ setSwitchPage, switchPage }) {
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("home"); setIsOpen(!isOpen)}}
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
+
                 >
                   Home
                 </a>
@@ -170,7 +171,7 @@ function Nav({ setSwitchPage, switchPage }) {
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("about"); setIsOpen(!isOpen)}}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
                 >
                   About
                 </a>
@@ -178,14 +179,14 @@ function Nav({ setSwitchPage, switchPage }) {
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("milestone"); setIsOpen(!isOpen)}}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
                 >
                   Milestone
                 </a>
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("contribution");setIsOpen(!isOpen)}}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
                 >
                   Contribution
                 </a>
@@ -193,7 +194,7 @@ function Nav({ setSwitchPage, switchPage }) {
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("more"); setIsOpen(!isOpen)}}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
                 >
                   More
                 </a>
@@ -201,7 +202,7 @@ function Nav({ setSwitchPage, switchPage }) {
                 <a
                   href="#"
                   onClick={() => {setSwitchPage("contact");setIsOpen(!isOpen)}}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className={` hover:bg-gray-700 ${bg_color === 'white' ? 'text-black' : 'text-white'}  px-3 py-2 block rounded-md text-base `}
                 >
                   Let get in touch
                 </a>
