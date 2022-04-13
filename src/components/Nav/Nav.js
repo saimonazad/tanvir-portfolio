@@ -238,7 +238,7 @@ function Nav({ setSwitchPage, switchPage }) {
               </span>
             </div>
           ) : (
-            <h1 className="md:text-5xl text-xl font-Impact font-bold text-heroTitle fixed lg:left-4% md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-red-500 w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1">
+            <h1 className="md:text-5xl text-xl font-Impact font-bold text-heroTitle fixed lg:left-4% md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-white w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1">
               {switchPage}
             </h1>
           )}
