@@ -1,14 +1,14 @@
 import React from "react";
-import { Five, Four, One, Six, Three, Two } from "../../icons";
+import { IconFive, IconFour, IconOne, IconSix, IconThree, IconTwo } from "../../icons";
 import Nav from "../Nav/Nav";
 
 const animationContent = [
-  { bg_color: "bg-yellow-500", content: <One /> },
-  { bg_color: "bg-red-300", content: <Two /> },
-  { bg_color: "bg-blue-500", content: <Three /> },
-  { bg_color: "bg-indigo-500", content: <Four /> },
-  { bg_color: "bg-cyan-500", content: <Five /> },
-  { bg_color: "bg-gray-500", content: <Six /> },
+  { bg_color: "bg-yellow-500", content: <IconOne /> },
+  { bg_color: "bg-red-300", content: <IconTwo /> },
+  { bg_color: "bg-blue-500", content: <IconThree /> },
+  { bg_color: "bg-indigo-500", content: <IconFour /> },
+  { bg_color: "bg-cyan-500", content: <IconFive /> },
+  { bg_color: "bg-gray-500", content: <IconSix /> },
 ];
 const Animation = () => {
   return (
