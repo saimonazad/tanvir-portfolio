@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap");
 
 @font-face {
   font-family: "impact";
@@ -23,5 +23,13 @@
   color: black;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #2D3038;
+  -webkit-text-stroke-color: #2d3038;
+}
+
+.box {
+  @apply
+		min-w-full
+		h-32
+		min-h-full
+		rounded;
 }

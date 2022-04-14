@@ -25,8 +25,8 @@ const AnimationComponent = () => {
       <h1 className=" absolute font-Poppins font-extrabold text-7xl pl-8 pb-4 text-stroke top-32 left-16">
         CONTENTS
       </h1>
-      <div class="grid overflow-hidden sm grid-cols-6 auto-rows-auto gap-16 h-full min-h-screen  md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white">
-        <div className="box col-start-1 w-full  flex flex-col flex-wrap">
+      <div className="flex justify-between space-x-16 items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen ">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
@@ -34,7 +34,7 @@ const AnimationComponent = () => {
             HOME
           </div>
         </div>
-        <div className="box col-start-2 w-full  flex flex-col flex-wrap">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
@@ -42,7 +42,7 @@ const AnimationComponent = () => {
             HOME
           </div>
         </div>
-        <div className="box col-start-3 w-full  flex flex-col flex-wrap">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
@@ -50,7 +50,7 @@ const AnimationComponent = () => {
             HOME
           </div>
         </div>
-        <div className="box col-start-4 w-full  flex flex-col flex-wrap">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
@@ -58,7 +58,7 @@ const AnimationComponent = () => {
             HOME
           </div>
         </div>
-        <div className="box col-start-5 w-full  flex flex-col flex-wrap">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
@@ -66,7 +66,7 @@ const AnimationComponent = () => {
             HOME
           </div>
         </div>
-        <div className="box col-start-6 w-full  flex flex-col flex-wrap">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-green-400 w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             1
           </div>
