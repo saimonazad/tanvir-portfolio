@@ -48,17 +48,17 @@ import MilestoneImage from "../../images/milestone.png";
 const years = [1, 2, 3, 4, 5, 6];
 const Milestone = () => {
   return (
-    <div className="w-5/6 mx-auto ">
+    <div className="mx-auto flex items-center flex-col lg:px-20 lg:pt-20 md:px-16 md:pt-16 sm:px-12 sm:pt-16 pt-20">
       <div className="flex justify-center ">
         <img src={MilestoneImage} alt="" className="w-full" />
       </div>
-      <div className="overflow-auto grid md:grid-cols-3 xl:grid-cols-6 gap-4 md:px-16 w-full mx-auto auto-rows-max place-items-center lg:h-[30vw]">
+      <div className="overflow-auto grid md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-6 md:gap-4 sm:gap-2 sm:px-8 md:px-16 w-full mx-auto auto-rows-max place-items-center">
         {years.map((item, i) => {
           return (
             <>
-              <div className="">
-                <p className="text-aboutTitle md:text-base font-Poppins lg:text-2xl text-xl font-semibold">
-                  Year- 0{i+1}
+              <div className="mt-2">
+                <p className="text-aboutTitle md:text-base font-Poppins lg:text-2xl text-xl font-semibold ">
+                  Year- 0{i + 1}
                 </p>
                 <div className="w-full">
                   <ul className="list-disc text-milestoneList lg:text-base md:text-xs mt-6 w-auto">

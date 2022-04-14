@@ -21,33 +21,10 @@ const Layout = ({ children }) => {
         switchPage={switchPage}
         bg_color={"bg-navbar"}
       /> */}
-
-      <div
-        className={`${
-          switchPage !== "home" ? "hidden" : "block"
-        } flex gap-5 justify-center md:justify-start lg:mt-2 fixed md:left-4% lg:top-1 xl:top-10 md:top-4 top-5 inset-x-0`}
-      >
-        <span>
-          <Facebook color={switchPage === "home" ? "#2D3038" : "#326AFF"} />
-        </span>
-        <span>
-          <LinkedIn color={switchPage === "home" ? "#2D3038" : "#326AFF"} />
-        </span>
-        <span>
-          <Twitter color={switchPage === "home" ? "#2D3038" : "#326AFF"} />
-        </span>
-        <span>
-          <Youtube
-            color={switchPage === "home" ? "#2D3038" : "#326AFF"}
-            pathColor={switchPage === "home" ? "#F6F6F6" : "#F6F6F6"}
-          />
-        </span>
-      </div>
-
       <div className="md:flex item-center justify-center ">
         <div
           className={`${
-            switchPage === "home" ? "md:hidden hidden" : "md:block hidden"
+            switchPage === "home" ? "md:hidden hidden" : "md:block sm:block hidden"
           } w-1/6 fixed md:left-0 `}
         >
           <div className="flex flex-col items-center align-middle pt-48 gap-8">
@@ -68,7 +45,7 @@ const Layout = ({ children }) => {
             </span>
           </div>
         </div>
-        <div>
+        <div className='w-5/6 mx-auto'> 
           {switchPage === "home" && (
             <Home
               successMessage={successMessage}
@@ -78,7 +55,7 @@ const Layout = ({ children }) => {
               setSuccessMessage={setSuccessMessage}
             />
           )}
-          <div className="">
+          <div className="lg:px-16 md:px-10">
             {switchPage === "about" && <About />}
             {switchPage === "milestone" && <Milestone />}
             {switchPage === "contribution" && <Contribution />}

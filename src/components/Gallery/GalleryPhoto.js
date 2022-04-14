@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import Carousel, { Modal, ModalGateway } from "react-images";
 import Imgix from "react-imgix";
 // import { photos } from "./photos";
 
@@ -117,9 +116,9 @@ function GalleryPhoto() {
   ];
 
   return (
-    <div>
+    <div className='w-full'>
       {/* <Gallery photos={photos} onClick={openLightbox} direction="row"/> */}
-      <div className="grid gap-2 lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gallery lg:mt-8 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
         {photos.map((image) => (
           <Imgix
             sizes="(min-width: 960px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -129,12 +128,12 @@ function GalleryPhoto() {
               fm: "jpg",
             }}
             srcset={image.srcset}
-            className="w-full lg:h-48 xl:h-60 md:h-20 h-auto"
+            className="w-full lg:h-48 xl:h-60 md:h-16 h-auto"
           />
         ))}
         
       </div>
-      <ModalGateway>
+      {/* <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
@@ -147,7 +146,7 @@ function GalleryPhoto() {
             />
           </Modal>
         ) : null}
-      </ModalGateway>
+      </ModalGateway> */}
       <div className="cursor-pointer text-center mx-auto mt-5">
           <p className='uppercase font-Open_Sans text-animationTitle text-2xl'>Show More</p>
         </div>
