@@ -1,4 +1,3 @@
-export { default as ContributionIcon } from './ContributionIcon';
 export { default as Facebook } from './Facebook';
 export { default as Five } from './Five';
 export { default as Four } from './Four';
