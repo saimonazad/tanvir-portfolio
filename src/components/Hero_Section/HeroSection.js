@@ -30,13 +30,13 @@ const HeroSection = ({
       </div>
       <div className="flex md:flex-row flex-col justify-between mx-auto items-center bg-white min-h-screen lg:px-32 md:px-24 xl:px-36 w-full">
         <div className="text-center md:text-left w-2/4">
-          <h1 className="text-4xl xl:text-5xl lg:text-4xl 2xl:text-7xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
+          <h1 className="text-4xl xl:text-5xl lg:text-4xl 2xl:text-5xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
             Hello I am
           </h1>
-          <h1 className="text-3xl md:text-xl lg:text-2xl 2xl:text-6xl xl:text-4xl font-semibold font-impact text-heroTitle tracking-wide uppercase dark:text-white py-3">
+          <h1 className="text-3xl md:text-xl lg:text-2xl 2xl:text-4xl xl:text-4xl font-semibold font-impact text-heroTitle tracking-wide uppercase dark:text-white py-3">
             Tanvir Hossain Khan
           </h1>
-          <p className=" font-semibold xl:text-2xl 2xl:text-5xl lg:text-xl md:text-base text-xl dark:text-gray-400 font-Montserrat uppercase">
+          <p className=" font-semibold xl:text-xl 2xl:text-xl lg:text-xl md:text-base text-xl dark:text-gray-400 font-Montserrat uppercase">
             Entrepreneur
           </p>
         </div>
