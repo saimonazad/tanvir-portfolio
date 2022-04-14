@@ -8,7 +8,6 @@ const IndexPage = () => {
   return (
     <>
       <Layout></Layout>
-      {/* <Animation/> */}
     </>
   );
 };

@@ -6,9 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Sacramento&display=swap");
 @import url("http://fonts.cdnfonts.com/css/maximum-impact");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap');
 
 @font-face {
   font-family: "impact";
@@ -19,3 +19,9 @@
   height: 100%;
 }
 /*===== VARIABLES CSS =====*/
+.text-stroke {
+  color: black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #2D3038;
+}
