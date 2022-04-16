@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="fixed lg:top-5% top-10% left-2% 2xl:px-20">
+    <div className="fixed lg:top-5% top-10% left-2% 2xl:px-52">
       <div className="w-full ">
         <div className="px-5 py-2">
           <p className="text-aboutTitle font-impact xl:text-7xl lg:text-5xl md:text-3xl text-xl font-normal text-center">
