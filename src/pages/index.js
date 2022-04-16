@@ -10,6 +10,7 @@ const IndexPage = () => {
   return (
     <>
       <Layout></Layout>
+      {/* <HeroSection/> */}
       {/* <Animation/> */}
     </>
   );

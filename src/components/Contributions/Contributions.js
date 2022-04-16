@@ -23,7 +23,7 @@ const Contributions = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   return (
-    <div className="pt-32 sm:px-24 md:px-0 pl-20 md:pl-0">
+    <div className="md:pt-32 sm:px-24 md:px-0 md:pl-20 pt-52 md:mt-auto">
       {/* <Carousel
         additionalTransfrom={0}
         arrows
@@ -43,22 +43,22 @@ const Contributions = () => {
       >
         
       </Carousel> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center justify-center">
-        <div className="flex flex-col items-center space-y-3 text-center dark:bg-gray-800 w-auto sm:min-h-screen max-h-screen px-5 py-3 sm:h-fit">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center justify-center md:pt-28 md:fixed left-0 lg:px-52 md:px-10">
+        <div className="flex flex-col items-center space-y-3 text-center dark:bg-gray-800 w-auto sm:min-h-screen max-h-screen px-10 py-3 sm:h-fit">
           <span className="p-3 md:mb-4 xl:mb-10 dark:text-white dark:bg-blue-500 sm:inline-block hidden">
             <ContributionIcon color="black" />
           </span>
-          <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-2xl lg:text-base sm:text-sm text-xs">
+          <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
             He always believes any problem can be solved if we can all work as
             one and from that idea his belief is “Collaboration is Always Better
             than Competition.
           </p>
         </div>
-        <div className="flex flex-col items-center space-y-3 text-center z-10  bg-aboutSubtitle dark:bg-gray-800 w-auto md:min-h-screen sm:h-fit max-h-screen px-5 py-3">
+        <div className="flex flex-col items-center space-y-3 text-center z-10  bg-aboutSubtitle dark:bg-gray-800 w-auto md:min-h-screen sm:h-fit max-h-screen px-10 py-3">
           <span className="inline-block p-3 md:mb-4 xl:mb-10 dark:text-white dark:bg-blue-500">
             <ContributionIcon color="#FFFFFF" bcolor="#373737" />
           </span>
-          <p className="text-white dark:text-gray-300 uppercase xl:text-2xl lg:text-base sm:text-sm text-xs">
+          <p className="text-white dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
             He always believes any problem can be solved if we can all work as
             one and from that idea his belief is “Collaboration is Always Better
             than Competition.
@@ -68,7 +68,7 @@ const Contributions = () => {
           <span className="inline-block p-3 md:mb-4 xl:mb-10 dark:text-white dark:bg-blue-500">
             <ContributionIcon color="#D31459" />
           </span>
-          <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-2xl lg:text-base sm:text-sm text-xs">
+          <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
             He always believes any problem can be solved if we can all work as
             one and from that idea his belief is “Collaboration is Always Better
             than Competition.

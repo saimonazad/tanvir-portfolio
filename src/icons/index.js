@@ -1,3 +1,6 @@
+export { default as Address } from './Address';
+export { default as Call } from './Call';
+export { default as Email } from './Email';
 export { default as Facebook } from './Facebook';
 export { default as IconFive } from './IconFive';
 export { default as IconFour } from './IconFour';

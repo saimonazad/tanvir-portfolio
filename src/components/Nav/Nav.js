@@ -39,14 +39,13 @@
 
 import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
-import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 
 function Nav({ setSwitchPage, switchPage, bg_color }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav
-        className={`bg-navbar md:fixed fixed md:top-auto top-0 lg:bottom-0 w-full z-50`}
+        className={`bg-navbar md:fixed fixed md:top-0 sm:top-auto top-0 lg:top-auto lg:bottom-0 w-full z-50`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16">
@@ -259,38 +258,12 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
       </nav>
 
       <header className={`${switchPage === "about" ? "hidden" : "block"}`}>
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          {switchPage === "home" ? (
-            <div className="flex gap-5 md:fixed justify-center md:justify-start mt-6">
-              <span>
-                <Facebook
-                  color={switchPage === "home" ? "#2D3038" : "#326AFF"}
-                />
-              </span>
-              <span>
-                <LinkedIn
-                  color={switchPage === "home" ? "#2D3038" : "#326AFF"}
-                />
-              </span>
-              <span>
-                <Twitter
-                  color={switchPage === "home" ? "#2D3038" : "#326AFF"}
-                />
-              </span>
-              <span>
-                <Youtube
-                  color={switchPage === "home" ? "#2D3038" : "#326AFF"}
-                  pathColor={switchPage === "home" ? "#F6F6F6" : "#F6F6F6"}
-                />
-              </span>
-            </div>
-          ) : (
-            <h1
-              className={` md:text-5xl text-xl font-Impact font-bold text-heroTitle fixed lg:left-4% md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-white w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1`}
-            >
-              {switchPage}
-            </h1>
-          )}
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white md:bg-inherit fixed lg:left-4% lg:top-4% md:top-4% top-6% w-full">
+          <h1
+            className={` md:text-5xl text-xl font-Impact font-bold text-heroTitle  md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-white w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1`}
+          >
+            {switchPage}
+          </h1>
         </div>
       </header>
     </div>

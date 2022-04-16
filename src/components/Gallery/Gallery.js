@@ -40,9 +40,9 @@ const Gallery = () => {
     },
   ];
   return (
-    <div className="container md:pt-24 ">
+    <div className="container md:pt-40 md:mt-40 lg:mt-0 md:ml-20 lg:ml-auto">
       <div className="flex items-center gap-10 md:justify-between justify-center">
-        <div className="md:w-4/5 ">
+        <div className="md:w-4/5 w-full">
           <GalleryPhoto />
         </div>
         <div className="lg:h-48 h-20 md:block hidden">

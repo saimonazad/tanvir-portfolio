@@ -4,24 +4,52 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Contribution from "../Contributions/Contributions";
 import Gallery from "../Gallery/Gallery";
-import Home from "../Hero_Section/HeroSection";
+import HeroSection from "../Hero_Section/HeroSection";
 import Milestone from "../Milestone/Milestone";
 import Nav from "../Nav/Nav";
 const Layout = ({ children }) => {
-  const [switchPage, setSwitchPage] = useState("home");
+  const [switchPage, setSwitchPage] = useState("milestone");
   const [successMessage, setSuccessMessage] = useState(false);
 
   return (
     <div className="">
       {switchPage !== "home" && (
-        <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} bg_color={'bg-navbar'} />
+        <div className="">
+          <div className="flex gap-24 lg:px-20 xl:px-32 md:px-10 items-center ">
+            <div className=" absolute top-40% md:block hidden">
+              <div className="flex gap-16 flex-col">
+              <span>
+                <Facebook color={"#326AFF"} />
+              </span>
+              <span>
+                <LinkedIn color={"#326AFF"} />
+              </span>
+              <span>
+                <Twitter color={"#326AFF"} />
+              </span>
+              <span>
+                <Youtube color={"#326AFF"} pathColor={"#F6F6F6"} />
+              </span>
+              </div>
+              
+            </div>
+            <div className="2xl:px-44 lg:px-20">
+              {switchPage === "about" && <About />}
+              {switchPage === "milestone" && <Milestone />}
+              {switchPage === "contribution" && <Contribution />}
+              {switchPage === "more" && <Gallery />}
+              {switchPage === "contact" && <Contact />}
+            </div>
+          </div>
+          <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />
+        </div>
       )}
-      {/* <Nav
-        setSwitchPage={setSwitchPage}
-        switchPage={switchPage}
-        bg_color={"bg-navbar"}
-      /> */}
-      <div className="md:flex item-center justify-center ">
+      {switchPage === "home" && (
+        <HeroSection switchPage={switchPage} setSwitchPage={setSwitchPage}/>
+      )}
+
+      {/* <Nav/> */}
+      {/* <div className="md:flex item-center justify-center ">
         <div
           className={`${
             switchPage === "home" ? "md:hidden hidden" : "md:block sm:block hidden"
@@ -46,15 +74,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
         <div className='w-5/6 mx-auto'> 
-          {switchPage === "home" && (
-            <Home
-              successMessage={successMessage}
-              successMessage={successMessage}
-              setSwitchPage={setSwitchPage}
-              switchPage={switchPage}
-              setSuccessMessage={setSuccessMessage}
-            />
-          )}
+         
           <div className="lg:px-16 md:px-10">
             {switchPage === "about" && <About />}
             {switchPage === "milestone" && <Milestone />}
@@ -63,9 +83,20 @@ const Layout = ({ children }) => {
             {switchPage === "contact" && <Contact />}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default Layout;
+{
+  /* {switchPage === "home" && (
+            <Home
+              successMessage={successMessage}
+              successMessage={successMessage}
+              setSwitchPage={setSwitchPage}
+              switchPage={switchPage}
+              setSuccessMessage={setSuccessMessage}
+            />
+          )} */
+}
