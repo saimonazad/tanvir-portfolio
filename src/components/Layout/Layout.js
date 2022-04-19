@@ -7,6 +7,7 @@ import Gallery from "../Gallery/Gallery";
 import Home from "../Hero_Section/HeroSection";
 import Milestone from "../Milestone/Milestone";
 import Nav from "../Nav/Nav";
+import AnimationComponent from "../Animaton/AnimationComponent";
 const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [successMessage, setSuccessMessage] = useState(false);
@@ -14,7 +15,11 @@ const Layout = ({ children }) => {
   return (
     <div className="">
       {switchPage !== "home" && (
-        <Nav setSwitchPage={setSwitchPage} switchPage={switchPage} bg_color={'bg-navbar'} />
+        <Nav
+          setSwitchPage={setSwitchPage}
+          switchPage={switchPage}
+          bg_color={"bg-navbar"}
+        />
       )}
       {/* <Nav
         setSwitchPage={setSwitchPage}
@@ -70,13 +75,15 @@ const Layout = ({ children }) => {
         </div>
         <div>
           {switchPage === "home" && (
-            <Home
-              successMessage={successMessage}
-              successMessage={successMessage}
-              setSwitchPage={setSwitchPage}
-              switchPage={switchPage}
-              setSuccessMessage={setSuccessMessage}
-            />
+            <>
+              <Home
+                successMessage={successMessage}
+                setSwitchPage={setSwitchPage}
+                switchPage={switchPage}
+                setSuccessMessage={setSuccessMessage}
+              />
+              <AnimationComponent />{" "}
+            </>
           )}
           <div className="">
             {switchPage === "about" && <About />}
