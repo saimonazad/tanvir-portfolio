@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 200px;
+            height: 10px;
+            background: red;
+            position: relative;
+            opacity: 1;
+            animation: myfirst 1s;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+                opacity: 1
+            }
+
+            50% {
+                left: 100px;
+                top: 0px;
+                opacity: 1;
+                transform: rotate(90deg);
+            }
+
+            100% {
+                left: 100px;
+                top: 0px;
+                opacity: 1;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>animation-direction: alternate</h1>
+
+    <p>Play the animation forwards first, then backwards:</p>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+</body>
+
+</html>

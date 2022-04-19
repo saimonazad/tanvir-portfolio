@@ -8,7 +8,6 @@ import {
   IconTwo,
 } from "../../icons";
 import Nav from "../Nav/Nav";
-import { motion, AnimatePresence, useCycle } from "framer-motion";
 
 const animationContent = [
   { bg_color: "bg-yellow-500", content: <IconOne /> },
