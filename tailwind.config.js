@@ -14,6 +14,7 @@ module.exports = {
         milestoneList: '#6C6C6F',
         bodyBg: '#F6F6F6',
       },
+     
       borderRadius:{
         aboutBorderRadius: '30px'
       },
@@ -26,6 +27,7 @@ module.exports = {
         Open_Sans: ['Open Sans', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
         impact: ['impact', 'sans-serif'],
+        Encode_Sans: ['Encode Sans', 'sans-serif'],
        },
        spacing: {
         'custom': '140%',
@@ -34,9 +36,12 @@ module.exports = {
         '10%': '10%',
         '2%': '2%',
         '4%': '4%',
+        '5%': '5%',
         '85%': '85%',
         '75%': '75%',
         '60%': '60%',
+        '40%': '40%',
+        '6%': '7%',
       }
     },
   },

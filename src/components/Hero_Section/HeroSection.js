@@ -1,4 +1,5 @@
 import React from "react";
+import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 const HeroSection = ({
   successMessage,
@@ -7,33 +8,53 @@ const HeroSection = ({
   setSuccessMessage,
 }) => {
   return (
-    <div>
-        <div className="flex md:flex-row flex-col justify-between mx-auto items-center md:pl-20 lg:pl-40 lg:pr-20 bg-white min-h-screen">
-          <div className="text-center md:text-left w-2/4">
-            <h1 className="text-4xl xl:text-7xl lg:text-5xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
-              Hello I am
-            </h1>
-            <h1 className="text-4xl lg:text-4xl xl:text-6xl font-semibold font-impact text-heroTitle uppercase dark:text-white py-3">
-              Tanvir Hossain Khan
-            </h1>
-            <p className=" font-semibold xl:text-3xl lg:text-2xl md:text-xl text-xl dark:text-gray-400 font-Montserrat uppercase">
-              Entrepreneur
-            </p>
-          </div>
-          <div className="md:mt-0 -mt-20 w-auto">
-            <img
-              className="w-full xl:object-cover object-cover lg:min-h-screen md:min-h-screen"
-              src={ProfilePic}
-              alt="Profile Pic"
-            />
-          </div>
+    <>
+      <div
+        className={`inline-flex gap-5 justify-center md:justify-start md:mt-16 w-full absolute md:left-5% inset-y-5 inset-x-0`}
+      >
+        <span>
+          <Facebook color={"#2D3038"} />
+        </span>
+        <span>
+          <LinkedIn color={"#2D3038"} />
+        </span>
+        <span>
+          <Twitter color={"#2D3038"} />
+        </span>
+        <span>
+          <Youtube color={"#2D3038"} pathColor={"#F6F6F6"} />
+        </span>
+      </div>
+
+      <div className="flex items-center justify-center md:flex-row flex-col gap-16 -mt-24 md:mt-0">
+        <div className="text-center md:text-left w-auto">
+          <p className="text-4xl xl:text-4xl lg:text-3xl 2xl:text-5xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
+            Hello I am
+          </p>
+          <p className="text-3xl md:text-xl lg:text-2xl 2xl:text-6xl xl:text-4xl font-semibold font-impact text-heroTitle tracking-wide uppercase dark:text-white py-3">
+            Tanvir Hossain Khan
+          </p>
+          <p className=" font-semibold xl:text-xl 2xl:text-3xl lg:text-xl md:text-base text-heroTitle text-xl dark:text-gray-400 font-Montserrat uppercase">
+            Entrepreneur
+          </p>
         </div>
+        <div className="w-2/4">
+          <img
+            className="w-full xl:object-cover lg:min-h-screen md:min-h-screen object-contain"
+            src={ProfilePic}
+            alt="Profile Pic"
+          />
+        </div>
+
         <div
           onClick={() => {
-            setSuccessMessage(!successMessage);
+            // setSuccessMessage(!successMessage);
             setSwitchPage("about");
-          }}s
-          className={`absolute bottom-0 left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+          }}
+          s
+          className={`absolute bottom-0 left-5% ${
+            switchPage === "home" && "block"
+          }`}
         >
           <svg
             width="48"
@@ -60,6 +81,7 @@ const HeroSection = ({
           </svg>
         </div>
       </div>
+    </>
   );
 };
 
