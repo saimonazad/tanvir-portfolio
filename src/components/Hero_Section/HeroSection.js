@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
+import AnimationComponent from "../Animaton/AnimationComponent";
 const HeroSection = ({
   successMessage,
   setSwitchPage,
@@ -9,7 +10,9 @@ const HeroSection = ({
 }) => {
   return (
     <>
-      <div
+    {switchPage !== 'animation' && (
+<>
+<div
         className={`inline-flex gap-5 justify-center md:justify-start md:mt-16 w-full absolute md:left-5% inset-y-5 inset-x-0`}
       >
         <span>
@@ -49,12 +52,13 @@ const HeroSection = ({
         <div
           onClick={() => {
             // setSuccessMessage(!successMessage);
-            setSwitchPage("about");
+            setSwitchPage("animation");
           }}
           s
           className={`absolute bottom-0 left-5% ${
             switchPage === "home" && "block"
           }`}
+          
         >
           <svg
             width="48"
@@ -81,6 +85,10 @@ const HeroSection = ({
           </svg>
         </div>
       </div>
+</>
+    )
+    }
+
     </>
   );
 };

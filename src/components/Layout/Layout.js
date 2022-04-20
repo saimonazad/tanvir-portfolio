@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import About from "../About/About";
+import AnimationComponent from "../Animaton/AnimationComponent";
 import Contact from "../Contact/Contact";
 import Contribution from "../Contributions/Contributions";
 import Gallery from "../Gallery/Gallery";
@@ -8,7 +9,7 @@ import HeroSection from "../Hero_Section/HeroSection";
 import Milestone from "../Milestone/Milestone";
 import Nav from "../Nav/Nav";
 const Layout = ({ children }) => {
-  const [switchPage, setSwitchPage] = useState("milestone");
+  const [switchPage, setSwitchPage] = useState("home");
   const [successMessage, setSuccessMessage] = useState(false);
 
   return (
@@ -41,12 +42,14 @@ const Layout = ({ children }) => {
               {switchPage === "contact" && <Contact />}
             </div>
           </div>
-          <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />
+          {switchPage !== "animation" && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />
+}
         </div>
       )}
       {switchPage === "home" && (
         <HeroSection switchPage={switchPage} setSwitchPage={setSwitchPage}/>
       )}
+            {switchPage === 'animation' &&  (<AnimationComponent/>)}
 
       {/* <Nav/> */}
       {/* <div className="md:flex item-center justify-center ">
