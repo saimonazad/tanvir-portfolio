@@ -64,7 +64,7 @@ const Contact = () => {
             </defs>
           </svg>
         </span>
-        <span className="text-animationTitle text-lg ">
+        <span className="text-animationTitle text-lg font-bold">
           Make an appointment
         </span>
       </div>

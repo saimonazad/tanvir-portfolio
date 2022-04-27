@@ -48,7 +48,8 @@ import MilestoneImage from "../../images/milestone.png";
 const years = [1, 2, 3, 4, 5, 6];
 const Milestone = () => {
   return (
-    <div className="mx-auto flex items-center flex-col md:mt-40 mt-52">
+    <div className="top-20% left-auto absolute">
+<div className="mx-auto flex items-center flex-col">
       <div className="flex justify-center ">
         <img src={MilestoneImage} alt="" className="w-full" />
       </div>
@@ -76,6 +77,9 @@ const Milestone = () => {
         })}
       </div>
     </div>
+
+    </div>
+    
   );
 };
 

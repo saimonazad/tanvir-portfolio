@@ -47,17 +47,18 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
       <nav
         className={`bg-navbar md:fixed fixed md:top-0 sm:top-auto top-0 lg:top-auto lg:bottom-0 w-full z-50`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center h-16">
-            <div className="flex items-center">
+        <div className="">
+          
+          <div className="h-16">
+            <div className="">
               <div className="hidden lg:block">
-                <div className="ml-10 flex items-baseline uppercase font-Poppins font-medium justify-center">
+                <div className=" grid grid-cols-6 pl-20 text-center">
                   <button
                     href="#"
                     onClick={() => setSwitchPage("home")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "home" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex justify-center items-center text-white px-6 py-2 w-auto text-sm`}
                   >
                     Home
                   </button>
@@ -67,7 +68,7 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                     onClick={() => setSwitchPage("about")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "about" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm `}
                   >
                     About
                   </a>
@@ -77,7 +78,7 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                     onClick={() => setSwitchPage("milestone")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "milestone" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm `}
                   >
                     Milestone
                   </a>
@@ -87,26 +88,26 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                     onClick={() => setSwitchPage("contribution")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "contribution" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm `}
                   >
                     Contribution
                   </a>
 
                   <a
                     href="#"
-                    onClick={() => setSwitchPage("more")}
+                    onClick={() => setSwitchPage("gallery")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "more" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm `}
                   >
                     More
                   </a>
                   <a
                     href="#"
-                    onClick={() => setSwitchPage("contact")}
+                    onClick={() => setSwitchPage("contact me")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "contact" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center text-white px-6 py-2 w-auto text-sm `}
+                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm `}
                   >
                     Let get in touch
                   </a>
@@ -229,7 +230,7 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                 <a
                   href="#"
                   onClick={() => {
-                    setSwitchPage("more");
+                    setSwitchPage("gallery");
                     setIsOpen(!isOpen);
                   }}
                   className={` hover:bg-gray-700 ${
@@ -242,7 +243,7 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                 <a
                   href="#"
                   onClick={() => {
-                    setSwitchPage("contact");
+                    setSwitchPage("contact me");
                     setIsOpen(!isOpen);
                   }}
                   className={` hover:bg-gray-700 ${
@@ -260,7 +261,7 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
       <header className={`${switchPage === "about" ? "hidden" : "block"}`}>
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white md:bg-inherit fixed lg:left-4% lg:top-4% md:top-4% top-6% w-full">
           <h1
-            className={` md:text-5xl text-xl font-Impact font-bold text-heroTitle  md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-white w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1`}
+            className={` md:text-5xl text-xl font-impact font-bold text-heroTitle  md:z-50 md:top-0 left-0 px-2 md:px-2 md:h-12 md:w-full md:left-0 uppercase lg:bg-inherit bg-white w-full lg:top-auto  top-16 h-10 md:text-left text-center py-1`}
           >
             {switchPage}
           </h1>

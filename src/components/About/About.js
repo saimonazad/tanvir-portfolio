@@ -9,7 +9,7 @@ const About = () => {
             Tanvir Hossain Khan
           </p>
         </div>
-        <div className="flex justify-center text-center md:px-24 xl:px-20 lg:px-10 lg:mt-5 mt-5">
+        <div className="flex justify-center text-center md:px-24 xl:px-20 lg:px-10 lg:mt-5 mt-5 xl:mt-8">
           <div className="2xl:h-[38vw] md:h-[75vw] xl:h-[47vw] overflow-auto rounded-t-aboutBorderRadius shadow-2xl bg-white md:px-10 lg:px-5 px-5 md:pt-5 pt-8 xl:pt-10 lg:w-5/6 w-4/5 md:w-full pb-44">
             <p className="text-aboutSubtitle tracking-widest  md:text-xl text-base lg:text-xl xl:text-2xl font-PT_Serif font-bold uppercase lg:py-16 py-5">
               “Collaboration is Always Better than Competition.”

@@ -47,11 +47,10 @@ const HeroSection = ({
         </div>
 
         <div
-          onClick={() => {
+           onClick={() => {
             // setSuccessMessage(!successMessage);
-            setSwitchPage("about");
+            setSwitchPage("animation");
           }}
-          s
           className={`absolute bottom-0 left-5% ${
             switchPage === "home" && "block"
           }`}
