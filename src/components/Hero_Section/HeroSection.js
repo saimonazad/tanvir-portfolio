@@ -52,7 +52,7 @@ className={`flex gap-5 justify-center md:justify-start md:mt-16 w-full`}
           </div>
         </div>
         <div
-          className={`absolute bottom-0 left-4% xl:top-full md:top-auto  ${switchPage !== "home" ? "hidden" : "block"}`}
+          className={`absolute bottom-0 left-4% xl:top-full 2xl:top-auto md:top-auto  ${switchPage !== "home" ? "hidden" : "block"}`}
         >
           <a href="#animationMenu">
             <svg

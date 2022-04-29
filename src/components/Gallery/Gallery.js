@@ -40,7 +40,7 @@ const Gallery = () => {
     },
   ];
   return (
-    <div className="px-52">
+    <div className="px-52 py-32 h-screen overflow-auto">
       <div className="flex items-center gap-10 md:justify-between justify-center">
         <div className="md:w-4/5 w-full">
           <GalleryPhoto />
