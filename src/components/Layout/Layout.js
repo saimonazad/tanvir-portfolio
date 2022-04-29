@@ -11,10 +11,11 @@ import Nav from "../Nav/Nav";
 const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [successMessage, setSuccessMessage] = useState(false);
+  const [animation, setAnimation] = useState(false)
 useEffect(() => {
-  if (switchPage === 'animation') {
+  if (switchPage) {
     setTimeout(() => {
-      setSwitchPage('about')
+      setAnimation(false)
     }, 2900);
   }
 }, [switchPage])
@@ -39,23 +40,25 @@ useEffect(() => {
               </div>
             </div>
             <div className="">
+              {
+                animation === true && <AnimationComponent/>
+              }
               <span className="fixed">
-              {switchPage === "about" && <About />}
-
+              {switchPage === "about" && animation === false && <About />}
               </span>
-              {switchPage === "milestone" && <Milestone />}
-              {switchPage === "contribution" && <Contribution />}
-              {switchPage === "gallery" && <Gallery />}
-              {switchPage === "contact me" && <Contact />}
+              {switchPage === "milestone" && !animation && <Milestone />}
+              {switchPage === "contribution" && !animation && <Contribution />}
+              {switchPage === "gallery" && !animation && <Gallery />}
+              {switchPage === "contact me" && !animation && <Contact />}
             </div>
-          {switchPage !== "animation" && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />}
+          {switchPage !== "animation" && !animation && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />}
         </div>
       )}
       {switchPage === "home" && (
-        <HeroSection switchPage={switchPage} setSwitchPage={setSwitchPage}/>
+        <HeroSection switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>
       )}
 
-{switchPage === 'animation' &&  (<AnimationComponent/>)}
+{/* {switchPage === 'animation' &&  (<AnimationComponent/>)} */}
 
       {/* <Nav/> */}
       {/* <div className="md:flex item-center justify-center ">

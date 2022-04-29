@@ -130,7 +130,7 @@ function GalleryPhoto() {
   return (
     <div className='w-full'>
       {/* <Gallery photos={photos} onClick={openLightbox} direction="row"/> */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {photos.map((image, i) => {
           const stylename = i
           return(
@@ -142,7 +142,7 @@ function GalleryPhoto() {
             fm: "jpg",
           }}
           srcset={image.srcset}
-          className={`${i == 1 ? 'col-start-2 col-span-2 ' : i == 2 ? 'col-start-2 col-end-2' : i == 3 ? 'col-start-3 col-end-2' : ''} w-full lg:h-48 xl:h-60 md:h-16 h-auto` }
+          className={`w-full lg:h-48 xl:h-60 md:h-16 h-auto` }
         />
           )
           

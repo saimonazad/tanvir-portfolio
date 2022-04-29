@@ -8,7 +8,6 @@ import {
   IconTwo,
 } from "../../icons";
 import Nav from "../Nav/Nav";
-import AnimationMenu from "./AnimationMenu";
 
 const animationContent = [
   { bg_color: "bg-yellow-500", content: <IconOne /> },
@@ -19,9 +18,14 @@ const animationContent = [
   { bg_color: "bg-gray-500", content: <IconSix /> },
 ];
 
-const AnimationComponent = ({setAnimation,setSwitchPage,switchPage, animation}) => {
+const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
+
+    const switchPageFunction = (value) => {
+        setSwitchPage(value)
+        setAnimation(true)
+    }
   return (
-    <div className="relative">
+    <div className="relative" id="animationMenu">
       <h1 className="z-50 absolute font-Poppins font-extrabold text-7xl pl-8 pb-4 text-stroke md:top-32 top-8 md:left-16">
         <span>
         <svg className="w-11/12 md:w-auto" width="595" height="74" viewBox="0 0 595 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,60 +34,51 @@ const AnimationComponent = ({setAnimation,setSwitchPage,switchPage, animation}) 
         </span>
       </h1>
       <div className="w-full flex md:justify-between md:space-x-16 space-x-5 md:items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen">
-        <div className="w-full flex flex-col flex-wrap item-1">
+        <div className="w-full flex flex-col flex-wrap ">
           <div className=" grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
           <IconOne />
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('home')} className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             HOME
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap item-2">
+        <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-itemtwo w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
           <IconTwo />
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => {switchPageFunction('about')}}  className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             About
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap item-3" >
+        <div className="w-full  flex flex-col flex-wrap " >
           <div className=" grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconThree/>
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('milestone')}  className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Milestone
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap item-4">
+        <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconFour/>
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('contribution')}  className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Contribution
           </div>
         </div>
-        <div className="w-full flex flex-col flex-wrap item-extra">
-          <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          
-          </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
-            
-          </div>
-        </div>
-
-        <div className="w-full  flex flex-col flex-wrap item-5">
+        <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconFive/>
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('gallery')}  className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             More
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap item-6">
+        <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconSix/>
           </div>
-          <div className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('contact me')}  className="text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Let Get In Touch
           </div>
         </div>
@@ -92,4 +87,4 @@ const AnimationComponent = ({setAnimation,setSwitchPage,switchPage, animation}) 
   );
 };
 
-export default AnimationComponent;
+export default AnimationMenu;

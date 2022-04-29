@@ -1,50 +1,6 @@
 import React from "react";
 import MilestoneImage from "../../images/milestone.png";
-// const milestoneYears = [
-//     {years:'year-01',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-//     {years:'year-02',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-//     {years:'year-03',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-//     {years:'year-04',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-//     {years:'year-05',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-//     {years:'year-06',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax',
-//     'Xsaaxaxax'},
-// ml-16 pl-10 flex gap-32 mt-9
-// ]
+
 const years = [1, 2, 3, 4, 5, 6];
 const Milestone = () => {
   return (

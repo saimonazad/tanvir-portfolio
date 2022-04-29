@@ -1,64 +1,61 @@
 import React from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
+import AnimationComponent from "../Animaton/AnimationComponent";
+import AnimationMenu from "../Animaton/AnimationMenu";
 const HeroSection = ({
   successMessage,
   setSwitchPage,
   switchPage,
   setSuccessMessage,
+  setAnimation,
+  animation
 }) => {
   return (
-    <div className="">
+    <div>
       <div className=" absolute left-5%">
-        <div
-        className={`flex gap-5 justify-center md:justify-start md:mt-16 w-full`}
-      >
-        <span>
-          <Facebook color={"#2D3038"} />
-        </span>
-        <span>
-          <LinkedIn color={"#2D3038"} />
-        </span>
-        <span>
-          <Twitter color={"#2D3038"} />
-        </span>
-        <span>
-          <Youtube color={"#2D3038"} pathColor={"#F6F6F6"} />
-        </span>
-      </div>
-      </div>
-      
-
-      <div className="flex items-center justify-center md:flex-row flex-col gap-16 -mt-24 md:mt-0">
-        <div className="text-center md:text-left w-auto">
-          <p className="text-4xl xl:text-4xl lg:text-3xl 2xl:text-5xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
-            Hello I am
-          </p>
-          <p className="text-3xl md:text-xl lg:text-2xl 2xl:text-6xl xl:text-4xl font-semibold font-impact text-heroTitle tracking-wide uppercase dark:text-white py-3">
-            Tanvir Hossain Khan
-          </p>
-          <p className=" font-semibold xl:text-xl 2xl:text-3xl lg:text-xl md:text-base text-heroTitle text-xl dark:text-gray-400 font-Montserrat uppercase">
-            Entrepreneur
-          </p>
+<div
+className={`flex gap-5 justify-center md:justify-start md:mt-16 w-full`}
+>
+<span>
+<Facebook color={"#2D3038"} />
+</span>
+<span>
+<LinkedIn color={"#2D3038"} />
+</span>
+<span>
+<Twitter color={"#2D3038"} />
+</span>
+<span>
+<Youtube color={"#2D3038"} pathColor={"#F6F6F6"} />
+</span>
+</div>
+</div>
+        <div className="flex md:flex-row flex-col justify-between mx-auto items-center md:pl-20 lg:pl-40 lg:pr-20 bg-white min-h-screen">
+          <div className="text-center md:text-left w-2/4">
+            <h1 className="text-4xl xl:text-5xl lg:text-5xl md:text-2xl mt-48 md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
+              Hello I am
+            </h1>
+            <h1 className="text-4xl lg:text-4xl xl:text-4xl 2xl:text-6xl font-semibold font-impact text-heroTitle uppercase dark:text-white py-3">
+              Tanvir Hossain Khan
+            </h1>
+            <p className=" font-semibold xl:text-2xl 2xl:text-3xl lg:text-2xl md:text-xl text-xl dark:text-gray-400 font-Montserrat uppercase">
+              Entrepreneur
+            </p>
+          </div>
+          <div className="md:mt-0 -mt-20 w-auto">
+            <img
+              className="w-full xl:object-cover object-cover lg:min-h-screen md:min-h-screen"
+              src={ProfilePic}
+              alt="Profile Pic"
+            />
+          </div>
         </div>
-        <div className="md:w-2/4 md:-mt-0 -mt-20">
-          <img
-            className="w-full md:min-h-screen "
-            src={ProfilePic}
-            alt="Profile Pic"
-          />
-        </div>
-
         <div
-           onClick={() => {
-            // setSuccessMessage(!successMessage);
-            setSwitchPage("animation");
-          }}
-          className={`absolute md:bottom-0 left-5% md:top-full top-85% ${
-            switchPage === "home" && "block"
-          }`}
+          className={`absolute bottom-0 left-4% xl:top-full md:top-auto  ${switchPage !== "home" ? "hidden" : "block"}`}
         >
-          <svg
+          <a href="#animationMenu">
+            <svg
             width="48"
             height="131"
             viewBox="0 0 48 131"
@@ -81,9 +78,11 @@ const HeroSection = ({
               stroke-linejoin="round"
             />
           </svg>
+          </a>
+          
         </div>
+        <AnimationMenu animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
       </div>
-    </div>
   );
 };
 

@@ -40,7 +40,7 @@ const Gallery = () => {
     },
   ];
   return (
-    <div className="container md:pt-40 md:mt-40 lg:mt-14 md:ml-20 lg:ml-auto">
+    <div className="px-52">
       <div className="flex items-center gap-10 md:justify-between justify-center">
         <div className="md:w-4/5 w-full">
           <GalleryPhoto />
@@ -52,12 +52,6 @@ const Gallery = () => {
             showNavigation={state.showNavigation}
             animationConfig={state.config}
           />
-          {/* <VerticalCarousel
-            slides={slides}
-            offsetRadius={state.offsetRadius}
-            showNavigation={state.showNavigation}
-            animationConfig={state.config}
-          /> */}
         </div>
       </div>
     </div>
