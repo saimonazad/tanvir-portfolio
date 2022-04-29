@@ -22,9 +22,8 @@ useEffect(() => {
     <div className="">
       {switchPage !== "home" && (
         <div className="">
-          <div className="flex gap-24 lg:px-20 xl:px-32 md:px-10 items-center ">
-            <div className=" absolute top-40% md:block hidden">
-              <div className="flex gap-16 flex-col">
+          <div className="md:block hidden absolute md:top-20% lg:top-1/4 xl:inset-y-30% left-5%">
+              <div className="flex gap-10 flex-col">
               <span>
                 <Facebook color={"#326AFF"} />
               </span>
@@ -38,16 +37,17 @@ useEffect(() => {
                 <Youtube color={"#326AFF"} pathColor={"#F6F6F6"} />
               </span>
               </div>
-              
             </div>
-            <div className="2xl:px-44 lg:px-20">
+            <div className="">
+              <span className="fixed">
               {switchPage === "about" && <About />}
+
+              </span>
               {switchPage === "milestone" && <Milestone />}
               {switchPage === "contribution" && <Contribution />}
               {switchPage === "gallery" && <Gallery />}
               {switchPage === "contact me" && <Contact />}
             </div>
-          </div>
           {switchPage !== "animation" && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />}
         </div>
       )}

@@ -3,11 +3,11 @@ import { Address, Call, Email } from "../../icons";
 import contactImg from "../../images/contact.png";
 const Contact = () => {
   return (
-    <div className="flex sm:flex-col flex-col items-center justify-center xl:mt-auto md:pt-40 pt-52 xl:pl-36 md:pl-20">
+    <div className="flex sm:flex-col flex-col items-center justify-center xl:mt-auto py-32">
       <div className="w-4/5 mx-auto">
-        <img src={contactImg} alt="" className="w-full " />
+        <img src={contactImg} alt="" className="w-5/6 mx-auto" />
       </div>
-      <div className="flex justify-center md:px-0 px-10 md:gap-10 gap-3 lg:text-xl text-base md:flex-row flex-col my-8 text-center">
+      <div className="flex justify-center md:px-0 px-10 md:gap-10 gap-3 lg:text-xl text-base md:flex-row flex-col text-center md:py-0 py-10 md:space-y-0 space-y-5">
         <div className="md:w-1/3 w-full">
           <span className="flex gap-5">
             <span>

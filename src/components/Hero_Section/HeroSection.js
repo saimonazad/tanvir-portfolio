@@ -8,9 +8,10 @@ const HeroSection = ({
   setSuccessMessage,
 }) => {
   return (
-    <>
-      <div
-        className={`inline-flex gap-5 justify-center md:justify-start md:mt-16 w-full absolute md:left-5% inset-y-5 inset-x-0`}
+    <div className="">
+      <div className=" absolute left-5%">
+        <div
+        className={`flex gap-5 justify-center md:justify-start md:mt-16 w-full`}
       >
         <span>
           <Facebook color={"#2D3038"} />
@@ -25,6 +26,8 @@ const HeroSection = ({
           <Youtube color={"#2D3038"} pathColor={"#F6F6F6"} />
         </span>
       </div>
+      </div>
+      
 
       <div className="flex items-center justify-center md:flex-row flex-col gap-16 -mt-24 md:mt-0">
         <div className="text-center md:text-left w-auto">
@@ -38,9 +41,9 @@ const HeroSection = ({
             Entrepreneur
           </p>
         </div>
-        <div className="w-2/4">
+        <div className="md:w-2/4 md:-mt-0 -mt-20">
           <img
-            className="w-full xl:object-cover lg:min-h-screen md:min-h-screen object-contain"
+            className="w-full md:min-h-screen "
             src={ProfilePic}
             alt="Profile Pic"
           />
@@ -51,7 +54,7 @@ const HeroSection = ({
             // setSuccessMessage(!successMessage);
             setSwitchPage("animation");
           }}
-          className={`absolute bottom-0 left-5% ${
+          className={`absolute md:bottom-0 left-5% md:top-full top-85% ${
             switchPage === "home" && "block"
           }`}
         >
@@ -80,7 +83,7 @@ const HeroSection = ({
           </svg>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
