@@ -4,7 +4,7 @@ import About from "../About/About";
 import AnimationComponent from "../Animaton/AnimationComponent";
 import Contact from "../Contact/Contact";
 import Contribution from "../Contributions/Contributions";
-import Gallery from "../Gallery/Gallery";
+import PhotoGallery from "../Gallery/Gallery";
 import HeroSection from "../Hero_Section/HeroSection";
 import Milestone from "../Milestone/Milestone";
 import Nav from "../Nav/Nav";
@@ -48,7 +48,7 @@ useEffect(() => {
               </span>
               {switchPage === "milestone" && !animation && <Milestone />}
               {switchPage === "contribution" && !animation && <Contribution />}
-              {switchPage === "gallery" && !animation && <Gallery />}
+              {switchPage === "gallery" && !animation && <PhotoGallery />}
               {switchPage === "contact me" && !animation && <Contact />}
             </div>
           {switchPage !== "animation" && !animation && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} />}

@@ -1,8 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { config } from "react-spring";
 import GalleryPhoto from "./GalleryPhoto";
 import VerticalCarousel from "./VerticalCarousel";
-const Gallery = () => {
+import Gallery from "react-photo-gallery";
+const fakeFetch = url => new Promise(resolve => {
+  setTimeout(() => resolve([
+    `https://picsum.photos/id/10/400`,
+    `https://picsum.photos/id/20/400`,
+    `https://picsum.photos/id/30/400`,
+    `https://picsum.photos/id/40/400`,
+    `https://picsum.photos/id/50/400`,
+    `https://picsum.photos/id/60/400`,
+    `https://picsum.photos/id/70/400`,
+  ]), 2000)
+})
+const PhotoGallery = () => {
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,
@@ -39,11 +51,28 @@ const Gallery = () => {
       content: "2022",
     },
   ];
+
+  const onClick = event => {
+    alert(event.target.src)
+  }
+  const [year, setYear] = useState({})
+  console.log('year', year);
+  const [photos, setPhotos] = useState([])
+  useEffect(() => {
+    fakeFetch(`/photos`)
+      .then(urls => urls.map(url => ({src: url, width: 150, height: 150})))
+      .then(setPhotos)
+  }, [])
+
   return (
     <div className="px-52 py-32 h-screen overflow-auto">
       <div className="flex items-center gap-10 md:justify-between justify-center">
         <div className="md:w-4/5 w-full">
-          <GalleryPhoto />
+        <Gallery
+      photos={photos}
+      onClick={onClick}
+    />
+    {/* <p>Test................</p> */}
         </div>
         <div className="lg:h-48 h-20 md:block hidden">
         <VerticalCarousel
@@ -51,6 +80,7 @@ const Gallery = () => {
             offsetRadius={state.offsetRadius}
             showNavigation={state.showNavigation}
             animationConfig={state.config}
+            setYear={setYear}
           />
         </div>
       </div>
@@ -58,7 +88,7 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default PhotoGallery;
 
 {
   /* <div className="w-40 h-48" >

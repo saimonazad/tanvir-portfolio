@@ -10,7 +10,8 @@ function Slide({
   moveSlide,
   delta,
   down,
-  up
+  up,
+  getYearData
 }) {
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
@@ -60,13 +61,17 @@ function Slide({
     >
       {style => (
         <div
-        className="absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
+        
+        className="  absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
           style={{
             ...style,
             zIndex: Math.abs(Math.abs(offsetFromMiddle) - 2)
           }}
         >
-          <div className="absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl font-PT_Serif flex items-center justify-center origin-[50%_50%]" onClick={() => {moveSlide(offsetFromMiddle)}}>
+          <div onClick={() => getYearData()} 
+          className=" cursor-pointer absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl font-PT_Serif flex items-center justify-center origin-[50%_50%]" 
+          // onClick={() => {moveSlide(offsetFromMiddle)}}
+          >
             {content}
           </div>
         </div>

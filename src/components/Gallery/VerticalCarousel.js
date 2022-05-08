@@ -9,6 +9,7 @@ import Slide from "./Slide";
 
 const NavBtn = styled.div`
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 function mod(a, b) {
@@ -94,12 +95,19 @@ class VerticalCarousel extends React.Component {
     return presentableSlides;
   }
 
+  getYearData = (e) => {
+    const { slides } = this.props;
+    const { index } = this.state;
+    const {setYear} = this.props
+    const newData = slides.find((item, i) => index === i)
+    setYear(newData);
+  };
   render() {
     const { animationConfig, offsetRadius, showNavigation } = this.props;
     let navigationButtons = null;
     if (showNavigation) {
       navigationButtons = (
-        <div className="absolute flex flex-col flex-nowrap md:gap-20 lg:gap-52 md:-top-10 lg:-top-14 z-50 mx-auto justify-between h-20">
+        <div className=" cursor-pointer absolute flex flex-col flex-nowrap md:gap-20 lg:gap-52 md:-top-10 lg:-top-14 z-50 mx-auto justify-between h-20">
           <NavBtn onClick={() => this.moveSlide(1)}>
             <svg
               width="104"
@@ -145,6 +153,7 @@ class VerticalCarousel extends React.Component {
               offsetRadius={this.clampOffsetRadius(offsetRadius)}
               index={presentableIndex}
               animationConfig={animationConfig}
+              getYearData={this.getYearData}
             />
           ))}
           {navigationButtons}
