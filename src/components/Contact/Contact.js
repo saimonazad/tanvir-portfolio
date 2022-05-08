@@ -1,7 +1,19 @@
 import React from "react";
 import { Address, Call, Email } from "../../icons";
 import contactImg from "../../images/contact.png";
+import { graphql, useStaticQuery } from "gatsby";
+
 const Contact = () => {
+  const res = useStaticQuery(graphql`
+    query ContactQuery {
+      datoCmsContact {
+        id
+        address
+        email
+      }
+    }
+  `);
+  console.log(res);
   return (
     <div className="flex sm:flex-col flex-col items-center justify-center xl:mt-auto py-32">
       <div className="w-4/5 mx-auto">

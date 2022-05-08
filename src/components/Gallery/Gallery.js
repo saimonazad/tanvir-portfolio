@@ -3,18 +3,59 @@ import { config } from "react-spring";
 import GalleryPhoto from "./GalleryPhoto";
 import VerticalCarousel from "./VerticalCarousel";
 import Gallery from "react-photo-gallery";
-const fakeFetch = url => new Promise(resolve => {
-  setTimeout(() => resolve([
-    `https://picsum.photos/id/10/400`,
-    `https://picsum.photos/id/20/400`,
-    `https://picsum.photos/id/30/400`,
-    `https://picsum.photos/id/40/400`,
-    `https://picsum.photos/id/50/400`,
-    `https://picsum.photos/id/60/400`,
-    `https://picsum.photos/id/70/400`,
-  ]), 2000)
-})
+import { graphql, useStaticQuery } from "gatsby";
+const fakeFetch = (url) =>
+  new Promise((resolve) => {
+    setTimeout(
+      () =>
+        resolve([
+          `https://picsum.photos/id/10/400`,
+          `https://picsum.photos/id/20/400`,
+          `https://picsum.photos/id/30/400`,
+          `https://picsum.photos/id/40/400`,
+          `https://picsum.photos/id/50/400`,
+          `https://picsum.photos/id/60/400`,
+          `https://picsum.photos/id/70/400`,
+        ]),
+      2000
+    );
+  });
 const PhotoGallery = () => {
+  const res = useStaticQuery(graphql`
+    query GalleryQuery {
+      datoCmsGallery {
+        id
+        gallery {
+          id
+          year
+          images {
+            size
+            width
+            height
+            path
+            format
+            isImage
+            notes
+            author
+            copyright
+            filename
+            basename
+            exifInfo
+            mimeType
+            blurhash
+            originalId
+            url
+            createdAt
+            gatsbyImageData
+            alt
+            title
+            customData
+          }
+        }
+      }
+    }
+  `);
+  console.log(res);
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,
@@ -52,30 +93,29 @@ const PhotoGallery = () => {
     },
   ];
 
-  const onClick = event => {
-    alert(event.target.src)
-  }
-  const [year, setYear] = useState({})
-  console.log('year', year);
-  const [photos, setPhotos] = useState([])
+  const onClick = (event) => {
+    alert(event.target.src);
+  };
+  const [year, setYear] = useState({});
+  console.log("year", year);
+  const [photos, setPhotos] = useState([]);
   useEffect(() => {
     fakeFetch(`/photos`)
-      .then(urls => urls.map(url => ({src: url, width: 150, height: 150})))
-      .then(setPhotos)
-  }, [])
+      .then((urls) =>
+        urls.map((url) => ({ src: url, width: 150, height: 150 }))
+      )
+      .then(setPhotos);
+  }, []);
 
   return (
     <div className="px-52 py-32 h-screen overflow-auto">
       <div className="flex items-center gap-10 md:justify-between justify-center">
         <div className="md:w-4/5 w-full">
-        <Gallery
-      photos={photos}
-      onClick={onClick}
-    />
-    {/* <p>Test................</p> */}
+          <Gallery photos={photos} onClick={onClick} />
+          {/* <p>Test................</p> */}
         </div>
         <div className="lg:h-48 h-20 md:block hidden">
-        <VerticalCarousel
+          <VerticalCarousel
             slides={slides}
             offsetRadius={state.offsetRadius}
             showNavigation={state.showNavigation}

@@ -1,6 +1,16 @@
 import React from "react";
-
+import {graphql, useStaticQuery} from 'gatsby'
 const About = () => {
+  const res = useStaticQuery(graphql`
+    query AboutQuery {
+      datoCmsAbout {
+        id
+        title
+        content
+      }
+    }
+  `);
+  console.log(res);
   return (
     <div className="md:px-20 px-5 2xl:px-52 mt-20 md:mt-5">
       <div className="w-full ">

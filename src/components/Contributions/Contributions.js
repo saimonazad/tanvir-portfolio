@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ContributionIcon from "./ContributionIcon";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { graphql, useStaticQuery } from "gatsby";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -21,79 +22,109 @@ const responsive = {
   },
 };
 const ContributionsData = [
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-    {
-      text: 'He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.'
-    },
-]
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+  {
+    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
+  },
+];
 const Contributions = () => {
+  const res = useStaticQuery(graphql`
+    query ContributionQuery {
+      datoCmsContribution {
+        id
+        contributions {
+          id
+          text
+          image {
+            size
+            width
+            height
+            path
+            format
+            isImage
+            notes
+            author
+            copyright
+            filename
+            basename
+            exifInfo
+            mimeType
+            blurhash
+            originalId
+            url
+            createdAt
+            gatsbyImageData
+            alt
+            title
+            customData
+          }
+        }
+      }
+    }
+  `);
+  console.log(res);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
-  
+
   return (
     <div className="md:px-40">
-
-
-<Splide
-      options={ {
-        rewind: true,
-        // gap   : '1rem',
-        perPage: 3,
-        // type:"loop",
-        perMove: 1,
-        pagination: false,
-        arrows: true,
-        trimSpace:true,
-        focus: 'center',
-        slideFocus: true,
-        perPage     : 3,
-        perMove     : 1,
-        focus       : 'center',      
+      <Splide
+        options={{
+          rewind: true,
+          // gap   : '1rem',
+          perPage: 3,
+          // type:"loop",
+          perMove: 1,
+          pagination: false,
+          arrows: true,
+          trimSpace: true,
+          focus: "center",
+          slideFocus: true,
+          perPage: 3,
+          perMove: 1,
+          focus: "center",
           breakpoints: {
-          768: {
-            perPage: 2,
+            768: {
+              perPage: 2,
+            },
+            540: {
+              perPage: 1,
+            },
           },
-          540: {
-            perPage: 1,
-          },
-        }
-      } }
-      aria-label="My Favorite Images"
-    >
-      {
-        ContributionsData.map((item, i) => {
+        }}
+        aria-label="My Favorite Images"
+      >
+        {ContributionsData.map((item, i) => {
           return (
-              <>
+            <>
               <SplideSlide>
                 <div className="flex flex-col px-5 text-center justify-center items-center py-5 h-screen">
                   <span className="p-3 md:mb-4 xl:mb-10 ">
-                      <ContributionIcon color="black" />
-                    </span>
-                    <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
-                      {item.text}
-                    </p>
+                    <ContributionIcon color="black" />
+                  </span>
+                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
+                    {item.text}
+                  </p>
                 </div>
               </SplideSlide>
-              </>
-          )
-        })
-        
-      }
-      {/* <SplideSlide>
+            </>
+          );
+        })}
+        {/* <SplideSlide>
         
       <div className="flex flex-col items-center space-y-3 text-center dark:bg-gray-800 w-auto sm:min-h-screen max-h-screen px-10 py-3 sm:h-fit">
           <span className="p-3 md:mb-4 xl:mb-10 dark:text-white dark:bg-blue-500 sm:inline-block hidden">
@@ -106,11 +137,7 @@ const Contributions = () => {
           </p>
         </div>
       </SplideSlide> */}
-      
-    </Splide>
-
-
-
+      </Splide>
 
       {/* <Carousel
         additionalTransfrom={0}
@@ -131,9 +158,6 @@ const Contributions = () => {
       >
         
       </Carousel> */}
-
-
-
     </div>
   );
 };
