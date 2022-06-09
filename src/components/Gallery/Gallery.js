@@ -108,7 +108,7 @@ const PhotoGallery = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <p>Gallery Section.......................</p>
     </div>
     // <div className="px-52 py-32 h-screen overflow-auto">

@@ -40,7 +40,7 @@ module.exports = {
        },
        spacing: {
         'custom': '140%',
-        'about': '30%',
+        'about': '25%',
       },
       inset: {
         '10%': '10%',

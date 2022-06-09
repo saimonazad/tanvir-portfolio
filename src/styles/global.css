@@ -42,8 +42,10 @@
     opacity: 2;
   }
   97%{
-    opacity: 2;
     left: 43.5%
+  }
+  98%{
+    opacity: 0;
   }
   100%{
     opacity: 0;
@@ -137,6 +139,10 @@
   97%{
     opacity: 2;
     left: -44%
+  }
+  98%{
+    opacity: 1;
+    left: -44%;
   }
   100%{
     opacity: 0;

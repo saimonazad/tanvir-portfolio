@@ -40,12 +40,12 @@
 import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
 
-function Nav({ setSwitchPage, switchPage, bg_color }) {
+function Nav({ setSwitchPage, switchPage, bg_color,setAnimation }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <nav
-        className={`bg-navbar md:fixed fixed md:top-0 sm:top-auto top-0 lg:top-auto lg:bottom-0 w-full z-50`}
+        className={`bg-navbar md:fixed fixed top-0 lg:top-auto lg:bottom-0 w-full z-50`}
       >
         <div className="">
           
@@ -55,7 +55,12 @@ function Nav({ setSwitchPage, switchPage, bg_color }) {
                 <div className=" grid grid-cols-6 pl-20 text-center">
                   <button
                     href="#"
-                    onClick={() => setSwitchPage("home")}
+                    onClick={() => 
+                      {
+                        setAnimation(null)
+                        setSwitchPage("home")
+                      }
+                      }
                     className={` hover:bg-gray-700 ${
                       switchPage === "home" && "bg-animationTitle"
                     } hover:bg-animationTitle h-16 flex justify-center items-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}

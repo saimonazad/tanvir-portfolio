@@ -18,11 +18,13 @@ const animationContent = [
   { bg_color: "bg-gray-500", content: <IconSix /> },
 ];
 
-const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
+const AnimationMenu = ({switchPage, setSwitchPage, setAnimation, animation}) => {
 
     const switchPageFunction = (value) => {
-        setSwitchPage(value)
         setAnimation(true)
+        if (!animation) {
+          setSwitchPage(value)
+        }
     }
   return (
     <div className="relative" id="animationMenu">
@@ -38,7 +40,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
           <IconOne />
           </div>
-          <div onClick={() => switchPageFunction('home')} className=" cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('home')} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             HOME
           </div>
         </div>
@@ -46,7 +48,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemtwo w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
           <IconTwo />
           </div>
-          <div onClick={() => {switchPageFunction('about')}}  className="cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('about')}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             About
           </div>
         </div>
@@ -54,7 +56,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconThree/>
           </div>
-          <div onClick={() => switchPageFunction('milestone')}  className="cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('milestone')}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Milestone
           </div>
         </div>
@@ -62,7 +64,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconFour/>
           </div>
-          <div onClick={() => switchPageFunction('contribution')}  className="cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('contribution')}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Contribution
           </div>
         </div>
@@ -70,7 +72,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconFive/>
           </div>
-          <div onClick={() => switchPageFunction('gallery')}  className="cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('gallery')}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             More
           </div>
         </div>
@@ -78,7 +80,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation}) => {
           <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
             <IconSix/>
           </div>
-          <div onClick={() => switchPageFunction('contact me')}  className="cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          <div onClick={() => switchPageFunction('contact me')}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             Let Get In Touch
           </div>
         </div>

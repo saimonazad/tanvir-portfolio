@@ -25,7 +25,7 @@ const Milestone = () => {
         <div className="flex justify-center">
           <img src={MilestoneImage} alt="" className="w-full" />
         </div>
-        <div className="grid grid-cols-6 gap-5">
+        <div className="grid md:grid-cols-6 grid-cols-2 justify-items-center md:gap-5 gap-2 mt-10 md:mt-0">
             {
               items.map((item) => {
                 return (
