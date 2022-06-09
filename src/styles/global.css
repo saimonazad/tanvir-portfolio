@@ -23,128 +23,128 @@
 
 
 .item-1{
-  animation: item1Animation 0.5s forwards;
+  animation: item1Animation 3s forwards;
   position: relative;
-  
-
+  z-index: 5;
 }
 
 @keyframes item1Animation {
   0% {
     left:0px 
   }
-  95%{
+  33.3%{
     left: 17.5%;
     opacity: 2;
+    
+  }
+  66.7%{
+    left: 35%;
+    opacity: 2;
+  }
+  97%{
+    opacity: 2;
+    left: 43.5%
   }
   100%{
     opacity: 0;
-    left: 17.5%
   }
 }
 
 .item-2{
-  animation: item2Animation 0.5s forwards 0.5s;
+  animation: item2Animation 0.5s forwards 1s;
   position: relative;
-  
-
+  z-index: 4;
 }
 
 @keyframes item2Animation {
   0% {
-    left:0px 
-  }
-  95%{
-    left: 17.5%;
-    opacity: 2;
+    left:0px ;
+    opacity: 0;
   }
   100%{
     opacity: 0;
-    left: 17.5%;
+    left: 0;
   }
 }
 .item-3{
-  animation: item3Animation 0.5s forwards 1s;
+  animation: item3Animation 0.5s forwards 2s;
   position: relative;
-  
-
+  z-index: 1;
 }
 
 @keyframes item3Animation {
   0% {
-    left:0px 
-  }
-  95%{
-    left: 10%;
-    opacity: 2;
+    left:0 ;
+    opacity: 0;
   }
   100%{
     opacity: 0;
-    left: 10%;
+    left: 0;
   }
 }
-.item-4{
-  animation: item4Animation 0.5s forwards 1s;
-  position: relative;
-  
 
+.item-4{
+  animation: item4Animation 0.5s forwards 2s;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes item4Animation {
   0% {
-    left:0px 
-  }
-  95%{
-    left: -7%;
-    opacity: 2;
+    left:0px ;
+    opacity: 0;
   }
   100%{
     opacity: 0;
-    left: -7%;
+    left: 0%;
   }
 }
 
 .item-5{
-  animation: item5Animation 0.5s forwards 0.5s;
+  animation: item5Animation 0.5s forwards 1s;
   position: relative;
-  
-
+  z-index: 4;
 }
-
 @keyframes item5Animation {
   0% {
-    left:0px 
-  }
-  95%{
-    left: -17.5%;
-    opacity: 2;
+    left:0px ;
+    opacity: 0;
   }
   100%{
     opacity: 0;
-    left: -17.5%;
+    left: 0;
   }
 }
 .item-6{
-  animation: item6Animation 0.5s forwards;
+  animation: item6Animation 3s forwards;
   position: relative;
+  z-index: 5;
 }
 
 @keyframes item6Animation {
   0% {
     left:0px 
   }
-  95%{
+  33.3%{
     left: -17.5%;
     opacity: 2;
+    z-index: 5;
+  }
+  66.7%{
+    left: -35%;
+    opacity: 2;
+  }
+  97%{
+    opacity: 2;
+    left: -44%
   }
   100%{
     opacity: 0;
-    left: -17.5%;
   }
 }
 
 .item-extra{
-  animation: itemExtraAnimation 2s forwards 1.5s;
+  animation: itemExtraAnimation 2s forwards 3s;
   position: absolute;
   height: 80%;
   width: 10%;
