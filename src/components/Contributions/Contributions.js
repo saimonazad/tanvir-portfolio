@@ -81,13 +81,40 @@ const Contributions = () => {
   const chevronWidth = 40;
 
   return (
-    <div className="md:px-40">
-      <Splide
+    <div className="px-0">
+        <div className="h-screen grid grid-cols-3 2xl:-mt-8 -mt-24 overflow-auto">
+            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center ">
+                  <span className="p-3 md:mb-4 xl:mb-10 ">
+                    <ContributionIcon color="red" />
+                  </span>
+                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
+                  </p>
+            </div>
+            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center py-5 bg-aboutSubtitle ">
+                  <span className="p-3 md:mb-4 xl:mb-10 ">
+                    <ContributionIcon color="black" />
+                  </span>
+                  <p className="text-white dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
+                  </p>
+            </div>
+            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center py-5 ">
+                  <span className="p-3 md:mb-4 xl:mb-10 ">
+                    <ContributionIcon color="red" />
+                  </span>
+                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
+                  </p>
+            </div>
+           
+        </div>
+      {/* <Splide
         options={{
           rewind: true,
-          // gap   : '1rem',
+          gap   : '1rem',
           perPage: 3,
-          // type:"loop",
+          type:"loop",
           perMove: 1,
           pagination: false,
           arrows: true,
@@ -124,20 +151,7 @@ const Contributions = () => {
             </>
           );
         })}
-        {/* <SplideSlide>
-        
-      <div className="flex flex-col items-center space-y-3 text-center dark:bg-gray-800 w-auto sm:min-h-screen max-h-screen px-10 py-3 sm:h-fit">
-          <span className="p-3 md:mb-4 xl:mb-10 dark:text-white dark:bg-blue-500 sm:inline-block hidden">
-            <ContributionIcon color="black" />
-          </span>
-          <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
-            He always believes any problem can be solved if we can all work as
-            one and from that idea his belief is “Collaboration is Always Better
-            than Competition.
-          </p>
-        </div>
-      </SplideSlide> */}
-      </Splide>
+      </Splide> */}
 
       {/* <Carousel
         additionalTransfrom={0}

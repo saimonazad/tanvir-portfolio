@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 import AnimationComponent from "../Animaton/AnimationComponent";
@@ -11,6 +11,11 @@ const HeroSection = ({
   setAnimation,
   animation
 }) => {
+  useEffect(() =>{
+    if(switchPage == 'home'){
+      setAnimation(null)
+    }
+  }, [switchPage])
   return (
     <div>
       <div className="h-screen">
@@ -51,7 +56,7 @@ const HeroSection = ({
           </div>
         </div>
         <div
-            className={`absolute md:left-4% bottom-4% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`absolute md:left-4% bottom-2% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
             <a href="#animationMenu">
                 <svg
@@ -80,7 +85,9 @@ const HeroSection = ({
             </a> 
           </div>
       </div>
-        <AnimationMenu animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+      <div className="mt-5"> 
+      <AnimationMenu animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+      </div>
     </div>
   );
 };

@@ -108,23 +108,26 @@ const PhotoGallery = () => {
   }, []);
 
   return (
-    <div className="px-52 py-32 h-screen overflow-auto">
-      <div className="flex items-center gap-10 md:justify-between justify-center">
-        <div className="md:w-4/5 w-full">
-          <Gallery photos={photos} onClick={onClick} />
-          {/* <p>Test................</p> */}
-        </div>
-        <div className="lg:h-48 h-20 md:block hidden">
-          <VerticalCarousel
-            slides={slides}
-            offsetRadius={state.offsetRadius}
-            showNavigation={state.showNavigation}
-            animationConfig={state.config}
-            setYear={setYear}
-          />
-        </div>
-      </div>
+    <div>
+      <p>Gallery Section.......................</p>
     </div>
+    // <div className="px-52 py-32 h-screen overflow-auto">
+    //   <div className="flex items-center gap-10 md:justify-between justify-center">
+    //     <div className="md:w-4/5 w-full">
+    //       <Gallery photos={photos} onClick={onClick} />
+    //       {/* <p>Test................</p> */}
+    //     </div>
+    //     <div className="lg:h-48 h-20 md:block hidden">
+    //       <VerticalCarousel
+    //         slides={slides}
+    //         offsetRadius={state.offsetRadius}
+    //         showNavigation={state.showNavigation}
+    //         animationConfig={state.config}
+    //         setYear={setYear}
+    //       />
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
