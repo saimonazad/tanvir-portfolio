@@ -22,7 +22,7 @@ const Milestone = () => {
   return (
     <div className="md:mt-0 mt-32">
       <div>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:py-10">
           <img src={MilestoneImage} alt="" className="w-full" />
         </div>
         <div className="grid md:grid-cols-6 grid-cols-2 justify-items-center md:gap-5 gap-2 mt-10 md:mt-0">

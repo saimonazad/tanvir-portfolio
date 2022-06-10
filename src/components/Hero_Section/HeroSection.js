@@ -25,8 +25,8 @@ const HeroSection = ({
   }, [page])
 
   return (
-    <div>
-      <div className="h-screen">
+    <div >
+      <div className="h-screen" >
         <div className="md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
           <div className="flex gap-5">
               <span>
@@ -43,12 +43,12 @@ const HeroSection = ({
               </span>
           </div>
         </div>
-        <div className="flex md:justify-around justify-center w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left">
+        <div className={`max-w-{1920} flex md:justify-around justify-center w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`} >
           <div className="">
               <h1 className="xl:text-5xl lg:text-5xl md:text-2xl text-2xl md:mt-0 font-semibold font-Sacramento  text-animationTitle ">
                 Hello I am
               </h1>
-              <h1 className="md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
+              <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
                 Tanvir Hossain Khan
               </h1>
               <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-sm font-Montserrat uppercase">

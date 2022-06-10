@@ -36,7 +36,7 @@ module.exports = {
         Poppins: ['Poppins', 'sans-serif'],
         Open_Sans: ['Open Sans', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
-        impact: ['impact', 'sans-serif'],
+        impact: ['Maximum Impact', 'sans-serif'],
         Encode_Sans: ['Encode Sans', 'sans-serif'],
        },
        spacing: {
@@ -59,6 +59,13 @@ module.exports = {
       },
       maxHeight: {
         '1/2': '50%',
+        
+      },
+      maxWidth: {
+        '4/5': '80%',
+      },
+      letterSpacing: {
+        custom: '0.055em',
       }
     },
   },

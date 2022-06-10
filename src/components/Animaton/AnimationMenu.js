@@ -1,18 +1,14 @@
 import React from "react";
-import {
-  IconFive,
-  IconFour,
-  IconOne,
-  IconSix,
-  IconThree,
-  IconTwo,
-  Six,
-} from "../../icons";
-
+import one from '../../images/desktop/1.png'
+import two from '../../images/desktop/2.png'
+import three from '../../images/desktop/3.png'
+import four from '../../images/desktop/4.png'
+import five from '../../images/desktop/5.png'
+import six from '../../images/desktop/6.png'
 const AnimationMenu = ({setPage, setAnimation, animation}) => {
 
   return (
-    <div className="relative" id="animationMenu">
+    <div className={`max-w-{1920} relative` } id="animationMenu">
       <h1 className="z-50 absolute font-Poppins font-extrabold text-7xl pl-8 pb-4 text-stroke md:top-32 top-8 md:left-16">
         <span>
           <svg className="w-11/12 md:w-auto" width="595" height="74" viewBox="0 0 595 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,18 +19,18 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
       <div className="w-full md:flex grid grid-cols-3 md:justify-between md:space-x-16 space-x-5 md:items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen">
         <div className="w-full flex flex-col flex-wrap ">
           <div className=" grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <IconOne />
+            <img src={one}/>
           </div>
           <div onClick={() => {
-            setPage('home');
-            setAnimation(false)
+            // setPage('home');
+            // setAnimation(false);
           }} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             HOME
           </div>
         </div>
         <div className="w-full  flex flex-col flex-wrap">
           <div className=" grow bg-itemtwo w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <IconTwo />
+          <img src={two}/>
           </div>
           <div onClick={() => {
             setPage('about');
@@ -45,7 +41,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </div>
         <div className="w-full  flex flex-col flex-wrap " >
           <div className=" grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <IconThree/>
+          <img src={three}/>
           </div>
           <div onClick={() => {
             setPage('milestone');
@@ -56,7 +52,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </div>
         <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <IconFour/>
+          <img src={four}/>
           </div>
           <div onClick={() => {
             setPage('contribution');
@@ -67,7 +63,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </div>
         <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <IconFive/>
+          <img src={five}/>
           </div>
           <div onClick={() => {
             setPage('gallery');
@@ -78,7 +74,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </div>
         <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <Six/>
+          <img src={six}/>
           </div>
           <div onClick={() => {
             setPage('contact me');

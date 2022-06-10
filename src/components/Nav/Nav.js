@@ -40,7 +40,7 @@
 import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
 
-function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }) {
+function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, setAnimateItem }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
@@ -48,13 +48,11 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
         className={`bg-navbar md:fixed fixed top-0 lg:top-auto lg:bottom-0 w-full z-50`}
       >
         <div className="">
-          
-          <div className="h-16">
+          <div className="h-16 max-w-4/5 mx-auto">
             <div className="">
               <div className="hidden lg:block">
                 <div className=" grid grid-cols-6 pl-20 text-center">
                   <button
-                    href="#"
                     onClick={() => 
                       {
                         setSwitchPage("home");
@@ -119,7 +117,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
               </div>
             </div>
             <div className="-mr-2 flex lg:hidden">
-              <div className="flex flex-col justify-center py-3 px-2">
+              <div className="flex flex-col justify-center py-3">
                 <h1 className=" font-black font-impact text-base text-navTitle uppercase ">
                   Tanvir Hossain Khan
                 </h1>
@@ -191,9 +189,10 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setMobileMenu(false);
                     setSwitchPage("home");
                     setIsOpen(!isOpen);
-                    setMobileMenu(false);
+                    
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
@@ -205,6 +204,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setAnimateItem(false);
                     setSwitchPage("about");
                     setIsOpen(!isOpen);
                   }}
@@ -218,6 +218,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setAnimateItem(false);
                     setSwitchPage("milestone");
                     setIsOpen(!isOpen);
                   }}
@@ -230,6 +231,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setAnimateItem(false);
                     setSwitchPage("contribution");
                     setIsOpen(!isOpen);
                   }}
@@ -243,6 +245,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setAnimateItem(false);
                     setSwitchPage("gallery");
                     setIsOpen(!isOpen);
                   }}
@@ -256,6 +259,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }
                 <a
                   href="#"
                   onClick={() => {
+                    setAnimateItem(false);
                     setSwitchPage("contact me");
                     setIsOpen(!isOpen);
                   }}

@@ -19,8 +19,8 @@ const Contact = () => {
   return (
       <div>
         <div className="2xl:-mt-0 mt-40 lg:-mt-24 ">
-          <div className="xl:w-4/5 sm:w-2/5 w-2/4 mx-auto">
-            <img src={contactImg} alt="" className="w-5/6 mx-auto" />
+          <div className="xl:w-4/5 sm:w-2/5 w-5/6 mx-auto">
+            <img src={contactImg} alt="" className="md:w-5/6 mx-auto" />
           </div>
           <div className="flex justify-center md:flex-row flex-col mx-auto 2xl:gap-20 gap-10 2xl:py-6 py-4">
               <span className="flex gap-5 md:w-1/3 w-auto mx-auto">
