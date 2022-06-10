@@ -6,17 +6,8 @@ import {
   IconSix,
   IconThree,
   IconTwo,
+  Six,
 } from "../../icons";
-import Nav from "../Nav/Nav";
-
-const animationContent = [
-  { bg_color: "bg-yellow-500", content: <IconOne /> },
-  { bg_color: "bg-red-300", content: <IconTwo /> },
-  { bg_color: "bg-blue-500", content: <IconThree /> },
-  { bg_color: "bg-indigo-500", content: <IconFour /> },
-  { bg_color: "bg-cyan-500", content: <IconFive /> },
-  { bg_color: "bg-gray-500", content: <IconSix /> },
-];
 
 const AnimationMenu = ({setPage, setAnimation, animation}) => {
 
@@ -87,7 +78,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </div>
         <div className="w-full  flex flex-col flex-wrap ">
           <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <IconSix/>
+            <Six/>
           </div>
           <div onClick={() => {
             setPage('contact me');
