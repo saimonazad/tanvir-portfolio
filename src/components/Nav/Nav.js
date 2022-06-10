@@ -40,7 +40,7 @@
 import { Transition } from "@headlessui/react";
 import React, { useState } from "react";
 
-function Nav({ setSwitchPage, switchPage, bg_color,setAnimation }) {
+function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
@@ -57,8 +57,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation }) {
                     href="#"
                     onClick={() => 
                       {
-                        setAnimation(null)
-                        setSwitchPage("home")
+                        setSwitchPage("home");
                       }
                       }
                     className={` hover:bg-gray-700 ${
@@ -120,10 +119,18 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation }) {
               </div>
             </div>
             <div className="-mr-2 flex lg:hidden">
+              <div className="flex flex-col justify-center py-3 px-2">
+                <h1 className=" font-black font-impact text-base text-navTitle uppercase ">
+                  Tanvir Hossain Khan
+                </h1>
+                <p className="text-navTitle font-semibold text-xs font-Montserrat uppercase">
+                  Entrepreneur
+                </p>
+              </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center absolute right-2 top-3 p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className=" inline-flex items-center absolute right-2 top-3 p-2 rounded-md text-navTitle hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -186,6 +193,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation }) {
                   onClick={() => {
                     setSwitchPage("home");
                     setIsOpen(!isOpen);
+                    setMobileMenu(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"

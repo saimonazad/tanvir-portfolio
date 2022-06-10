@@ -19,6 +19,7 @@ module.exports = {
         itemfour: '#7BC7A0',
         itemfive: '#73479E',
         itemsix: '#343434',
+        navTitle: '#FFFFCC'
       },
      
       borderRadius:{

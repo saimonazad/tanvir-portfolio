@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import About from "../About/About";
 import AnimationComponent from "../Animaton/AnimationComponent";
+import AnimationMobile from "../Animaton/AnimationMobile";
 import Contact from "../Contact/Contact";
 import Contribution from "../Contributions/Contributions";
 import PhotoGallery from "../Gallery/Gallery";
@@ -11,22 +12,13 @@ import Nav from "../Nav/Nav";
 const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [animation, setAnimation] = useState(null)
-  
-  useEffect(() => {
-    if (animation) {
-      setTimeout(() => {
-        setAnimation(null)
-      }, 4000);
-    }
-  }, [switchPage])
-
+  const [mobileMenu, setMobileMenu] = useState(false)
+  console.log("switchPage", switchPage);
   return (
     <div className="">
       {switchPage !== "home" && (
         <>
-              {
-                animation === true ? <AnimationComponent/> : (
-                  <div className="">
+              {<div className="">
                       <div className="h-screen">
                           <div className={`${switchPage === "about" ? "hidden" : "block lg:px-28 lg:py-3 absolute top-5% mt-2 lg:mt-0 w-full md:relative"}`}>
                             <h1
@@ -51,28 +43,35 @@ const Layout = ({ children }) => {
                                           </span>
                               </div>
                               <div className={`${switchPage == 'contribution' ||switchPage == 'contact' ? 'xl:px-10 lg:px-20 px-5' : 'xl:px-48 lg:px-20 px-5'} `}>
-                                        {switchPage === "about" && !animation && <About />}
-                                        {switchPage === "milestone" && !animation && <Milestone />}
-                                        {switchPage === "contribution" && !animation && <Contribution />}
-                                        {switchPage === "gallery" && !animation && <PhotoGallery />}
-                                        {switchPage === "contact me" && !animation && <Contact />}
+                                        {switchPage === "about" &&  <About />}
+                                        {switchPage === "milestone" &&  <Milestone />}
+                                        {switchPage === "contribution" && <Contribution />}
+                                        {switchPage === "gallery" && <PhotoGallery />}
+                                        {switchPage === "contact me" && <Contact />}
                                           {/* <div>Test........</div> */}
                               </div>
                           </div>
                       </div>
                       <div>
-                      {switchPage !== "animation" && !animation && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>}
+                      {switchPage !== "home" && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>}
                       </div>
                   </div>
-                )
               }
           
         </>
        
       )}
       {switchPage === "home" && (
-        <HeroSection switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>
+        <div className={`md:block ${mobileMenu && 'hidden'}`}>
+          <HeroSection switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setAnimation={setAnimation} setMobileMenu={setMobileMenu}/>
+        </div>
       )}
+      <div className="md:hidden block">
+      {
+        mobileMenu && (<AnimationMobile switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu}/>)
+      }
+      </div>
+      
     </div>
   );
 };
