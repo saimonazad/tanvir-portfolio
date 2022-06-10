@@ -35,7 +35,7 @@ const AnimationMenu = ({switchPage, setSwitchPage, setAnimation, animation}) => 
 </svg>
         </span>
       </h1>
-      <div className="w-full flex md:justify-between md:space-x-16 space-x-5 md:items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen">
+      <div className="w-full md:flex grid grid-cols-3 md:justify-between md:space-x-16 space-x-5 md:items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen">
         <div className="w-full flex flex-col flex-wrap ">
           <div className=" grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
           <IconOne />

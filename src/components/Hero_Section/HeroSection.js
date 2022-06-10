@@ -37,13 +37,13 @@ const HeroSection = ({
         </div>
         <div className="flex md:justify-around justify-center w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left">
           <div className="">
-              <h1 className="text-4xl xl:text-5xl lg:text-5xl md:text-2xl md:mt-0 font-semibold font-Sacramento text-animationTitle dark:text-white">
+              <h1 className="text-4xl xl:text-5xl lg:text-5xl md:text-2xl md:mt-0 font-semibold font-Sacramento text-animationTitle ">
                 Hello I am
               </h1>
-              <h1 className="md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-semibold font-impact text-heroTitle uppercase dark:text-white py-3">
+              <h1 className="md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-semibold font-impact text-heroTitle uppercase py-3">
                 Tanvir Hossain Khan
               </h1>
-              <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-xl dark:text-gray-400 font-Montserrat uppercase">
+              <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-xl font-Montserrat uppercase">
                 Entrepreneur
               </p>
           </div>
