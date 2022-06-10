@@ -9,10 +9,11 @@ import five from '../../images/mobile/5.png'
 import six from '../../images/mobile/6.png'
 const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
     const [showAnimateItem, setAnimateItem] = useState(true)
+    console.log("showAnimateItem", showAnimateItem);
     return (
         <div id="">
             <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu} setAnimateItem={setAnimateItem}/>
-            <div className={`mt-20 ${!showAnimateItem && 'hidden'}`}>
+            <div className={`mt-20 ${showAnimateItem ? 'block' : 'hidden'}`}>
                 <div className='px-5'>
                     <div className='flex items-center gap-3'>
                         {/* <IconOne/> */}
@@ -24,23 +25,23 @@ const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={two}/>
-                        <p onClick={() => setSwitchPage("about")} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>ABOUT</p>
+                        <p onClick={() => {setSwitchPage("about"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>ABOUT</p>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={three}/>
-                        <p onClick={() => setSwitchPage("milestone")} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MILESTONES</p>
+                        <p onClick={() => {setSwitchPage("milestone"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MILESTONES</p>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={four}/>
-                        <p onClick={() => setSwitchPage("contribution")} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>CONTRIBUTION</p>
+                        <p onClick={() => {setSwitchPage("contribution"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>CONTRIBUTION</p>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={five}/>
-                        <p onClick={() => setSwitchPage("gellary")} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MORE</p>
+                        <p onClick={() => {setSwitchPage("gellary"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MORE</p>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={six}/>
-                        <p onClick={() => setSwitchPage("contact me")} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>CONTACT US</p>
+                        <p onClick={() => {setSwitchPage("contact me"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>CONTACT US</p>
                     </div>
                     
                 </div>

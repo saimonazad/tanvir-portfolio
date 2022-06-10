@@ -20,7 +20,7 @@ const HeroSection = ({
         setAnimation(false);
         setSwitchPage(page);
         setPage('')
-      }, 4000)
+      }, 5000)
     };
   }, [page])
 
@@ -55,16 +55,16 @@ const HeroSection = ({
                 Entrepreneur
               </p>
           </div>
-          <div className="md:mt-0 -mt-20">
+          <div className="">
               <img
-                className="h-screen md:h-screen w-auto "
+                className="max-h-max md:h-screen w-auto "
                 src={ProfilePic}
                 alt="Profile Pic"
               />
           </div>
         </div>
         <div
-            className={`absolute md:left-4% md:bottom-2% -bottom-4% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`absolute md:left-4% md:bottom-2% top-55% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
             <a href="#animationMenu" onClick={() => setMobileMenu(true)}>
                 <svg

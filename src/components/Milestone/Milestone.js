@@ -25,17 +25,17 @@ const Milestone = () => {
         <div className="flex justify-center md:py-10">
           <img src={MilestoneImage} alt="" className="w-full" />
         </div>
-        <div className="grid md:grid-cols-6 grid-cols-2 justify-items-center md:gap-5 gap-2 mt-10 md:mt-0">
+        <div className="grid md:grid-cols-6 grid-cols-2 justify-items-center md:gap-4 gap-3 gap-y-5 md:gap-y-0 mt-10 md:mt-0">
             {
               items.map((item) => {
                 return (
                   <>
                     <div className="">
-                      <p className="text-aboutTitle md:text-base font-Poppins 2xl:text-2xl text-xl font-semibold text-left">
+                      <p className="text-aboutTitle md:text-base font-Poppins 2xl:text-2xl text-xl font-semibold text-left ">
                         {item.title}
                       </p>
                       <div className="w-full">
-                        <ul className="list-disc text-milestoneList lg:text-base md:text-xs mt-4  w-auto">
+                        <ul className="list-disc text-milestoneList lg:text-base md:text-xs md:mt-4 mt-2  w-auto pl-5">
                           {
                             item.milestones.map((value) => {
                               return (<li>{value.title}</li>)

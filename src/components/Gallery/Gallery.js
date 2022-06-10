@@ -21,41 +21,41 @@ const fakeFetch = (url) =>
     );
   });
 const PhotoGallery = () => {
-  const res = useStaticQuery(graphql`
-    query GalleryQuery {
-      datoCmsGallery {
-        id
-        gallery {
-          id
-          year
-          images {
-            size
-            width
-            height
-            path
-            format
-            isImage
-            notes
-            author
-            copyright
-            filename
-            basename
-            exifInfo
-            mimeType
-            blurhash
-            originalId
-            url
-            createdAt
-            gatsbyImageData
-            alt
-            title
-            customData
-          }
-        }
-      }
-    }
-  `);
-  console.log(res);
+  // const res = useStaticQuery(graphql`
+  //   query GalleryQuery {
+  //     datoCmsGallery {
+  //       id
+  //       gallery {
+  //         id
+  //         year
+  //         images {
+  //           size
+  //           width
+  //           height
+  //           path
+  //           format
+  //           isImage
+  //           notes
+  //           author
+  //           copyright
+  //           filename
+  //           basename
+  //           exifInfo
+  //           mimeType
+  //           blurhash
+  //           originalId
+  //           url
+  //           createdAt
+  //           gatsbyImageData
+  //           alt
+  //           title
+  //           customData
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+  // console.log(res);
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,

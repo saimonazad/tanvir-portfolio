@@ -22,8 +22,8 @@ const Contact = () => {
           <div className="xl:w-4/5 sm:w-2/5 w-5/6 mx-auto">
             <img src={contactImg} alt="" className="md:w-5/6 mx-auto" />
           </div>
-          <div className="flex justify-center md:flex-row flex-col mx-auto 2xl:gap-20 gap-10 2xl:py-6 py-4">
-              <span className="flex gap-5 md:w-1/3 w-auto mx-auto">
+          <div className="flex justify-start md:justify-center md:flex-row flex-col 2xl:gap-20 gap-10 2xl:py-6 py-4">
+              <span className="flex gap-5 md:w-1/3 w-auto ">
                 <span>
                   <Address />
                 </span>
@@ -31,21 +31,21 @@ const Contact = () => {
                   {address}
                 </p>
               </span>
-              <span className="flex gap-5 w-auto mx-auto">
+              <span className="flex gap-5 w-auto ">
                 <span>
                   <Call />
                 </span>
                 <p className="2xl:text-lg md:text-left text-base text-heroTitle font-Encode_Sans ">{phone}</p>
               </span>
 
-              <span className="flex gap-5 w-auto mx-auto">
+              <span className="flex gap-5 w-auto">
                 <span>
                   <Email />
                 </span>
                 <p className="2xl:text-lg md:text-left text-base text-heroTitle font-Encode_Sans ">{email}</p>
               </span>
           </div>
-          <div className="flex flex-col justify-center items-center  cursor-pointer">
+          <div className="flex flex-col justify-center items-center  cursor-pointer mt-5 md:mt-0">
             <span>
               <svg
                 width="67"
@@ -73,7 +73,7 @@ const Contact = () => {
                 </defs>
               </svg>
             </span>
-            <span className="text-animationTitle text-lg font-bold">
+            <span className="text-animationTitle text-lg font-bold mt-2">
               Make an appointment
             </span>
           </div>
