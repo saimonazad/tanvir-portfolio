@@ -187,6 +187,11 @@
 
 }
 
+@media only screen and (max-width: 600px) {
+  .scroll{
+    top: 55% !important;
+  }
+}
 .splide__slide.is-active{
   transform: scale(1, 1); 
   background-color: #373737 !important;

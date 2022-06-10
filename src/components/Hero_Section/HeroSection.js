@@ -64,7 +64,7 @@ const HeroSection = ({
           </div>
         </div>
         <div
-            className={`absolute md:left-4% md:bottom-2% top-55% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`scroll absolute md:left-4% md:bottom-2% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
             <a href="#animationMenu" onClick={() => setMobileMenu(true)}>
                 <svg
