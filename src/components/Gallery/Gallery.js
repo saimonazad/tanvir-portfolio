@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { config } from "react-spring";
 import GalleryPhoto from "./GalleryPhoto";
 import VerticalCarousel from "./VerticalCarousel";
 import Gallery from "react-photo-gallery";
 import { graphql, useStaticQuery } from "gatsby";
+import GalleryMasonary from "./GalleryMasonary";
+import equal from "fast-deep-equal";
 const fakeFetch = (url) =>
   new Promise((resolve) => {
     setTimeout(
@@ -21,113 +23,116 @@ const fakeFetch = (url) =>
     );
   });
 const PhotoGallery = () => {
+  const ref = useRef(null);
+
   const res = useStaticQuery(graphql`
     query GalleryQuery {
       datoCmsGallery {
-        id
         gallery {
-          id
           year
-          images {
-            size
-            width
+          imagesgallery {
             height
-            path
-            format
-            isImage
-            notes
-            author
-            copyright
-            filename
-            basename
-            exifInfo
-            mimeType
-            blurhash
-            originalId
-            url
-            createdAt
-            gatsbyImageData
-            alt
-            title
-            customData
+            width
+            image {
+              url
+            }
           }
         }
       }
     }
   `);
-  console.log(res);
+  console.log(res?.datoCmsGallery?.gallery);
+
   const [state, setState] = useState({
     goToSlide: 0,
     offsetRadius: 2,
     showNavigation: true,
     config: config.gentle,
   });
-  let slides = [
-    {
-      key: 1,
-      content: "2015",
-    },
-    {
-      key: 2,
-      content: "2017",
-    },
-    {
-      key: 3,
-      content: "2018",
-    },
-    {
-      key: 4,
-      content: "2019",
-    },
-    {
-      key: 5,
-      content: "2020",
-    },
-    {
-      key: 6,
-      content: "2021",
-    },
-    {
-      key: 7,
-      content: "2022",
-    },
-  ];
+  const [slides, setslides] = useState();
+  useEffect(() => {
+    if (res?.datoCmsGallery?.gallery?.length > 0) {
+      let c = res?.datoCmsGallery?.gallery.map((item, index) => {
+        console.log(index);
+        return {
+          key: index + 1,
+          content: item.year,
+        };
+      });
+      if (!equal(c, slides)) {
+        setslides(c);
+      }
+      console.log("slides", slides);
+    }
+  }, [slides]);
+
+  // let slides = [
+  //   {
+  //     key: 1,
+  //     content: "2021",
+  //   },
+  //   {
+  //     key: 2,
+  //     content: "2022",
+  //   },
+  //   {
+  //     key: 3,
+  //     content: "2020",
+  //   },
+  // ];
 
   const onClick = (event) => {
     alert(event.target.src);
   };
-  const [year, setYear] = useState({});
+
+  const [year, setYear] = useState({
+    key: 1,
+    content: "2022",
+  });
   console.log("year", year);
-  const [photos, setPhotos] = useState([]);
-  useEffect(() => {
-    fakeFetch(`/photos`)
-      .then((urls) =>
-        urls.map((url) => ({ src: url, width: 150, height: 150 }))
-      )
-      .then(setPhotos);
-  }, []);
+  const [photos, setPhotos] = useState();
+  React.useEffect(() => {
+    let b = res?.datoCmsGallery?.gallery.filter(
+      (item) => item.year == year.content
+    );
+    // console.log(b);
+    if (b?.length > 0 && b[0]?.imagesgallery?.length > 0) {
+      let c = b[0].imagesgallery.map((item) => {
+        return {
+          height: item.height,
+          width: item.width,
+          src: item.image.url,
+        };
+      });
+      console.log(c);
+      if (!equal(c, photos)) {
+        console.log("yesssss");
+        setPhotos(c);
+      }
+    }
+  }, [year]);
+
 
   return (
-    <div className="">
-      <p>Gallery Section.......................</p>
+
+    <div>
+      <div class=" flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <div className="relative">
+          <GalleryMasonary photos={photos} year={year} />
+        </div>
+        <div className="lg:h-48 h-20 md:block hidden ml-28">
+          {slides?.length > 0 && (
+            <VerticalCarousel
+              slides={slides}
+              offsetRadius={state.offsetRadius}
+              showNavigation={state.showNavigation}
+              animationConfig={state.config}
+              setYear={setYear}
+            />
+          )}
+        </div>
+      </div>
     </div>
-    // <div className="px-52 py-32 h-screen overflow-auto">
-    //   <div className="flex items-center gap-10 md:justify-between justify-center">
-    //     <div className="md:w-4/5 w-full">
-    //       <Gallery photos={photos} onClick={onClick} />
-    //       {/* <p>Test................</p> */}
-    //     </div>
-    //     <div className="lg:h-48 h-20 md:block hidden">
-    //       <VerticalCarousel
-    //         slides={slides}
-    //         offsetRadius={state.offsetRadius}
-    //         showNavigation={state.showNavigation}
-    //         animationConfig={state.config}
-    //         setYear={setYear}
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 
