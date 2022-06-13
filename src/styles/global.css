@@ -19,7 +19,7 @@
 /*===== VARIABLES CSS =====*/
 
 .item-1{
-  animation: item1Animation 5s forwards;
+  animation: item1Animation 2s forwards;
   position: relative;
   z-index: 5;
 }
@@ -49,7 +49,7 @@
 }
 
 .item-2{
-  animation: item2Animation 0.5s forwards 1.5s;
+  animation: item2Animation 0.5s forwards 0.5s;
   position: relative;
   z-index: 4;
 }
@@ -65,7 +65,7 @@
   }
 }
 .item-3{
-  animation: item3Animation 0.5s forwards 3.4s;
+  animation: item3Animation 0.1s forwards 1.3s;
   position: relative;
   z-index: 1;
 }
@@ -82,7 +82,7 @@
 }
 
 .item-4{
-  animation: item4Animation 0.5s forwards 3s;
+  animation: item4Animation 0.1s forwards 1.3s;
   position: relative;
   z-index: 2;
 }
@@ -99,7 +99,7 @@
 }
 
 .item-5{
-  animation: item5Animation 0.5s forwards 1.5s;
+  animation: item5Animation 0.6s forwards 0.5s;
   position: relative;
   z-index: 4;
 }
@@ -114,7 +114,7 @@
   }
 }
 .item-6{
-  animation: item6Animation 5s forwards;
+  animation: item6Animation 2s forwards;
   position: relative;
   z-index: 5;
 }
@@ -147,7 +147,7 @@
 }
 
 .item-extra{
-  animation: itemExtraAnimation 3s forwards 4.4s;
+  animation: itemExtraAnimation 2s forwards 1.7s;
   position: absolute;
   height: 84%;
   width: 12%;

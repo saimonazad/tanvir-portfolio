@@ -21,7 +21,7 @@ const HeroSection = ({
         setAnimation(false);
         setSwitchPage(page);
         setPage('')
-      }, 7000)
+      }, 3500)
     };
   }, [page])
 
