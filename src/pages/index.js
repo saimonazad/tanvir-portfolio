@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import '@splidejs/react-splide/css';
 import Layout from "../components/Layout/Layout";
 
 const IndexPage = () => {

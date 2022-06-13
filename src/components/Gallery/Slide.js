@@ -10,15 +10,14 @@ function Slide({
   moveSlide,
   delta,
   down,
-  up,
-  getYearData,
+  up
 }) {
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 1));
 
-  const offsetCardClick = (i) => {
-    console.log("i", i);
+  const offsetCardClick = i => {
+    console.log('i', i);
   };
 
   const translateYoffset =
@@ -47,7 +46,6 @@ function Slide({
   } else if (offsetFromMiddle < 0) {
     translateY -= translateYoffset;
   }
- 
 
   return (
     <Spring
@@ -56,23 +54,19 @@ function Slide({
         top: `${
           offsetRadius === 0 ? 50 : 50 + (offsetFromMiddle * 50) / offsetRadius
         }%`,
-        opacity: distanceFactor * distanceFactor,
+        opacity: distanceFactor * distanceFactor
       }}
       config={animationConfig}
     >
-      {(style) => (
+      {style => (
         <div
-          className="  absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
+        className="absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
           style={{
             ...style,
-            zIndex: Math.abs(Math.abs(offsetFromMiddle) - 2),
+            zIndex: Math.abs(Math.abs(offsetFromMiddle) - 2)
           }}
         >
-          <div
-            onClick={() => getYearData()}
-            className=" cursor-pointer absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl font-PT_Serif flex items-center justify-center origin-[50%_50%]"
-            // onClick={() => {moveSlide(offsetFromMiddle)}}
-          >
+          <div className="absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl font-PT_Serif flex items-center justify-center origin-[50%_50%]" onClick={() => {moveSlide(offsetFromMiddle)}}>
             {content}
           </div>
         </div>

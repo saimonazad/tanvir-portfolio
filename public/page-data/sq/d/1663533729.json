@@ -1,1 +1,0 @@
-{"errors":[{"message":"Cannot read property 'type' of undefined","locations":[{"line":4,"column":5}],"path":["datoCmsContact","address"]}],"data":{"datoCmsContact":{"id":"DatoCmsContact-12345307-en","address":null,"email":"info@dreamerzlab.com"}}}
