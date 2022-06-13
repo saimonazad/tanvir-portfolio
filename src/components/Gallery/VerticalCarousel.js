@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import Slide from "./Slide";
 
-
-
-
-
 const NavBtn = styled.div`
   border-radius: 3px;
   cursor: pointer;
@@ -60,6 +56,15 @@ class VerticalCarousel extends React.Component {
     return mod(index, this.props.slides.length);
   };
 
+  getYearData = (e, action) => {
+    const { slides } = this.props;
+    const { index } = this.state;
+    const { setYear } = this.props;
+    const newData = slides.find(
+      (item, i) => this.modBySlidesLength(this.state.index + action) === i
+    );
+    setYear(newData);
+  };
   moveSlide = (direction) => {
     this.setState({
       index: this.modBySlidesLength(this.state.index + direction),
@@ -95,20 +100,18 @@ class VerticalCarousel extends React.Component {
     return presentableSlides;
   }
 
-  getYearData = (e) => {
-    const { slides } = this.props;
-    const { index } = this.state;
-    const {setYear} = this.props
-    const newData = slides.find((item, i) => index === i)
-    setYear(newData);
-  };
   render() {
     const { animationConfig, offsetRadius, showNavigation } = this.props;
     let navigationButtons = null;
     if (showNavigation) {
       navigationButtons = (
         <div className=" cursor-pointer absolute flex flex-col flex-nowrap md:gap-20 lg:gap-52 md:-top-10 lg:-top-14 z-50 mx-auto justify-between h-20">
-          <NavBtn onClick={() => this.moveSlide(1)}>
+          <NavBtn
+            onClick={(e) => {
+              this.getYearData(e, 1);
+              this.moveSlide(1);
+            }}
+          >
             <svg
               width="104"
               height="45"
@@ -122,7 +125,12 @@ class VerticalCarousel extends React.Component {
               />
             </svg>
           </NavBtn>
-          <NavBtn onClick={() => this.moveSlide(-1)}>
+          <NavBtn
+            onClick={(e) => {
+              this.getYearData(e, -1);
+              this.moveSlide(-1);
+            }}
+          >
             <svg
               width="104"
               height="45"
@@ -140,10 +148,8 @@ class VerticalCarousel extends React.Component {
       );
     }
     return (
-
       <React.Fragment>
         <div className="relative flex justify-center w-full h-full">
-          
           {this.getPresentableSlides().map((slide, presentableIndex) => (
             <Slide
               key={slide.key}

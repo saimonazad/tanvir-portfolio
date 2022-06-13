@@ -28,8 +28,8 @@ const HeroSection = ({
   
   return (
     <div>
-      <div className="h-screen flex flex-col items-stretch justify-between " id="home">
-        <div className="mt-auto mb-16 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center md:my-0">
+      <div className="h-screen flex flex-col" id="home">
+        <div className="grow-0 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
           <div className="flex gap-5">
               <span>
                 <Facebook color={"#2D3038"} />
@@ -45,8 +45,8 @@ const HeroSection = ({
               </span>
           </div>
         </div>
-        <div className={`max-w-{1920} flex md:justify-around justify-center w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`} >
-          <div className="">
+        <div className={`grow justify-between flex md:justify-around w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`} >
+          <div className="pt-[50%] md:pt-0">
               <h1 className="xl:text-5xl lg:text-5xl md:text-2xl text-2xl md:mt-0 font-semibold font-Sacramento  text-animationTitle ">
                 Hello I am
               </h1>
@@ -95,6 +95,7 @@ const HeroSection = ({
             </a> 
         </div>
       </div>
+
       <div className="" id="animationMenu">
           <div className="md:hidden block h-screen">
             <AnimationMobile setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
