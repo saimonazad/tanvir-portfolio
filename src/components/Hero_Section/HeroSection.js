@@ -1,25 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 import AnimationComponent from "../Animaton/AnimationComponent";
 import AnimationMenu from "../Animaton/AnimationMenu";
+import AnimationMobile from "../Animaton/AnimationMobile";
+import { scrollTo } from "../Scroll/ScrollTo";
+import TextAnimation from "./TextAnimation";
 const HeroSection = ({
   successMessage,
   setSwitchPage,
   switchPage,
   setSuccessMessage,
   setAnimation,
-  animation
+  animation,
+  setMobileMenu
 }) => {
-  useEffect(() =>{
-    if(switchPage == 'home'){
-      setAnimation(null)
-    }
-  }, [switchPage])
+  const [page, setPage] = useState('')
+  useEffect(() => {
+    if (page) {
+      setTimeout(() => {
+        setAnimation(false);
+        setSwitchPage(page);
+        setPage('')
+      }, 5000)
+    };
+  }, [page])
+
+  
   return (
     <div>
-      <div className="h-screen">
-        <div className="md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
+      <div className="h-screen flex flex-col" id="home">
+        <div className="grow-0 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
           <div className="flex gap-5">
               <span>
                 <Facebook color={"#2D3038"} />
@@ -35,30 +46,31 @@ const HeroSection = ({
               </span>
           </div>
         </div>
-        <div className="flex md:justify-around justify-center w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left">
-          <div className="">
-              <h1 className="text-4xl xl:text-5xl lg:text-5xl md:text-2xl md:mt-0 font-semibold font-Sacramento text-animationTitle ">
+        <div className={`grow justify-between flex md:justify-around w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`} >
+          <div className="pt-[50%] md:pt-0">
+              {/* <h1 className="xl:text-5xl lg:text-5xl md:text-2xl text-2xl md:mt-0 font-semibold font-Sacramento  text-animationTitle ">
                 Hello I am
-              </h1>
-              <h1 className="md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-semibold font-impact text-heroTitle uppercase py-3">
+              </h1> */}
+              <TextAnimation />
+              <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
                 Tanvir Hossain Khan
               </h1>
-              <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-xl font-Montserrat uppercase">
+              <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-sm font-Montserrat uppercase">
                 Entrepreneur
               </p>
           </div>
-          <div className="md:mt-0 -mt-20">
+          <div className="">
               <img
-                className="h-screen md:h-screen w-auto "
+                className="max-h-max md:h-screen w-auto "
                 src={ProfilePic}
                 alt="Profile Pic"
               />
           </div>
         </div>
         <div
-            className={`absolute md:left-4% md:bottom-2% -bottom-4% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`absolute md:left-4% bottom-4% cursor-pointer left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
-            <a href="#animationMenu">
+            <a onClick={() => scrollTo({ id: "animationMenu" })}>
                 <svg
                 width="48"
                 height="131"
@@ -85,9 +97,18 @@ const HeroSection = ({
             </a> 
         </div>
       </div>
-      <div className="mt-5"> 
-      <AnimationMenu animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+
+      <div className="" id="animationMenu">
+          <div className="md:hidden block h-screen">
+            <AnimationMobile setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+          </div>
+          <div className="md:block hidden mt-5">
+            {
+              animation ? <AnimationComponent/> : <AnimationMenu setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+            }          
+          </div>
       </div>
+     
     </div>
   );
 };

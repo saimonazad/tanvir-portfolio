@@ -11,4 +11,5 @@ export { default as IconTwo } from './IconTwo';
 export { default as LinkedIn } from './Linkedin';
 export { default as Twitter } from './Twitter';
 export { default as Youtube } from './Youtube';
+export { default as Six } from './whiteSix';
 

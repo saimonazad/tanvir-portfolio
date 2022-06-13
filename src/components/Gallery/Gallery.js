@@ -116,7 +116,7 @@ const PhotoGallery = () => {
   return (
 
     <div>
-      <div class=" flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-center items-start mx-auto">
         <div className="relative">
           <GalleryMasonary photos={photos} year={year} />
         </div>

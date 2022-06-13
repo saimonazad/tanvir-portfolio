@@ -101,7 +101,7 @@ const Contributions = () => {
             </div>
             <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
                   <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="red" />
+                    <ContributionIcon color="#D31459" />
                   </span>
                   <p className="text-aboutSubtitle dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
                     He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”

@@ -19,6 +19,7 @@ module.exports = {
         itemfour: '#7BC7A0',
         itemfive: '#73479E',
         itemsix: '#343434',
+        navTitle: '#FFFFCC'
       },
      
       borderRadius:{
@@ -35,7 +36,7 @@ module.exports = {
         Poppins: ['Poppins', 'sans-serif'],
         Open_Sans: ['Open Sans', 'sans-serif'],
         Inter: ['Inter', 'sans-serif'],
-        impact: ['impact', 'sans-serif'],
+        impact: ['Maximum Impact', 'sans-serif'],
         Encode_Sans: ['Encode Sans', 'sans-serif'],
        },
        spacing: {
@@ -49,6 +50,7 @@ module.exports = {
         '5%': '5%',
         '85%': '85%',
         '75%': '75%',
+        '55%': '55%',
         '60%': '60%',
         '40%': '40%',
         '6%': '7%',
@@ -58,6 +60,13 @@ module.exports = {
       },
       maxHeight: {
         '1/2': '50%',
+        
+      },
+      maxWidth: {
+        '4/5': '80%',
+      },
+      letterSpacing: {
+        custom: '0.055em',
       }
     },
   },
