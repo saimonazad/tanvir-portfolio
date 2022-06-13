@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import About from "../About/About";
 import AnimationComponent from "../Animaton/AnimationComponent";
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [animation, setAnimation] = useState(null)
   const [mobileMenu, setMobileMenu] = useState(false)
-  
+
   return (
     <div className="">
       {switchPage !== "home" && (
@@ -62,15 +62,15 @@ const Layout = ({ children }) => {
        
       )}
       {switchPage === "home" && (
-        <div className={`md:block ${mobileMenu && 'hidden'}`}>
+        <div >
           <HeroSection switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setAnimation={setAnimation} setMobileMenu={setMobileMenu}/>
         </div>
       )}
-      <div className="md:hidden block">
+      {/* <div className="md:hidden block">
       {
         mobileMenu && (<AnimationMobile switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu}/>)
       }
-      </div>
+      </div> */}
       
     </div>
   );

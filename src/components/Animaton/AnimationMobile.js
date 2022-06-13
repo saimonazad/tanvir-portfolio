@@ -7,21 +7,21 @@ import three from '../../images/mobile/3.png'
 import four from '../../images/mobile/4.png'
 import five from '../../images/mobile/5.png'
 import six from '../../images/mobile/6.png'
+import { scrollTo } from '../Scroll/ScrollTo';
 const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
     const [showAnimateItem, setAnimateItem] = useState(true)
-    console.log("showAnimateItem", showAnimateItem);
     return (
-        <div id="">
-            <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu} setAnimateItem={setAnimateItem}/>
-            <div className={`mt-20 ${showAnimateItem ? 'block' : 'hidden'}`}>
+        <div className='h-auto my-10'>
+            {/* <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu} setAnimateItem={setAnimateItem}/> */}
+            <div className={`${showAnimateItem ? 'block' : 'hidden'} flex items-center`}>
                 <div className='px-5'>
                     <div className='flex items-center gap-3'>
                         {/* <IconOne/> */}
                         <img src={one}/>
-                        <p onClick={() => {
-                            setSwitchPage("home");
-                            setMobileMenu(false);   
-                        }} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>HOME</p>
+                        <a onClick={() => {
+                            setSwitchPage("home")
+                            scrollTo({ id: "home" })
+                        }} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>HOME</a>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={two}/>
@@ -43,7 +43,6 @@ const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
                     <img src={six}/>
                         <p onClick={() => {setSwitchPage("contact me"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>CONTACT US</p>
                     </div>
-                    
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 import AnimationComponent from "../Animaton/AnimationComponent";
 import AnimationMenu from "../Animaton/AnimationMenu";
 import AnimationMobile from "../Animaton/AnimationMobile";
+import { scrollTo } from "../Scroll/ScrollTo";
 const HeroSection = ({
   successMessage,
   setSwitchPage,
@@ -24,9 +25,10 @@ const HeroSection = ({
     };
   }, [page])
 
+  
   return (
     <div >
-      <div className="h-screen" >
+      <div  className="md:h-screen" id="home">
         <div className="md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
           <div className="flex gap-5">
               <span>
@@ -64,9 +66,9 @@ const HeroSection = ({
           </div>
         </div>
         <div
-            className={`scroll absolute md:left-4% md:bottom-2% left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`scroll absolute md:left-4% md:bottom-2% cursor-pointer left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
-            <a href="#animationMenu" onClick={() => setMobileMenu(true)}>
+            <a onClick={() => scrollTo({ id: "animationMenu" })}>
                 <svg
                 width="48"
                 height="131"
@@ -92,14 +94,19 @@ const HeroSection = ({
               </svg>
             </a> 
         </div>
+        
       </div>
-      <div className="mt-5 "> 
-          <div className="md:block hidden">
+        <div  className="" id="animationMenu">
+          <div className="md:hidden block">
+            <AnimationMobile setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
+          </div>
+          <div className="md:block hidden mt-5">
             {
               animation ? <AnimationComponent/> : <AnimationMenu setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
-            }
+            }          
           </div>
-      </div>
+        </div>
+     
     </div>
   );
 };

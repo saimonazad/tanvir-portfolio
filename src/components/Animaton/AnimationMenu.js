@@ -5,10 +5,11 @@ import three from '../../images/desktop/3.png'
 import four from '../../images/desktop/4.png'
 import five from '../../images/desktop/5.png'
 import six from '../../images/desktop/6.png'
+import { scrollTo } from "../Scroll/ScrollTo";
 const AnimationMenu = ({setPage, setAnimation, animation}) => {
 
   return (
-    <div className={`max-w-{1920} relative` } id="animationMenu">
+    <div className={`max-w-{1920} relative` } >
       <h1 className="z-50 absolute font-Poppins font-extrabold text-7xl pl-8 pb-4 text-stroke md:top-32 top-8 md:left-16">
         <span>
           <svg className="w-11/12 md:w-auto" width="595" height="74" viewBox="0 0 595 74" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +23,8 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
             <img src={one}/>
           </div>
           <div onClick={() => {
-            // setPage('home');
+            setPage('home')
+            scrollTo({ id: "home" })
             // setAnimation(false);
           }} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
             HOME
