@@ -20,7 +20,7 @@ const Milestone = () => {
   
   const {items} = res?.datoCmsMilestone
   return (
-    <div className="md:mt-0 mt-32">
+    <div className="md:-mt-28 2xl:-mt-10 mt-32">
       <div>
         <div className="flex justify-center md:py-10">
           <img src={MilestoneImage} alt="" className="w-full" />

@@ -12,6 +12,7 @@ function Slide({
   down,
   up,
   getYearData,
+  isMobile
 }) {
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
@@ -54,7 +55,7 @@ function Slide({
       to={{
         transform: `translateX(0%) translateY(${translateY}%) scale(${distanceFactor})`,
         top: `${
-          offsetRadius === 0 ? 60 : 50 + (offsetFromMiddle * 40) / offsetRadius
+          offsetRadius === 0 ? 60 : 50 + (offsetFromMiddle * (isMobile ? 35 : 40)) / offsetRadius
         }%`,
         opacity: distanceFactor * distanceFactor,
       }}
@@ -70,7 +71,7 @@ function Slide({
         >
           <div
             onClick={() => getYearData()}
-            className=" cursor-pointer absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl font-PT_Serif flex items-center justify-center origin-[50%_50%]"
+            className=" cursor-pointer absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl text-2xl font-PT_Serif flex items-center justify-center origin-[50%_50%]"
             // onClick={() => {moveSlide(offsetFromMiddle)}}
           >
             {content}
