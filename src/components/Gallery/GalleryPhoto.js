@@ -30,6 +30,18 @@ function GalleryPhoto() {
       height: 1,
     },
     {
+      src: "https://source.unsplash.com/2ShvY8Lf6l0/1600x1200",
+      srcSet: [
+        "https://source.unsplash.com/2ShvY8Lf6l0/500x375 20w",
+        "https://source.unsplash.com/2ShvY8Lf6l0/800x600 20w",
+        "https://source.unsplash.com/2ShvY8Lf6l0/1024x768 304w",
+        "https://source.unsplash.com/2ShvY8Lf6l0/1600x1200 30w",
+      ],
+      sizes: ["(min-width: 480px) 20vw,(min-width: 1024px) 20.3vw,20vw"],
+      width: 1,
+      height: 1,
+    },
+    {
       src: "https://source.unsplash.com/Dm-qxdynoEc/1600x1600",
       srcSet: [
         "https://source.unsplash.com/Dm-qxdynoEc/500x500 500w",
@@ -118,19 +130,24 @@ function GalleryPhoto() {
   return (
     <div className='w-full'>
       {/* <Gallery photos={photos} onClick={openLightbox} direction="row"/> */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-        {photos.map((image) => (
-          <Imgix
-            sizes="(min-width: 960px) 33vw, (min-width: 640px) 50vw, 100vw"
-            src={image.src}
-            imgixParams={{
-              fit: "crop",
-              fm: "jpg",
-            }}
-            srcset={image.srcset}
-            className="w-full lg:h-48 xl:h-60 md:h-16 h-auto"
-          />
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {photos.map((image, i) => {
+          const stylename = i
+          return(
+            <Imgix
+          sizes="(min-width: 960px) 33vw, (min-width: 640px) 50vw, 100vw"
+          src={image.src}
+          imgixParams={{
+            fit: "crop",
+            fm: "jpg",
+          }}
+          srcset={image.srcset}
+          className={`w-full lg:h-48 xl:h-60 md:h-16 h-auto` }
+        />
+          )
+          
+          
+})}
         
       </div>
       {/* <ModalGateway>

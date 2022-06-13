@@ -13,10 +13,19 @@ module.exports = {
         aboutDescription: "#6F6F6F",
         milestoneList: '#6C6C6F',
         bodyBg: '#F6F6F6',
+        itemone: '#FBEE6F',
+        itemtwo: '#F77C70',
+        itemthree: '#326AFF',
+        itemfour: '#7BC7A0',
+        itemfive: '#73479E',
+        itemsix: '#343434',
       },
      
       borderRadius:{
         aboutBorderRadius: '30px'
+      },
+      margin:{
+        "40%":"20%"
       },
       fontFamily: {
         Sacramento: ['Sacramento', 'cursive'],
@@ -31,6 +40,7 @@ module.exports = {
        },
        spacing: {
         'custom': '140%',
+        'about': '25%',
       },
       inset: {
         '10%': '10%',
@@ -42,6 +52,12 @@ module.exports = {
         '60%': '60%',
         '40%': '40%',
         '6%': '7%',
+        '20%': '20%',
+        '30%': '30%',
+        '85%': '85%',
+      },
+      maxHeight: {
+        '1/2': '50%',
       }
     },
   },

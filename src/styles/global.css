@@ -13,10 +13,171 @@
 
 @font-face {
   font-family: "impact";
-  src: local("impact"), url("../fonts//impact.ttf") format("ttf");
+  src: font-url("../fonts//impact.ttf") format("truetype");
 }
 .profileImage {
   background-image: url("https://www.w3schools.com/howto/img_girl.jpg");
   height: 100%;
 }
 /*===== VARIABLES CSS =====*/
+
+
+.item-1{
+  animation: item1Animation 3s forwards;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes item1Animation {
+  0% {
+    left:0px 
+  }
+  33.3%{
+    left: 17.5%;
+    opacity: 2;
+    
+  }
+  66.7%{
+    left: 35%;
+    opacity: 2;
+  }
+  97%{
+    left: 43.5%
+  }
+  98%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.item-2{
+  animation: item2Animation 0.5s forwards 1s;
+  position: relative;
+  z-index: 4;
+}
+
+@keyframes item2Animation {
+  0% {
+    left:0px ;
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    left: 0;
+  }
+}
+.item-3{
+  animation: item3Animation 0.5s forwards 2s;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes item3Animation {
+  0% {
+    left:0 ;
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    left: 0;
+  }
+}
+
+.item-4{
+  animation: item4Animation 0.5s forwards 2s;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes item4Animation {
+  0% {
+    left:0px ;
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    left: 0%;
+  }
+}
+
+.item-5{
+  animation: item5Animation 0.5s forwards 1s;
+  position: relative;
+  z-index: 4;
+}
+@keyframes item5Animation {
+  0% {
+    left:0px ;
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+    left: 0;
+  }
+}
+.item-6{
+  animation: item6Animation 3s forwards;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes item6Animation {
+  0% {
+    left:0px 
+  }
+  33.3%{
+    left: -17.5%;
+    opacity: 2;
+    z-index: 5;
+  }
+  66.7%{
+    left: -35%;
+    opacity: 2;
+  }
+  97%{
+    opacity: 2;
+    left: -44%
+  }
+  98%{
+    opacity: 1;
+    left: -44%;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.item-extra{
+  animation: itemExtraAnimation 2s forwards 3s;
+  position: absolute;
+  height: 80%;
+  width: 10%;
+  z-index: 0;
+  left:-5900px;
+  
+}
+
+@keyframes itemExtraAnimation {
+  0% {
+    left: 41%;
+    transform: rotate(-80deg);
+  }
+  100%{
+    left: 41%;
+    transform: rotate(90deg);
+    transform: scaleX(10);
+    height: 6rem;
+    bottom: 0;
+  }
+}
+
+.splide__slide.is-active{
+  transform: scale(1, 1); 
+  background-color: #373737 !important;
+  color:white !important
+}
+.splide__slide.is-active p{
+  color: white !important;
+}

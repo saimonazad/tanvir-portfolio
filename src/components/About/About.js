@@ -1,31 +1,35 @@
 import React from "react";
-
+import {graphql, useStaticQuery} from 'gatsby'
 const About = () => {
+  const res = useStaticQuery(graphql`
+    query AboutQuery {
+      datoCmsAbout {
+        id
+        title
+        content
+      }
+    }
+  `);
+
+  const {title, content} = res.datoCmsAbout
   return (
-    <div className="fixed lg:top-5% top-10% left-2% 2xl:px-52">
-      <div className="w-full ">
-        <div className="px-5 py-2">
-          <p className="text-aboutTitle font-impact xl:text-7xl lg:text-5xl md:text-3xl text-xl font-normal text-center">
-            Tanvir Hossain Khan
-          </p>
-        </div>
-        <div className="flex justify-center text-center md:px-24 xl:px-20 lg:px-10 lg:mt-5 mt-5">
-          <div className="2xl:h-[38vw] md:h-[75vw] xl:h-[47vw] overflow-auto rounded-t-aboutBorderRadius shadow-2xl bg-white md:px-10 lg:px-5 px-5 md:pt-5 pt-8 xl:pt-10 lg:w-5/6 w-4/5 md:w-full pb-44">
-            <p className="text-aboutSubtitle tracking-widest  md:text-xl text-base lg:text-xl xl:text-2xl font-PT_Serif font-bold uppercase lg:py-16 py-5">
-              “Collaboration is Always Better than Competition.”
+    <div className="text-center ">
+      <div className="xl:pt-24 xl:pb-5 pt-20 2xl:pt-48 2xl:pb-10 text-center">
+        <p className="text-aboutTitle text-3xl sm:text-4xl 2xl:text-7xl md:text-5xl lg:text-3xl font-impact font-black">Tanvir Hossain Khan</p>
+      </div>
+      <div className="bg-white rounded-t-aboutBorderRadius lg:pb-20 2xl:pb-about 2xl:pt-20 py-10 2xl:px-40 px-10 shadow-lg">
+            <p className="text-aboutSubtitle tracking-widest md:text-xl text-xs lg:text-xl 2xl:text-2xl font-PT_Serif font-bold uppercase xl:py-5 md:py-8 my-5">
+               {title}
             </p>
-            <p className="text-aboutDescription font-light tracking-widest text-xs xl:text-xl lg:text-lg md:text-base font-PT_Serif uppercase xl:pb-16 pb-6">
-              He always believes any problem can be solved if we can all work as
-              one and from that idea his belief is “Collaboration is Always
-              Better than Competition.
+             <p className="text-aboutDescription font-light tracking-widest text-xs xl:text-2xl lg:text-base md:text-base font-PT_Serif uppercase xl:pb-10 pb-2">
+              {content}
             </p>
-            <button className="bg-animationTitle font-Poppins rounded px-3 p-2 md:text-lg text-sm outline-none focus:outline-none text-white">
+             <button className="bg-animationTitle font-Poppins rounded px-3 p-2 md:text-lg text-sm outline-none focus:outline-none text-white">
               Read more
             </button>
-          </div>
-        </div>
       </div>
     </div>
+
   );
 };
 
