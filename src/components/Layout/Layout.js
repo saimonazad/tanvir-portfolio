@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="">
-      {switchPage !== "home" && (
+      {switchPage !== "home" && switchPage !== "gallery" && (
         <>
               {<div className="">
                       <div className="h-screen">
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
                                         {switchPage === "about" &&  <About />}
                                         {switchPage === "milestone" &&  <Milestone />}
                                         {switchPage === "contribution" && <Contribution />}
-                                        {switchPage === "gallery" && <PhotoGallery />}
+                                        
                                         {switchPage === "contact me" && <Contact />}
                                           {/* <div>Test........</div> */}
                               </div>
@@ -55,22 +55,21 @@ const Layout = ({ children }) => {
                       <div>
                       {switchPage !== "home" && <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>}
                       </div>
-                  </div>
+                </div>
               }
           
         </>
        
       )}
+
+      {
+        switchPage === "gallery" && <PhotoGallery switchPage={switchPage} setSwitchPage={setSwitchPage} setAnimation={setAnimation}/>
+      }
       {switchPage === "home" && (
         <div >
           <HeroSection switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setAnimation={setAnimation} setMobileMenu={setMobileMenu}/>
         </div>
       )}
-      {/* <div className="md:hidden block">
-      {
-        mobileMenu && (<AnimationMobile switchPage={switchPage} animation={animation} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu}/>)
-      }
-      </div> */}
       
     </div>
   );

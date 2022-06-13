@@ -19,7 +19,7 @@
 /*===== VARIABLES CSS =====*/
 
 .item-1{
-  animation: item1Animation 3s forwards;
+  animation: item1Animation 5s forwards;
   position: relative;
   z-index: 5;
 }
@@ -49,7 +49,7 @@
 }
 
 .item-2{
-  animation: item2Animation 0.5s forwards 1s;
+  animation: item2Animation 0.5s forwards 1.5s;
   position: relative;
   z-index: 4;
 }
@@ -65,7 +65,7 @@
   }
 }
 .item-3{
-  animation: item3Animation 0.5s forwards 2s;
+  animation: item3Animation 0.5s forwards 3.2s;
   position: relative;
   z-index: 1;
 }
@@ -82,7 +82,7 @@
 }
 
 .item-4{
-  animation: item4Animation 0.5s forwards 2s;
+  animation: item4Animation 0.5s forwards 3s;
   position: relative;
   z-index: 2;
 }
@@ -99,7 +99,7 @@
 }
 
 .item-5{
-  animation: item5Animation 0.5s forwards 1s;
+  animation: item5Animation 0.5s forwards 1.5s;
   position: relative;
   z-index: 4;
 }
@@ -114,7 +114,7 @@
   }
 }
 .item-6{
-  animation: item6Animation 3s forwards;
+  animation: item6Animation 5s forwards;
   position: relative;
   z-index: 5;
 }
@@ -133,38 +133,59 @@
     opacity: 2;
   }
   97%{
-    opacity: 2;
+    opacity: 0;
     left: -44%
   }
   98%{
-    opacity: 1;
+    opacity: 0;
     left: -44%;
   }
   100%{
+    left: -44%;
     opacity: 0;
   }
 }
 
 .item-extra{
-  animation: itemExtraAnimation 3s forwards 3s;
+  animation: itemExtraAnimation 3s forwards 4.4s;
   position: absolute;
-  height: 80%;
-  width: 10%;
+  height: 84%;
+  width: 12%;
   z-index: 0;
   left:-5900px;
-  
+  z-index: 6;
 }
 
 @keyframes itemExtraAnimation {
   0% {
     left: 41%;
-    transform: rotateZ(20deg);
+    /* transform: rotateZ(10deg); */
   }
-  20%{
+  /* 20%{
     left: 41%;
-    transform: rotateZ(90deg);
+    transform: rotateZ(20deg);
+  } 
+  30%{
+    left: 41%;
+    transform: rotateZ(30deg);
+  } 
+  40%{
+    left: 41%;
+    transform: rotateZ(40deg);
+  } 
+  50%{
+    left: 41%;
+    transform: rotateZ(50deg);
   } 
   60%{
+    left: 41%;
+    transform: rotateZ(60deg);
+  }
+  70%{
+    left: 41%;
+    transform: rotateZ(70deg);
+  } */
+  80%{
     left: 41%;
     transform: rotateZ(90deg);
   }
@@ -199,4 +220,24 @@
 }
 .splide__slide.is-active p{
   color: white !important;
+}
+
+
+.gallery {
+  scrollbar-width: thin;
+  scrollbar-color: #326AFF #fff;
+}
+
+
+/* For Chrome, EDGE, Opera, Others */
+.gallery::-webkit-scrollbar {
+  width: 2px;
+}
+
+.gallery::-webkit-scrollbar-track { 
+  background: #fff;
+}
+
+.gallery::-webkit-scrollbar-thumb { 
+  background:#326AFF;
 }

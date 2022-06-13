@@ -101,11 +101,11 @@ class VerticalCarousel extends React.Component {
   }
 
   render() {
-    const { animationConfig, offsetRadius, showNavigation } = this.props;
+    const { animationConfig, offsetRadius, showNavigation, isMobile } = this.props;
     let navigationButtons = null;
     if (showNavigation) {
       navigationButtons = (
-        <div className=" cursor-pointer absolute flex flex-col flex-nowrap md:gap-20 lg:gap-52 md:-top-10 lg:-top-14 z-50 mx-auto justify-between h-20">
+        <div className=" cursor-pointer  flex flex-col flex-nowrap md:gap-20 lg:gap-52  z-50 mx-auto justify-between">
           <NavBtn
             onClick={(e) => {
               this.getYearData(e, 1);
@@ -113,7 +113,7 @@ class VerticalCarousel extends React.Component {
             }}
           >
             <svg
-              width="104"
+              width={isMobile ? '55' : '104'}
               height="45"
               viewBox="0 0 104 45"
               fill="none"
@@ -132,7 +132,7 @@ class VerticalCarousel extends React.Component {
             }}
           >
             <svg
-              width="104"
+              width={isMobile ? '55' : '104'}
               height="45"
               viewBox="0 0 104 45"
               fill="none"

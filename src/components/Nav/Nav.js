@@ -48,7 +48,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
         className={`bg-navbar md:fixed fixed top-0 lg:top-auto lg:bottom-0 w-full z-50`}
       >
         <div className="">
-          <div className="h-16 max-w-4/5 mx-auto">
+          <div className="h-20 max-w-4/5 mx-auto">
             <div className="">
               <div className="hidden lg:block">
                 <div className=" grid grid-cols-6 pl-20 text-center">
@@ -60,7 +60,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                       }
                     className={` hover:bg-gray-700 ${
                       switchPage === "home" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex justify-center items-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex justify-center items-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     Home
                   </button>
@@ -70,7 +70,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     onClick={() => setSwitchPage("about")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "about" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     About
                   </a>
@@ -80,7 +80,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     onClick={() => setSwitchPage("milestone")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "milestone" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     Milestone
                   </a>
@@ -90,7 +90,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     onClick={() => setSwitchPage("contribution")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "contribution" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     Contribution
                   </a>
@@ -100,7 +100,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     onClick={() => setSwitchPage("gallery")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "more" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     More
                   </a>
@@ -109,7 +109,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     onClick={() => setSwitchPage("contact me")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "contact" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-16 flex items-center justify-center text-white px-6 py-2 w-auto text-sm font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     Let get in touch
                   </a>
@@ -189,7 +189,6 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setMobileMenu(false);
                     setSwitchPage("home");
                     setIsOpen(!isOpen);
                     
@@ -204,7 +203,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setAnimateItem(false);
+                    // setAnimateItem(false);
                     setSwitchPage("about");
                     setIsOpen(!isOpen);
                   }}
@@ -218,7 +217,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setAnimateItem(false);
+                    // setAnimateItem(false);
                     setSwitchPage("milestone");
                     setIsOpen(!isOpen);
                   }}
@@ -231,7 +230,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setAnimateItem(false);
+                    // setAnimateItem(false);
                     setSwitchPage("contribution");
                     setIsOpen(!isOpen);
                   }}
@@ -245,7 +244,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setAnimateItem(false);
+                    // setAnimateItem(false);
                     setSwitchPage("gallery");
                     setIsOpen(!isOpen);
                   }}
@@ -259,7 +258,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                 <a
                   href="#"
                   onClick={() => {
-                    setAnimateItem(false);
+                    // setAnimateItem(false);
                     setSwitchPage("contact me");
                     setIsOpen(!isOpen);
                   }}

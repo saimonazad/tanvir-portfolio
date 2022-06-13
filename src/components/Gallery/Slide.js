@@ -54,7 +54,7 @@ function Slide({
       to={{
         transform: `translateX(0%) translateY(${translateY}%) scale(${distanceFactor})`,
         top: `${
-          offsetRadius === 0 ? 50 : 50 + (offsetFromMiddle * 50) / offsetRadius
+          offsetRadius === 0 ? 60 : 50 + (offsetFromMiddle * 40) / offsetRadius
         }%`,
         opacity: distanceFactor * distanceFactor,
       }}
@@ -62,7 +62,7 @@ function Slide({
     >
       {(style) => (
         <div
-          className="  absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
+          className=" absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
           style={{
             ...style,
             zIndex: Math.abs(Math.abs(offsetFromMiddle) - 2),
