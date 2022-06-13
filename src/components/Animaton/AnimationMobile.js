@@ -11,10 +11,10 @@ import { scrollTo } from '../Scroll/ScrollTo';
 const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
     const [showAnimateItem, setAnimateItem] = useState(true)
     return (
-        <div className='h-auto my-10'>
+        <div className='h-auto my-10 py-20'>
             {/* <Nav switchPage={switchPage} setSwitchPage={setSwitchPage} setMobileMenu={setMobileMenu} setAnimateItem={setAnimateItem}/> */}
-            <div className={`${showAnimateItem ? 'block' : 'hidden'} flex items-center`}>
-                <div className='px-5'>
+            <div className={`${showAnimateItem ? 'block' : 'hidden'} flex items-center justify-center`}>
+                <div className='px-5 flex flex-col gap-y-6'>
                     <div className='flex items-center gap-3'>
                         {/* <IconOne/> */}
                         <img src={one}/>

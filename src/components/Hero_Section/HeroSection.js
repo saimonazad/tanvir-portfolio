@@ -27,9 +27,9 @@ const HeroSection = ({
 
   
   return (
-    <div >
-      <div  className="md:h-screen" id="home">
-        <div className="md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
+    <div>
+      <div className="h-screen flex flex-col items-stretch justify-between " id="home">
+        <div className="mt-auto mb-16 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center md:my-0">
           <div className="flex gap-5">
               <span>
                 <Facebook color={"#2D3038"} />
@@ -66,7 +66,7 @@ const HeroSection = ({
           </div>
         </div>
         <div
-            className={`scroll absolute md:left-4% md:bottom-2% cursor-pointer left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
+            className={`absolute md:left-4% bottom-4% cursor-pointer left-4% ${switchPage !== "home" ? "hidden" : "block"}`}
           >
             <a onClick={() => scrollTo({ id: "animationMenu" })}>
                 <svg
@@ -94,10 +94,9 @@ const HeroSection = ({
               </svg>
             </a> 
         </div>
-        
       </div>
-        <div  className="" id="animationMenu">
-          <div className="md:hidden block">
+      <div className="" id="animationMenu">
+          <div className="md:hidden block h-screen">
             <AnimationMobile setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
           </div>
           <div className="md:block hidden mt-5">
@@ -105,7 +104,7 @@ const HeroSection = ({
               animation ? <AnimationComponent/> : <AnimationMenu setPage={setPage} animation={animation} setAnimation={setAnimation} setSwitchPage={setSwitchPage} switchPage={switchPage}/>
             }          
           </div>
-        </div>
+      </div>
      
     </div>
   );
