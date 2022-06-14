@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     <div className="">
       {switchPage !== "home" && switchPage !== "gallery" && (
         <>
-              {<div className="">
+              {<div className={`${ switchPage == 'contribution'  && 'bg-bodyBg'}`}>
                       <div className="h-screen">
                           <div className={`${switchPage === "about" ? "hidden" : "lg:px-28 lg:py-3 absolute md:top-5% top-6% mt-2 lg:mt-0 w-full md:relative"} `}>
                             <h1
