@@ -88,7 +88,7 @@ const Contributions = () => {
                   <span className="p-3 md:mb-4 xl:mb-10 ">
                     <ContributionIcon color="#373737" bcolor="white" />
                   </span>
-                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
                     He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
                   </p>
             </div>
@@ -96,7 +96,7 @@ const Contributions = () => {
                   <span className="p-3 md:mb-4 xl:mb-10 ">
                     <ContributionIcon color="white" bcolor="#373737"/>
                   </span>
-                  <p className="text-white dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                  <p className="text-white uppercase 2xl:text-2xl sm:text-sm text-xs">
                     He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
                   </p>
             </div>
@@ -104,7 +104,7 @@ const Contributions = () => {
                   <span className="p-3 md:mb-4 xl:mb-10 ">
                     <LastContributionIcon/>
                   </span>
-                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase 2xl:text-2xl sm:text-sm text-xs">
+                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
                     He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
                   </p>
             </div>

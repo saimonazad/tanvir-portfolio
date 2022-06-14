@@ -37,7 +37,7 @@ const AnimationMobile = ({switchPage, setSwitchPage, setMobileMenu}) => {
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={five}/>
-                        <p onClick={() => {setSwitchPage("gellary"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MORE</p>
+                        <p onClick={() => {setSwitchPage("gallery"); setAnimateItem(false)}} className='text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer'>MORE</p>
                     </div>
                     <div className='flex items-center gap-3'>
                     <img src={six}/>

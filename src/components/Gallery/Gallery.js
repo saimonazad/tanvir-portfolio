@@ -116,23 +116,7 @@ const PhotoGallery = ({switchPage,setSwitchPage,setAnimation}) => {
   return (
 
     <div>
-      {/* <div class="flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-        <div className="relative">
-          <GalleryMasonary photos={photos} year={year} />
-        </div>
-        <div className="lg:h-48 h-20 md:block hidden ml-28">
-          {slides?.length > 0 && (
-            <VerticalCarousel
-              slides={slides}
-              offsetRadius={state.offsetRadius}
-              showNavigation={state.showNavigation}
-              animationConfig={state.config}
-              setYear={setYear}
-            />
-          )}
-        </div>
-      </div> */}
-        <div className={`${switchPage === "about" ? "hidden" : "block lg:px-28 lg:py-2 absolute top-5% mt-2 lg:mt-0 w-full md:relative"} `}>
+        <div className={`${switchPage === "about" ? "hidden" : "block lg:px-28 lg:py-2 absolute top-5% md:top-5% mt-2 lg:mt-0 w-full md:relative"} `}>
                             <h1
                               className={` lg:text-3xl tracking-widest flex items-center justify-center lg:justify-start text-lg font-impact font-black text-heroTitle  md:z-50 px-2 md:px-2 uppercase lg:bg-inherit bg-white w-full  md:text-left text-center lg:py-5 pt-9 md:pt-0`}
                             >

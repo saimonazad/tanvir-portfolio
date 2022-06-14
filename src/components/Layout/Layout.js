@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
       {switchPage !== "home" && switchPage !== "gallery" && (
         <>
               {<div className={`${ switchPage == 'contribution'  && 'bg-bodyBg'}`}>
-                      <div className="h-screen">
-                          <div className={`${switchPage === "about" ? "hidden" : "lg:px-28 lg:py-3 absolute md:top-5% top-6% mt-2 lg:mt-0 w-full md:relative"} `}>
+                      <div className="md:h-screen">
+                          <div className={`${switchPage === "about" ? "hidden" : "lg:px-28 lg:py-3 fixed md:top-5% top-[5.8%] mt-2 lg:mt-0 w-full md:relative"} `}>
                             <h1
                               className={`lg:text-3xl tracking-widest flex items-center justify-center lg:justify-start text-lg font-impact font-black text-heroTitle  md:z-50 px-2 md:px-2 uppercase lg:bg-inherit bg-white w-full  md:text-left text-center lg:py-5 pt-8 md:pt-0`}
                             >
