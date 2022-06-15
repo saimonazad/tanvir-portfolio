@@ -4,7 +4,7 @@ import animationData from "../../fonts/Animation.json";
 
 export default function TextAnimationLottie() {
   const defaultOptions = {
-    loop: true,
+    loop: false,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
