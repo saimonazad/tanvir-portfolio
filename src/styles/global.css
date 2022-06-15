@@ -10,7 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap");
-@import url('http://fonts.cdnfonts.com/css/maximum-impact');
+@import url("http://fonts.cdnfonts.com/css/maximum-impact");
 
 .profileImage {
   background-image: url("https://www.w3schools.com/howto/img_girl.jpg");
@@ -18,7 +18,7 @@
 }
 /*===== VARIABLES CSS =====*/
 
-.item-1{
+.item-1 {
   animation: item1Animation 2s forwards;
   position: relative;
   z-index: 5;
@@ -26,29 +26,28 @@
 
 @keyframes item1Animation {
   0% {
-    left:0px 
+    left: 0px;
   }
-  33.3%{
+  33.3% {
     left: 17.5%;
     opacity: 2;
-    
   }
-  66.7%{
+  66.7% {
     left: 35%;
     opacity: 2;
   }
-  97%{
-    left: 43.5%
+  97% {
+    left: 43.5%;
   }
-  98%{
+  98% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.item-2{
+.item-2 {
   animation: item2Animation 0.5s forwards 0.5s;
   position: relative;
   z-index: 4;
@@ -56,15 +55,15 @@
 
 @keyframes item2Animation {
   0% {
-    left:0px ;
+    left: 0px;
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
     left: 0;
   }
 }
-.item-3{
+.item-3 {
   animation: item3Animation 0.1s forwards 1.3s;
   position: relative;
   z-index: 1;
@@ -72,16 +71,16 @@
 
 @keyframes item3Animation {
   0% {
-    left:0 ;
+    left: 0;
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
     left: 0;
   }
 }
 
-.item-4{
+.item-4 {
   animation: item4Animation 0.1s forwards 1.3s;
   position: relative;
   z-index: 2;
@@ -89,31 +88,31 @@
 
 @keyframes item4Animation {
   0% {
-    left:0px ;
+    left: 0px;
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
     left: 0%;
   }
 }
 
-.item-5{
+.item-5 {
   animation: item5Animation 0.6s forwards 0.5s;
   position: relative;
   z-index: 4;
 }
 @keyframes item5Animation {
   0% {
-    left:0px ;
+    left: 0px;
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 0;
     left: 0;
   }
 }
-.item-6{
+.item-6 {
   animation: item6Animation 2s forwards;
   position: relative;
   z-index: 5;
@@ -121,38 +120,38 @@
 
 @keyframes item6Animation {
   0% {
-    left:0px 
+    left: 0px;
   }
-  33.3%{
+  33.3% {
     left: -17.5%;
     opacity: 2;
     z-index: 5;
   }
-  66.7%{
+  66.7% {
     left: -35%;
     opacity: 2;
   }
-  97%{
-    opacity: 0;
-    left: -44%
-  }
-  98%{
+  97% {
     opacity: 0;
     left: -44%;
   }
-  100%{
+  98% {
+    opacity: 0;
+    left: -44%;
+  }
+  100% {
     left: -44%;
     opacity: 0;
   }
 }
 
-.item-extra{
+.item-extra {
   animation: itemExtraAnimation 2s forwards 1.7s;
   position: absolute;
   height: 84%;
   width: 12%;
   z-index: 0;
-  left:-5900px;
+  left: -5900px;
   z-index: 6;
 }
 
@@ -185,7 +184,7 @@
     left: 41%;
     transform: rotateZ(70deg);
   } */
-  80%{
+  80% {
     left: 41%;
     transform: rotateZ(90deg);
   }
@@ -201,43 +200,45 @@
     left: 41%;
     transform: translate(0%, 60%) rotate(90deg) scaleY(10)
   } */
-  100%{
+  100% {
     left: 41%;
-    transform: translate(0%, 100%) rotate(90deg) scaleY(10)
+    transform: translate(0%, 100%) rotate(90deg) scaleY(10);
   }
-
 }
 
 @media only screen and (max-width: 600px) {
-  .scroll{
+  .scroll {
     top: 55% !important;
   }
 }
-.splide__slide.is-active{
-  transform: scale(1, 1); 
+.splide__slide.is-active {
+  transform: scale(1, 1);
   background-color: #373737 !important;
-  color:white !important
+  color: white !important;
 }
-.splide__slide.is-active p{
+.splide__slide.is-active p {
   color: white !important;
 }
 
-
 .gallery {
   scrollbar-width: thin;
-  scrollbar-color: #326AFF #fff;
+  scrollbar-color: #326aff #fff;
 }
-
 
 /* For Chrome, EDGE, Opera, Others */
 .gallery::-webkit-scrollbar {
   width: 2px;
 }
 
-.gallery::-webkit-scrollbar-track { 
+.gallery::-webkit-scrollbar-track {
   background: #fff;
 }
 
-.gallery::-webkit-scrollbar-thumb { 
-  background:#326AFF;
+.gallery::-webkit-scrollbar-thumb {
+  background: #326aff;
+}
+@media (min-width: 768px) {
+  .animatedText div {
+    margin: 0px !important;
+  }
 }
