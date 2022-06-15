@@ -111,7 +111,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                       switchPage === "contact" && "bg-animationTitle"
                     } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
-                    Let get in touch
+                    Let's get in touch
                   </a>
                 </div>
               </div>
@@ -266,7 +266,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     bg_color === "white" ? "text-black" : "text-white"
                   }  px-3 py-2 block rounded-md text-base font-Poppins font-semibold`}
                 >
-                  Let get in touch
+                  Let's get in touch
                 </a>
               </div>
             </div>

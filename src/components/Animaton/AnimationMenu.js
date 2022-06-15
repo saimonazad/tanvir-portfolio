@@ -82,7 +82,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
             setPage('contact me');
             setAnimation(true)
           }} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
-            Let Get In Touch
+            Let's Get In Touch
           </div>
         </div>
       </div>
