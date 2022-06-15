@@ -15,7 +15,7 @@ export default function TextAnimationLottie() {
 
   return (
     <div className="animatedText">
-      <Lottie options={defaultOptions} height={30} width={140} />
+      <Lottie options={defaultOptions} height={30} width={150} />
     </div>
   );
 }
