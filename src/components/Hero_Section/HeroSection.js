@@ -6,6 +6,7 @@ import AnimationMenu from "../Animaton/AnimationMenu";
 import AnimationMobile from "../Animaton/AnimationMobile";
 import { scrollTo } from "../Scroll/ScrollTo";
 import TextAnimation from "./TextAnimation";
+import TextAnimationLottie from "./TextAnimationLottie";
 const HeroSection = ({
   successMessage,
   setSwitchPage,
@@ -51,7 +52,7 @@ const HeroSection = ({
               {/* <h1 className="xl:text-5xl lg:text-5xl md:text-2xl text-2xl md:mt-0 font-semibold font-Sacramento  text-animationTitle ">
                 Hello I am
               </h1> */}
-              <TextAnimation />
+              <TextAnimationLottie />
               <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
                 Tanvir Hossain Khan
               </h1>
