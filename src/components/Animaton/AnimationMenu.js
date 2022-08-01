@@ -1,13 +1,8 @@
-import React from "react";
-import one from '../../images/desktop/1.png'
-import two from '../../images/desktop/2.png'
-import three from '../../images/desktop/3.png'
-import four from '../../images/desktop/4.png'
-import five from '../../images/desktop/5.png'
-import six from '../../images/desktop/6.png'
+import React, { useState } from "react";
 import { scrollTo } from "../Scroll/ScrollTo";
+import { Five, Four, One, Six, Three, Two } from "./font";
 const AnimationMenu = ({setPage, setAnimation, animation}) => {
-
+  const [hoverEvent, setHoverEvent]= useState(null)
   return (
     <div className={`max-w-{1920} relative` } >
       <h1 className="z-50 absolute font-Poppins font-extrabold text-7xl pl-8 pb-4 text-stroke md:top-32 top-8 md:left-16">
@@ -18,70 +13,86 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         </span>
       </h1>
       <div className="w-full md:flex grid grid-cols-3 md:justify-between md:space-x-16 space-x-5 md:items-stretch md:pl-20 lg:pl-20 lg:pr-20 lg:pt-20 lg:pb-10 bg-white min-h-screen">
-        <div className="w-full flex flex-col flex-wrap ">
-          <div className=" grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-            <img src={one}/>
+        <div onMouseEnter={() => setHoverEvent('home')}
+            onMouseLeave={() => setHoverEvent(false)} 
+            className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full flex flex-col flex-wrap ">
+          <div className={`${hoverEvent === 'home' ? 'border-2 border-hovercolor' : 'border-2' } grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+            <One color={hoverEvent === 'home' && '#C4C4C4'}></One>
           </div>
-          <div onClick={() => {
+          <span onClick={() => {
             setPage('home')
             scrollTo({ id: "home" })
-            // setAnimation(false);
-          }} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }} className="text-center font-Poppins font-semibold mt-10">
             HOME
-          </div>
+          </span>
         </div>
-        <div className="w-full  flex flex-col flex-wrap">
-          <div className=" grow bg-itemtwo w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <img src={two}/>
+        <div onMouseEnter={() => setHoverEvent('about')}
+            onMouseLeave={() => setHoverEvent(false)} 
+             className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap">
+          <div className={`${hoverEvent === 'about' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemtwo w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+          {/* <img src={two}/> */}
+          <Two color={hoverEvent === 'about' && '#C4C4C4'}></Two>
           </div>
           <div onClick={() => {
             setPage('about');
             setAnimation(true)
-          }}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }}  className=" cursor-pointer text-center font-Poppins font-semibold	 mt-10">
             About
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap " >
-          <div className=" grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <img src={three}/>
+        <div 
+        onMouseEnter={() => setHoverEvent('milestone')}
+        onMouseLeave={() => setHoverEvent(false)} 
+        className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap " >
+          <div className={`${hoverEvent === 'milestone' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+            <Three color={hoverEvent === 'milestone' && '#C4C4C4'}/>
           </div>
           <div onClick={() => {
             setPage('milestone');
             setAnimation(true)
-          }}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }}  className="cursor-pointer text-center font-Poppins font-semibold	mt-10">
             Milestone
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap ">
-          <div className=" grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <img src={four}/>
+        <div 
+        onMouseEnter={() => setHoverEvent('contribution')}
+        onMouseLeave={() => setHoverEvent(false)} 
+        className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap ">
+          <div className={`${hoverEvent === 'contribution' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+          <Four color={hoverEvent === 'contribution' && '#C4C4C4'}/>
           </div>
           <div onClick={() => {
             setPage('contribution');
             setAnimation(true)
-          }}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }}  className="cursor-pointer text-center font-Poppins font-semibold	mt-10">
             Contribution
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap ">
-          <div className=" grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <img src={five}/>
+        <div 
+        onMouseEnter={() => setHoverEvent('gallery')}
+        onMouseLeave={() => setHoverEvent(false)} 
+        className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap ">
+          <div className={`${hoverEvent === 'gallery' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+          <Five color={hoverEvent === 'gallery' && '#C4C4C4'}/>
           </div>
           <div onClick={() => {
             setPage('gallery');
             setAnimation(true)
-          }}  className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }}  className="cursor-pointer text-center font-Poppins font-semibold	 mt-10">
             More
           </div>
         </div>
-        <div className="w-full  flex flex-col flex-wrap ">
-          <div className=" grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke">
-          <img src={six}/>
+        <div 
+        onMouseEnter={() => setHoverEvent('contact')}
+        onMouseLeave={() => setHoverEvent(false)} 
+        className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap ">
+          <div className={`${hoverEvent === 'contact'  ? 'border-2 border-hovercolor' : 'border-2'} grow bg-itemsix w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke`}>
+          <Six color={hoverEvent === 'contact' && '#C4C4C4'}/>
           </div>
           <div onClick={() => {
             setPage('contact me');
             setAnimation(true)
-          }} className="hover:text-animationTitle cursor-pointer text-center font-Poppins font-semibold	text-aboutSubtitle mt-10">
+          }} className=" cursor-pointer text-center font-Poppins font-semibold	mt-10">
             Let's Get In Touch
           </div>
         </div>

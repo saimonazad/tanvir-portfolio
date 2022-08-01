@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 import AnimationComponent from "../Animaton/AnimationComponent";
 import AnimationMenu from "../Animaton/AnimationMenu";
 import AnimationMobile from "../Animaton/AnimationMobile";
 import { scrollTo } from "../Scroll/ScrollTo";
-import TextAnimation from "./TextAnimation";
 import TextAnimationLottie from "./TextAnimationLottie";
 const HeroSection = ({
   successMessage,
