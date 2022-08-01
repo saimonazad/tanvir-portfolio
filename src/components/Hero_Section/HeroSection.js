@@ -54,10 +54,7 @@ const HeroSection = ({
         <div
           className={`grow justify-between flex md:justify-around w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`}
         >
-          <div className="pt-[50%] md:pt-0">
-            {/* <h1 className="xl:text-5xl lg:text-5xl md:text-2xl text-2xl md:mt-0 font-semibold font-Sacramento  text-animationTitle ">
-                Hello I am
-              </h1> */}
+          <div className="pt-[10%] md:pt-0">
             <TextAnimationLottie />
             <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
               Tanvir Hossain Khan

@@ -1,13 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
-import { config } from "react-spring";
-import GalleryPhoto from "./GalleryPhoto";
-import VerticalCarousel from "./VerticalCarousel";
-import Gallery from "react-photo-gallery";
-import { graphql, useStaticQuery } from "gatsby";
-import GalleryMasonary from "./GalleryMasonary";
 import equal from "fast-deep-equal";
-import Nav from "../Nav/Nav";
+import { graphql, useStaticQuery } from "gatsby";
+import React, { useEffect, useRef, useState } from "react";
+import { config } from "react-spring";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
+import Nav from "../Nav/Nav";
+import GalleryMasonary from "./GalleryMasonary";
+import VerticalCarousel from "./VerticalCarousel";
 const fakeFetch = (url) =>
   new Promise((resolve) => {
     setTimeout(
@@ -123,7 +121,9 @@ const PhotoGallery = ({switchPage,setSwitchPage,setAnimation}) => {
                               {switchPage}
                             </h1>
       </div>
-    <div class="md:h-[calc(100vh-5rem)] h-screen flex md:pb-[6%] md:px-0 px-3 md:pt-0 pt-[33%]">
+      
+      
+    <div class="md:h-[calc(100vh-5rem)] h-screen flex md:pb-[10%] xl:pb-[6%] md:px-10 xl:px-0 px-3 lg:pt-0 pt-[33%]">
                             <div class=" w-1/5 my-auto justify-center md:flex hidden ">
                               <div className="items-center flex-col lg:gap-10 gap-7 md:flex hidden">
                                           <span>
