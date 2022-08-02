@@ -60,7 +60,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                       }
                     className={` hover:bg-gray-700 ${
                       switchPage === "home" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-20 flex justify-center items-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex justify-center items-center text-white lg:px-6 px-8 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
                     Home
                   </button>
@@ -99,17 +99,17 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                     href="#"
                     onClick={() => setSwitchPage("gallery")}
                     className={` hover:bg-gray-700 ${
-                      switchPage === "more" && "bg-animationTitle"
+                      switchPage === "gallery" && "bg-animationTitle"
                     } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
                   >
-                    More
+                    Gallery
                   </a>
                   <a
                     href="#"
                     onClick={() => setSwitchPage("contact me")}
                     className={` hover:bg-gray-700 ${
                       switchPage === "contact" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto xl:text-lg text-base font-Poppins font-semibold`}
                   >
                     Let's get in touch
                   </a>
@@ -205,7 +205,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                   onClick={() => {
                     // setAnimateItem(false);
                     setSwitchPage("about");
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
@@ -219,7 +219,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                   onClick={() => {
                     // setAnimateItem(false);
                     setSwitchPage("milestone");
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
@@ -232,7 +232,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                   onClick={() => {
                     // setAnimateItem(false);
                     setSwitchPage("contribution");
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
@@ -246,7 +246,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                   onClick={() => {
                     // setAnimateItem(false);
                     setSwitchPage("gallery");
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
@@ -260,7 +260,7 @@ function Nav({ setSwitchPage, switchPage, bg_color,setAnimation, setMobileMenu, 
                   onClick={() => {
                     // setAnimateItem(false);
                     setSwitchPage("contact me");
-                    setIsOpen(!isOpen);
+                    setIsOpen(false);
                   }}
                   className={` hover:bg-gray-700 ${
                     bg_color === "white" ? "text-black" : "text-white"
