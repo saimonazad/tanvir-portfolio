@@ -40,6 +40,7 @@ module.exports = {
         Inter: ['Inter', 'sans-serif'],
         impact: ['Maximum Impact', 'sans-serif'],
         Encode_Sans: ['Encode Sans', 'sans-serif'],
+        gotham: ['Gotham', 'sans-serif']
        },
        spacing: {
         'custom': '140%',

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
+import { CloseIcon, Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import ProfilePic from "../../images/hero-image.png";
 import AnimationComponent from "../Animaton/AnimationComponent";
 import AnimationMenu from "../Animaton/AnimationMenu";
@@ -16,6 +16,7 @@ const HeroSection = ({
   setMobileMenu,
 }) => {
   const [page, setPage] = useState("");
+  const [snackbar, setSnackbar] = useState(true);
   useEffect(() => {
     if (page) {
       setTimeout(() => {
@@ -28,6 +29,16 @@ const HeroSection = ({
 
   return (
     <div>
+      {
+        snackbar && (
+          <div className="shadow-md px-10 py-2 bg-white w-full md:absolute top-0">
+            <p className="w-[60%] mx-auto text-center font-bold font-gotham text-xs text-animationTitle tracking-wider truncate">I’m going to the NASA Apps Space Challenge. Join me on 30th June at Radisson.</p>
+            <div onClick={() => setSnackbar(false)} className="absolute top-1 right-2 cursor-pointer">
+              <CloseIcon/>
+            </div>
+          </div>
+        )
+      }
       <div className="h-screen flex flex-col" id="home">
         <div className="grow-0 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
           <div className="flex gap-5">
