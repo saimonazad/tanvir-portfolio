@@ -20,7 +20,8 @@ module.exports = {
         itemfive: '#73479E',
         itemsix: '#343434',
         navTitle: '#FFFFCC',
-        contributeFont:'#202020'
+        contributeFont:'#202020',
+        hovercolor: "#2E2793",
       },
      
       borderRadius:{

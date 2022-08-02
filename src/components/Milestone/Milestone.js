@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import MilestoneImage from "../../images/milestone.png";
-import { useStaticQuery, graphql } from "gatsby";
 const years = [1, 2, 3, 4, 5, 6];
 const Milestone = () => {
   const res = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const Milestone = () => {
   
   const {items} = res?.datoCmsMilestone
   return (
-    <div className="md:-mt-28 2xl:-mt-10 mt-32">
+    <div className="lg:-mt-28 2xl:-mt-10 mt-32">
       <div>
         <div className="flex justify-center md:py-10">
           <img src={MilestoneImage} alt="" className="w-full" />
