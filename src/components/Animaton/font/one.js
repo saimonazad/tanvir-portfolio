@@ -1,13 +1,13 @@
 import React from "react";
 
 const SVGComponent = ({ color }) => (
-    <svg width="46" height="88" viewBox="0 0 46 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="45" height="89" viewBox="0 0 45 89" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_921_107)">
-<path d="M7.80005 22.3V3.90002H38.6V77H18.1V22.3H7.80005Z" fill={`${color}`} fill-opacity="0.4" shape-rendering="crispEdges"/>
-<path d="M6.30005 22.3V23.8H7.80005H16.6V77V78.5H18.1H38.6H40.1001V77V3.90002V2.40002H38.6H7.80005H6.30005V3.90002V22.3Z" stroke={`${color ? '#2E2793' : '#2D3038'}`} stroke-width="3" shape-rendering="crispEdges"/>
+<path d="M7 21.8782V3H37.8V78H17.3V21.8782H7Z" fill={color} fill-opacity="0.4" shape-rendering="crispEdges"/>
+<path d="M5.5 21.8782V23.3782H7H15.8V78V79.5H17.3H37.8H39.3V78V3V1.5H37.8H7H5.5V3V21.8782Z" stroke="#2D3038" stroke-width="3" shape-rendering="crispEdges"/>
 </g>
 <defs>
-<filter id="filter0_d_921_107" x="0.800049" y="0.900024" width="44.8" height="87.1" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_921_107" x="0" y="0" width="44.8" height="89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
