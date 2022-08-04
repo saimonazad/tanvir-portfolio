@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
                       switchPage == "contribution" || switchPage == "contact"
                         ? "xl:px-0 lg:px-16 px-5"
                         : "xl:px-48 lg:px-20 px-5"
-                    } `}
+                    } ${switchPage == "about" && 'xl:px-48 2xl:px-20'}`}
                   >
                     {switchPage === "about" && <About />}
                     {switchPage === "milestone" && <Milestone />}

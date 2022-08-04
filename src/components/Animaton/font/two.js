@@ -1,21 +1,21 @@
 import React from "react";
 
 const SVGComponent = ({ color }) => (
-  <svg width="63" height="87" viewBox="0 0 63 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_921_108)">
-<path d="M6.3001 62.4204C12.7668 57.2574 18.0668 52.8076 22.2001 49.0712C26.3334 45.3348 29.8001 41.4965 32.6001 37.5563C35.4001 33.5481 36.8001 29.7438 36.8001 26.1432C36.8001 23.9693 36.3001 22.2709 35.3001 21.0481C34.3668 19.8253 32.9668 19.2139 31.1001 19.2139C29.1668 19.2139 27.6668 20.0631 26.6001 21.7614C25.5334 23.3919 25.0334 25.8036 25.1001 28.9965H6.1001C6.3001 22.9503 7.6001 17.9571 10.0001 14.0169C12.4001 10.0087 15.5334 7.08752 19.4001 5.25328C23.2668 3.35111 27.5668 2.40002 32.3001 2.40002C40.5001 2.40002 46.6001 4.47203 50.6001 8.61606C54.6001 12.7601 56.6001 18.1269 56.6001 24.7166C56.6001 31.7818 54.2668 38.4055 49.6001 44.5875C45.0001 50.7696 39.2334 56.3063 32.3001 61.1976H57.3001V77.4H6.3001V62.4204Z" fill={color} fill-opacity="0.4" shape-rendering="crispEdges"/>
-<path d="M6.3001 62.4204C12.7668 57.2574 18.0668 52.8076 22.2001 49.0712C26.3334 45.3348 29.8001 41.4965 32.6001 37.5563C35.4001 33.5481 36.8001 29.7438 36.8001 26.1432C36.8001 23.9693 36.3001 22.2709 35.3001 21.0481C34.3668 19.8253 32.9668 19.2139 31.1001 19.2139C29.1668 19.2139 27.6668 20.0631 26.6001 21.7614C25.5334 23.3919 25.0334 25.8036 25.1001 28.9965H6.1001C6.3001 22.9503 7.6001 17.9571 10.0001 14.0169C12.4001 10.0087 15.5334 7.08752 19.4001 5.25328C23.2668 3.35111 27.5668 2.40002 32.3001 2.40002C40.5001 2.40002 46.6001 4.47203 50.6001 8.61606C54.6001 12.7601 56.6001 18.1269 56.6001 24.7166C56.6001 31.7818 54.2668 38.4055 49.6001 44.5875C45.0001 50.7696 39.2334 56.3063 32.3001 61.1976H57.3001V77.4H6.3001V62.4204Z" stroke="#2D3038" stroke-width="3" shape-rendering="crispEdges"/>
+  <svg width="62" height="87" viewBox="0 0 62 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_937_103)">
+<path d="M25 28.8359H5.5C5 -3.16394 39 -2.75021 47.5 6.33598C62 21.836 55.5216 40.5655 30 60.836H56.5V77.336H5V62.336C25.8121 46.2595 33.3657 38.6611 36 28.8359C39.5 17.836 24 11.836 25 28.8359Z" fill={color ? '#787777' : ''}/>
+<path d="M25 28.8359H5.5C5 -3.16394 39 -2.75021 47.5 6.33598C62 21.836 55.5216 40.5655 30 60.836H56.5V77.336H5V62.336C25.8121 46.2595 33.3657 38.6611 36 28.8359C39.5 17.836 24 11.836 25 28.8359Z" stroke="#2D3038" stroke-width="2"/>
 </g>
 <defs>
-<filter id="filter0_d_921_108" x="0.549561" y="0.900024" width="62.2505" height="86" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_937_103" x="0" y="0" width="61.5" height="86.336" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="2"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_921_108"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_921_108" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_937_103"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_937_103" result="shape"/>
 </filter>
 </defs>
 </svg>

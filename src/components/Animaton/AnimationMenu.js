@@ -21,7 +21,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
             }}
             className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full flex flex-col flex-wrap ">
           <div className={`${hoverEvent === 'home' ? 'border-2 border-hovercolor' : 'border-2' } grow bg-itemone w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke justify-start xl:justify-center`}>
-            <One color={hoverEvent === 'home' && '#C4C4C4'}></One>
+            <One color={hoverEvent === 'home' && '#787777'}></One>
           </div>
           <span className="text-center font-Poppins font-semibold mt-10">
             HOME
@@ -51,7 +51,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         }} 
         className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap " >
           <div className={`${hoverEvent === 'milestone' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemthree w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke justify-start xl:justify-center`}>
-            <Three color={hoverEvent === 'milestone' && '#C4C4C4'}/>
+            <Three color={hoverEvent === 'milestone' && '#787777'}/>
           </div>
           <div  className="cursor-pointer text-center font-Poppins font-semibold	mt-10">
             Milestone
@@ -66,7 +66,7 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         }} 
         className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap ">
           <div className={`${hoverEvent === 'contribution' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemfour w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke justify-start xl:justify-center`}>
-          <Four color={hoverEvent === 'contribution' && '#C4C4C4'}/>
+          <Four color={hoverEvent === 'contribution' && '#787777'}/>
           </div>
           <div  className="cursor-pointer text-center font-Poppins font-semibold	mt-10">
             Contribution
@@ -82,10 +82,10 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
         }} 
         className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full  flex flex-col flex-wrap ">
           <div className={`${hoverEvent === 'gallery' ? 'border-2 border-hovercolor' :'border-2'} grow bg-itemfive w-full flex items-end font-Poppins font-extrabold text-8xl pl-8 pb-4 text-stroke justify-start xl:justify-center`}>
-          <Five color={hoverEvent === 'gallery' && '#C4C4C4'}/>
+          <Five color={hoverEvent === 'gallery' && '#787777'}/>
           </div>
           <div  className="cursor-pointer text-center font-Poppins font-semibold	 mt-10">
-            More
+            Gallery
           </div>
         </div>
         <div 
