@@ -19,7 +19,6 @@ const HeroSection = ({
   setMobileMenu,
 }) => {
   const [page, setPage] = useState("");
-  const [snackbar, setSnackbar] = useState(true);
   useEffect(() => {
     if (page) {
       setTimeout(() => {
@@ -30,16 +29,21 @@ const HeroSection = ({
     }
   }, [page]);
 
-    const news = useStaticQuery(graphql`
-      query MyQuery {
-        datoCmsNews {
-          title {
-            value
-          }
+  const news = useStaticQuery(graphql`
+    query MyQuery {
+      datoCmsNews {
+        title {
+          value
         }
       }
-    `);
-    console.log(news);
+    }
+  `);
+  const [snackbar, setSnackbar] = useState(false);
+  useEffect(() => {
+    if (news?.datoCmsNews?.title) {
+      setSnackbar(true);
+    }
+  }, [news]);
 
   return (
     <div>
