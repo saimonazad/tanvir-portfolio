@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [animation, setAnimation] = useState(null);
   const [mobileMenu, setMobileMenu] = useState(false);
-
+  console.log("switchPage", switchPage);
 
   return (
     <div className="">
@@ -66,7 +66,6 @@ const Layout = ({ children }) => {
                     {switchPage === "about" && <About />}
                     {switchPage === "milestone" && <Milestone />}
                     {switchPage === "contribution" && <Contribution />}
-
                     {switchPage === "contact me" && <Contact />}
                     {/* <div>Test........</div> */}
                   </div>

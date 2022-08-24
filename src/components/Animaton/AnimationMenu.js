@@ -89,10 +89,10 @@ const AnimationMenu = ({setPage, setAnimation, animation}) => {
           </div>
         </div>
         <div 
-        onMouseEnter={() => setHoverEvent('contact')}
+        onMouseEnter={() => setHoverEvent('contact me')}
         onMouseLeave={() => setHoverEvent(false)} 
         onClick={() => {
-          setPage('contact');
+          setPage('contact me');
           setAnimation(true)
         }} 
         className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full flex flex-col flex-wrap ">
