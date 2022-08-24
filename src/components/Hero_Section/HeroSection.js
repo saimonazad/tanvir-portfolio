@@ -14,7 +14,10 @@ const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
   const [animation, setAnimation] = useState(false);
   // const [switchPage, setSwitchPage] = useState(null);
   useEffect(() => {
-    if (page) {
+    if(page === "home"){
+      window.location.replace("/");
+    }
+    if (page !== "home" && page !== null) {
       setTimeout(() => {
         window.location.replace(`/${page}`);
         setPage(null);

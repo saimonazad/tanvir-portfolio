@@ -33,7 +33,7 @@ function Nav({
                     Home
                   </button> */}
 
-                  <Link to="/home">
+                  <Link to="/">
                     <a
                       href="#"
                       // onClick={() => {setSwitchPage("home");}}

@@ -32,6 +32,7 @@ const AnimationMenu = ({setAnimation, animation,setPage }) => {
           onClick={() => {
             setPage("home");
             scrollTo({ id: "home" });
+            setAnimation(false);
           }}
           className="hover:text-animationTitle text-aboutSubtitle cursor-pointer w-full flex flex-col flex-wrap "
         >
