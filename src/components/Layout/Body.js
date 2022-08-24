@@ -3,7 +3,10 @@ import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import Nav from "../Nav/Nav";
 
 const Body = ({ children }) => {
-    const route = window.location.pathname
+  let route = "";
+  if (typeof window !== `undefined`) {
+    route = window.location.pathname;
+  }
   return (
     <div>
       <div className="lg:hidden block">
@@ -20,7 +23,7 @@ const Body = ({ children }) => {
             <p
               className={`lg:text-3xl text-2xl tracking-widest font-impact font-black text-heroTitle uppercase lg:bg-inherit w-full`}
             >
-              {route !== '/about' && route?.substr(1, route.length)}
+              {route !== "/about" && route?.substr(1, route.length)}
             </p>
           </div>
         </div>
