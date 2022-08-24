@@ -230,7 +230,10 @@
 .gallery::-webkit-scrollbar {
   width: 2px;
 }
-
+body::-webkit-scrollbar {
+  width: 2px;
+  background: #fff;
+}
 .gallery::-webkit-scrollbar-track {
   background: #fff;
 }
@@ -243,3 +246,10 @@
     margin: 0px !important;
   }
 }
+
+@media (min-width:600px) and (max-width: 1024px) {
+  .react-photo-gallery--gallery img{
+    width: 145px !important;
+  }
+}
+

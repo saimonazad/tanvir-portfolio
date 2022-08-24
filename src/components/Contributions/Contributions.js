@@ -21,26 +21,7 @@ const responsive = {
     items: 1,
   },
 };
-const ContributionsData = [
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-];
+
 const Contributions = () => {
   const res = useStaticQuery(graphql`
     query ContributionQuery {
@@ -81,34 +62,40 @@ const Contributions = () => {
   const chevronWidth = 40;
 
   return (
-    <div className="px-0 font-medium md:mt-[25%] lg:mt-0">
-        <div className="xl:h-screen grid md:grid-cols-3 2xl:-mt-32 xl:-mt-36 lg:h-4/5 mt-24 md:mt-0 overflow-auto md:h-fit">
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="#373737" bcolor="white" />
-                  </span>
-                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 bg-aboutSubtitle ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="white" bcolor="#373737"/>
-                  </span>
-                  <p className="text-white uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <LastContributionIcon/>
-                  </span>
-                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-           
+    <div className="px-0 font-medium lg:mt-0">
+      {/* xl:h-screen grid md:grid-cols-3 2xl:-mt-32 xl:-mt-36  mt-24 md:mt-0 overflow-auto md:h-fit */}
+      <div className=" grid md:grid-cols-3 lg:h-[calc(100vh-5rem)]">
+        <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center ">
+          <span className="p-3 md:mb-4 xl:mb-10 ">
+            <ContributionIcon color="#373737" bcolor="white" />
+          </span>
+          <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
+            He always believes any problem can be solved if we can all work as
+            one and from that idea his belief is “Collaboration is Always Better
+            than Competition.”
+          </p>
         </div>
+        <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center bg-aboutSubtitle ">
+          <span className="p-3 md:mb-4 xl:mb-10 ">
+            <ContributionIcon color="white" bcolor="#373737" />
+          </span>
+          <p className="text-white uppercase 2xl:text-2xl sm:text-sm text-xs">
+            He always believes any problem can be solved if we can all work as
+            one and from that idea his belief is “Collaboration is Always Better
+            than Competition.”
+          </p>
+        </div>
+        <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
+          <span className="p-3 md:mb-4 xl:mb-10 ">
+            <LastContributionIcon />
+          </span>
+          <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
+            He always believes any problem can be solved if we can all work as
+            one and from that idea his belief is “Collaboration is Always Better
+            than Competition.”
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

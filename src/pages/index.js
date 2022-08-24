@@ -4,15 +4,13 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import '@splidejs/react-splide/css';
-import Layout from "../components/Layout/Layout";
+import "@splidejs/react-splide/css";
+import Home from "../components/Layout/Home";
 
 const IndexPage = () => {
   return (
     <>
-      <Layout></Layout>
-      {/* <HeroSection/> */}
-      {/* <Animation/> */}
+      <Home/>
     </>
   );
 };
