@@ -5,7 +5,7 @@ import Nav from "../Nav/Nav";
 const Body = ({ children }) => {
   let route = "";
   if (typeof window !== `undefined`) {
-    route = window.location.pathname;
+    route = window.location.pathname.replace(/^\/+|\/+$/g, '');
   }
   return (
     <div>
@@ -23,7 +23,9 @@ const Body = ({ children }) => {
             <p
               className={`lg:text-3xl text-2xl tracking-widest font-impact font-black text-heroTitle uppercase lg:bg-inherit w-full`}
             >
-              {route !== "/about" && route?.substr(1, route.length)}
+              {/* {route !== "/about" && route?.substr(1, route.length)} */}
+              {route !== "about" && route }
+             
             </p>
           </div>
         </div>

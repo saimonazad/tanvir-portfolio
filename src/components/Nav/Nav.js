@@ -3,14 +3,15 @@ import { Link } from "gatsby";
 import React, { useState } from "react";
 
 function Nav({
-  setSwitchPage,
-  switchPage,
   bg_color,
-  setAnimation,
-  setMobileMenu,
-  setAnimateItem,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  // const [switchPage, setSwitchPage] = useState('');
+  let route = "";
+  if (typeof window !== `undefined`) {
+    route = window.location.pathname.replace(/^\/+|\/+$/g, '');
+  }
+
   return (
     <div>
       <nav
@@ -22,46 +23,25 @@ function Nav({
             <div className="">
               <div className="hidden lg:block">
                 <div className=" grid grid-cols-6 pl-20 text-center">
-                  {/* <button
-                    onClick={() => {
-                      setSwitchPage("home");
-                    }}
-                    className={` hover:bg-gray-700 ${
-                      switchPage === "home" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-20 flex justify-center items-center text-white lg:px-6 px-8 py-2 w-auto text-lg font-Poppins font-semibold`}
-                  >
-                    Home
-                  </button> */}
-
                   <Link to="/">
                     <a
                       href="#"
                       // onClick={() => {setSwitchPage("home");}}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "home" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       Home
                     </a>
                   </Link>
-
-                  {/* <a
-                    href="#"
-                    onClick={() => setSwitchPage("about")}
-                    className={` hover:bg-gray-700 ${
-                      switchPage === "about" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
-                  >
-                    About
-                  </a> */}
 
                   <Link to="/about">
                     <a
                       href="#"
                       // onClick={() => setSwitchPage("about")}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "about" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       About
                     </a>
@@ -72,8 +52,8 @@ function Nav({
                       href="#"
                       // onClick={() => setSwitchPage("milestone")}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "milestone" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       Milestone
                     </a>
@@ -84,8 +64,8 @@ function Nav({
                       href="#"
                       // onClick={() => setSwitchPage("contribution")}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "contributions" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       Contribution
                     </a>
@@ -96,8 +76,8 @@ function Nav({
                       href="#"
                       // onClick={() => setSwitchPage("gallery")}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "gallery" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       Gallery
                     </a>
@@ -108,22 +88,12 @@ function Nav({
                       href="#"
                       // onClick={() => setSwitchPage("contact me")}
                       className={` hover:bg-gray-700 ${
-                        switchPage === "milestone" && "bg-animationTitle"
-                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-lg font-Poppins font-semibold`}
+                        route === "contact" && "bg-animationTitle"
+                      } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-3 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
                       Let's get in touch
                     </a>
                   </Link>
-
-                  {/* <a
-                    href="#"
-                    onClick={() => setSwitchPage("contact me")}
-                    className={` hover:bg-gray-700 ${
-                      switchPage === "contact" && "bg-animationTitle"
-                    } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto xl:text-lg text-base font-Poppins font-semibold`}
-                  >
-                    Let's get in touch
-                  </a> */}
                 </div>
               </div>
             </div>

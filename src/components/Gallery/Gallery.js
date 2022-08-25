@@ -89,6 +89,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
     content: "2022",
   });
   const [photos, setPhotos] = useState();
+
   React.useEffect(() => {
     let b = res?.datoCmsGallery?.gallery.filter(
       (item) => item.year == year.content
@@ -114,7 +115,6 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
   if (typeof window !== `undefined`) {
     isMobile = window.innerWidth < 640 ? true : false;
   }
-  
   
   return (
     <div className="grid grid-cols-6 place-items-center items-center space-x-3 lg:space-x-5 px-2 lg:mt-[10%] gallery">
