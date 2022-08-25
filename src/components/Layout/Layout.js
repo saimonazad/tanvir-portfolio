@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import About from "../About/About";
-import AnimationComponent from "../Animaton/AnimationComponent";
-import AnimationMobile from "../Animaton/AnimationMobile";
 import Contact from "../Contact/Contact";
 import Contribution from "../Contributions/Contributions";
 import PhotoGallery from "../Gallery/Gallery";
@@ -13,6 +11,7 @@ const Layout = ({ children }) => {
   const [switchPage, setSwitchPage] = useState("home");
   const [animation, setAnimation] = useState(null);
   const [mobileMenu, setMobileMenu] = useState(false);
+
 
   return (
     <div className="">
@@ -25,11 +24,11 @@ const Layout = ({ children }) => {
                   className={`${
                     switchPage === "about"
                       ? "hidden"
-                      : "lg:px-28 lg:py-3 fixed md:top-5% top-[5.8%] mt-2 lg:mt-0 w-full md:relative"
+                      : "lg:px-28 lg:py-3 fixed lg:top-5% md:top-6% top-[5.8%] mt-2 lg:mt-0 w-full md:relative"
                   } `}
                 >
                   <h1
-                    className={`lg:text-3xl tracking-widest flex items-center justify-center lg:justify-start text-lg font-impact font-black text-heroTitle  md:z-50 px-2 md:px-2 uppercase lg:bg-inherit bg-white w-full  md:text-left text-center lg:py-5 pt-8 md:pt-0`}
+                    className={`lg:text-3xl tracking-widest flex items-center justify-center lg:justify-start text-lg mt-5 md:mt-10 lg:mt-0 font-impact font-black text-heroTitle  md:z-50 px-2 md:px-2 uppercase lg:bg-inherit bg-white w-full  md:text-left text-center lg:py-5 pt-8 md:pt-0`}
                   >
                     {switchPage}
                   </h1>
@@ -62,7 +61,7 @@ const Layout = ({ children }) => {
                       switchPage == "contribution" || switchPage == "contact"
                         ? "xl:px-0 lg:px-16 px-5"
                         : "xl:px-48 lg:px-20 px-5"
-                    } `}
+                    } ${switchPage == "about" && 'xl:px-48 2xl:px-20'}`}
                   >
                     {switchPage === "about" && <About />}
                     {switchPage === "milestone" && <Milestone />}
