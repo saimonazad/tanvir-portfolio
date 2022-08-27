@@ -8,13 +8,14 @@ import { scrollTo } from "../Scroll/ScrollTo";
 import TextAnimationLottie from "./TextAnimationLottie";
 import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
+import NewAnimationMenu from "../NewAnimationMenu/NewAnimationMenu";
 
 const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
   const [page, setPage] = useState(null);
   const [animation, setAnimation] = useState(false);
   // const [switchPage, setSwitchPage] = useState(null);
   useEffect(() => {
-    if(page === "home"){
+    if (page === "home") {
       window.location.replace("/");
     }
     if (page !== "home" && page !== null) {
@@ -145,7 +146,12 @@ const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
               />
             </div>
             <div className="md:block hidden mt-5">
-              <AnimationMenu
+              {/* <AnimationMenu
+                setPage={setPage}
+                animation={animation}
+                setAnimation={setAnimation}
+              /> */}
+              <NewAnimationMenu
                 setPage={setPage}
                 animation={animation}
                 setAnimation={setAnimation}
