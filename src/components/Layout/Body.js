@@ -5,7 +5,7 @@ import Nav from "../Nav/Nav";
 const Body = ({ children }) => {
   let route = "";
   if (typeof window !== `undefined`) {
-    route = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    route = window.location.pathname.replace(/^\/+|\/+$/g, "");
   }
   return (
     <div>
@@ -19,13 +19,12 @@ const Body = ({ children }) => {
           >
             MILESTONE
           </p> */}
-          <div className="lg:w-[20%] w-[98%] text-center mx-auto lg:absolute lg:top-[12%] lg:left-[7%] py-3">
+          <div className="lg:w-[20%] w-[98%] text-center mx-auto lg:absolute lg:top-[5%] lg:left-[7%] py-3">
             <p
               className={`lg:text-3xl text-2xl tracking-widest font-impact font-black text-heroTitle uppercase lg:bg-inherit w-full`}
             >
               {/* {route !== "/about" && route?.substr(1, route.length)} */}
-              {route !== "about" && route }
-             
+              {route !== "about" && route}
             </p>
           </div>
         </div>
@@ -52,7 +51,7 @@ const Body = ({ children }) => {
           </div>
 
           {/* content */}
-          <div className="lg:pr-32 lg:col-span-5">{children}</div>
+          <div className="lg:pr-32 lg:col-span-5 w-full">{children}</div>
         </div>
       </div>
       <div className="lg:block hidden">
