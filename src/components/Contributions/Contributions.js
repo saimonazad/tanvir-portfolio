@@ -52,20 +52,19 @@ const Contributions = () => {
 
   return (
     <>
-    
       <Swiper
         cssMode={true}
         navigation={true}
         // pagination={true}
         mousewheel={true}
         keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
+        modules={[Navigation]}
+        className=""
       >
         
         {contributions?.map((contribution, i) => (
           <SwiperSlide>
-            <div className="px-0 font-medium ">
+            <div className="px-0 font-medium mt-[5%]">
               <div className=" grid md:grid-cols-3 lg:h-[calc(100vh-5rem)]">
                 {contribution?.contents.map((item, i) => (
                   <div

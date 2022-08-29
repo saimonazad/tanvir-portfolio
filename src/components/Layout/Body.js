@@ -19,7 +19,8 @@ const Body = ({ children }) => {
           >
             MILESTONE
           </p> */}
-          <div className="lg:w-[20%] w-[98%] text-center mx-auto lg:absolute lg:top-[5%] lg:left-[7%] py-3">
+          {/* md:w-[20%] w-[50%] mx-auto left-0 right-0 lg:right-auto absolute lg:top-[5%] lg:left-[7%] */}
+          <div className="lg:w-[20%] text-center mx-auto lg:absolute lg:top-[5%] lg:left-[7%] py-3 z-10">
             <p
               className={`lg:text-3xl text-2xl tracking-widest font-impact font-black text-heroTitle uppercase lg:bg-inherit w-full`}
             >
@@ -28,7 +29,7 @@ const Body = ({ children }) => {
             </p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-6 lg:place-items-center space-x-3 h-full w-[98%]">
+        <div className="grid lg:grid-cols-6 lg:place-items-center md:space-x-3 h-full w-[98%]">
           <div className="lg:flex hidden flex-col space-y-7 w-[8%] justify-center items-center">
             <span>
               <a href="https://www.facebook.com/dreamerz.tanvir">

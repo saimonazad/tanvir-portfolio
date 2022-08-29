@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import "./menu.css";
 
@@ -89,18 +90,23 @@ const NewAnimationMenu = () => {
       <div className="w-full grid grid-cols-6 lg:pt-20 lg:pb-10 xl:px-14 px-5 md:pt-20 md:pb-24 bg-white min-h-screen">
         {menuItem.map((item, i) => (
           <div class="cardWrap" key={i}>
-            <div class="card">
-              <div
-                class="cardBg"
-                style={{
-                  backgroundImage: `url(${item.bgImg})`,
-                }}
-              ></div>
-              <div class="cardInfo text-center">
-                <h3 class="cardTitle">{item.title}</h3>
-                <p>{item.subTitle}</p>
+            <Link to={item.link}>
+              <div class="card">
+                <div
+                  class="cardBg"
+                  style={{
+                    backgroundImage: `url(${item.bgImg})`,
+                  }}
+                ></div>
+                <div class="cardInfo text-center">
+                  <h3 class="cardTitle">{item.title}</h3>
+                  <p>
+                    {/* {item.subTitle} */}
+                    In publishing and graphic design.
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

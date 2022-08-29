@@ -16,7 +16,7 @@ function Nav({
     <div>
       <nav
         // md:fixed fixed top-0 lg:top-auto lg:bottom-0 w-full z-50
-        className={`bg-navbar `}
+        className={`bg-navbar`}
       >
         <div className="max-w-[1980px] mx-auto w-full">
           <div className="lg:h-20 lg:max-w-4/5 lg:mx-auto">

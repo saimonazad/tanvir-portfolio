@@ -247,23 +247,43 @@ body::-webkit-scrollbar {
   }
 }
 
-@media (min-width:600px) and (max-width: 1024px) {
-  .react-photo-gallery--gallery img{
+@media (min-width: 600px) and (max-width: 1024px) {
+  .react-photo-gallery--gallery img {
     width: 145px !important;
   }
 }
 
 .swiper-slide {
   width: 100% !important;
+  
+}
+.swiper{
+  z-index: -2 !important;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 7% !important;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 7% !important;
+  right: 7% !important;
+  left: auto !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.5);
-    right:0px;
-    padding: 30px;
-    color: #000 !important;
-    fill: black !important;
-    stroke: black !important;
+@media screen and (max-width: 768px){
+  .swiper-button-next {
+    top: 4% !important;
+    right: 8% !important;
+  }
+  .swiper-button-prev {
+    top: 4% !important;
+    left: 8% !important;
+  }
+}
+.swiper-button-next:after {
+  content: url("../../public/right_arrow.png") !important;
+}
+.swiper-button-prev:after {
+  content: url("../../public/left_arrow.png") !important;
 }
