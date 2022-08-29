@@ -272,14 +272,14 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 998px){
   .swiper-button-next {
-    top: 4% !important;
+    top: 3% !important;
     right: 8% !important;
     /* z-index: 10 !important; */
     /* z-index: 1 !important; */
   }
   
   .swiper-button-prev {
-    top: 4% !important;
+    top: 3% !important;
     left: 8% !important;
     /* z-index: 1 !important; */
     /* z-index: 10 !important; */

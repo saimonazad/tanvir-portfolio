@@ -117,11 +117,11 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
   }
   console.log("photos", photos);
   return (
-    <div className="grid grid-cols-6 md:place-items-center md:items-start space-x-10 lg:space-x-5 gallery overflow-x-hidden md:h-full ">
-      <div className="md:col-span-5 col-span-5 sm:h-auto h-full w-full gallery">
+    <div className="grid grid-cols-6 lg:h-[calc(100vh-16rem)] md:place-items-center md:items-start space-x-10 lg:space-x-0 gallery overflow-x-hidden ">
+      <div className="md:col-span-5 col-span-5 sm:h-auto h-[80%] w-full gallery">
         <GalleryMasonary photos={photos} year={year} />
       </div>
-      <div class="w-1/5 flex my-auto justify-center">
+      <div class="w-1/5 lg:flex my-auto justify-center absolute lg:relative right-0 ">
         {slides?.length > 0 && (
           <VerticalCarousel
             slides={slides}

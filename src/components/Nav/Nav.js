@@ -168,14 +168,15 @@ function Nav({ bg_color, setNavbarZindex }) {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          // className={"absolute"}
+          className={""}
         >
           {(ref) => (
             <div className="lg:hidden" id="mobile-menu">
               <div
                 ref={ref}
+                style={{zIndex:10000}}
                 // className="px-2 pt-2 pb-3 space-y-1 sm:px-3 uppercase"
-                className={`origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-navbar`}
+                className={`origin-top-right absolute z-50 right-0 mt-2 w-full rounded-md shadow-lg bg-navbar`}
               >
                 <Link to="/">
                   <a
