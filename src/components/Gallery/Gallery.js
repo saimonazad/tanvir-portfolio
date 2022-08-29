@@ -117,8 +117,8 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
   }
   
   return (
-    <div className="grid grid-cols-6 place-items-center items-center space-x-3 lg:space-x-5 px-2 lg:mt-[10%] gallery">
-      <div className="col-span-5 h-[calc(100vh-10rem)] sm:h-auto lg:h-[42rem] xl:h-[23rem] 2xl:h-[40rem] w-auto overflow-auto gallery">
+    <div className="grid grid-cols-6 h-screen md:place-items-center md:items-center space-x-10 lg:space-x-5 px-2 gallery md:h-full">
+      <div className="md:col-span-5 col-span-5 sm:h-auto h-full w-auto overflow-auto gallery">
         <div className="w-full h-full 2xl:p-5 ">
           <GalleryMasonary photos={photos} year={year} />
         </div>

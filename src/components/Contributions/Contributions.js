@@ -49,54 +49,113 @@ const Contributions = () => {
     res.datoCmsContribution.contributions
   );
   const chevronWidth = 40;
-
+  console.log("contributions", contributions);
   return (
     <>
       <Swiper
         cssMode={true}
         navigation={true}
-        // pagination={true}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation]}
-        className=""
+        className="h-full mt-[15%] lg:mt-0"
+        // id="swiper"
       >
-        
         {contributions?.map((contribution, i) => (
           <SwiperSlide>
-            <div className="px-0 font-medium mt-[5%]">
-              <div className=" grid md:grid-cols-3 lg:h-[calc(100vh-5rem)]">
-                {contribution?.contents.map((item, i) => (
-                  <div
-                    className={`flex flex-col 2xl:px-20 px-5 text-center justify-center items-center py-5 ${
-                      i == 1 ? "bg-aboutSubtitle" : ""
-                    }`}
+            <div className=" w-full h-full flex flex-col lg:flex-row">
+            {<p className="text-black text-4xl text-center lg:hidden block">{contribution.categoryName}</p>}
+              {contribution?.contents.map((item, i) => (
+                <div
+                  className={` ${
+                    i == 1 ? "bg-aboutSubtitle" : ""
+                  }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-3`}
+                >
+                  {i == 1 && <p className="text-white text-4xl absolute top-[4%] lg:block hidden">{contribution.categoryName}</p>}
+                  <span className="p-3 md:mb-4 xl:mb-10 ">
+                    {i == 2 ? (
+                      <LastContributionIcon />
+                    ) : (
+                      <ContributionIcon
+                        bcolor={`${i == 1 ? "#373737" : "white"} `}
+                        color={`${i == 1 ? "white" : "#373737"} `}
+                      />
+                    )}
+                  </span>
+                  <p
+                    className={`${
+                      i == 1 ? "text-white" : "text-contributeFont"
+                    } uppercase 2xl:text-2xl sm:text-sm text-xs`}
                   >
-                    <span className="p-3 md:mb-4 xl:mb-10 ">
-                      {i == 2 ? (
-                        <LastContributionIcon />
-                      ) : (
-                        <ContributionIcon
-                          bcolor={`${i == 1 ? "#373737" : "white"} `}
-                          color={`${i == 1 ? "white" : "#373737"} `}
-                        />
-                      )}
-                    </span>
-                    <p
-                      className={`${
-                        i == 1 ? "text-white" : "text-contributeFont"
-                      } uppercase 2xl:text-2xl sm:text-sm text-xs`}
-                    >
-                      {item.content}
-                    </p>
-                  </div>
-                ))}
-              </div>
+                    {item.content}
+                  </p>
+                </div>
+              ))}
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </>
+    // <Swiper
+    //   cssMode={true}
+    //   navigation={true}
+    //   // pagination={true}
+    //   mousewheel={true}
+    //   keyboard={true}
+    //   modules={[Navigation]}
+    //   className=""
+    // >
+
+    //   <div className="flex h-full">
+    //     <p className="bg-red-600 w-[33%]">Test...</p>
+    //     <p className="bg-blue-600 w-[33%]">Test...</p>
+    //     <p className="bg-red-600 w-[33%]">Test...</p>
+    //     {/* <Swiper
+    //     cssMode={true}
+    //     navigation={true}
+    //     // pagination={true}
+    //     mousewheel={true}
+    //     keyboard={true}
+    //     modules={[Navigation]}
+    //     className=""
+    //   >
+
+    //     {contributions?.map((contribution, i) => (
+    //       <SwiperSlide>
+    //         <div className="px-0 font-medium ">
+    //           <div className="flex items-center">
+    //             {contribution?.contents.map((item, i) => (
+    //               <div
+    //                 className={`flex flex-col 2xl:px-20 px-5 text-center justify-center items-center py-5 ${
+    //                   i == 1 ? "bg-aboutSubtitle" : ""
+    //                 }`}
+    //               >
+    //                 <span className="p-3 md:mb-4 xl:mb-10 ">
+    //                   {i == 2 ? (
+    //                     <LastContributionIcon />
+    //                   ) : (
+    //                     <ContributionIcon
+    //                       bcolor={`${i == 1 ? "#373737" : "white"} `}
+    //                       color={`${i == 1 ? "white" : "#373737"} `}
+    //                     />
+    //                   )}
+    //                 </span>
+    //                 <p
+    //                   className={`${
+    //                     i == 1 ? "text-white" : "text-contributeFont"
+    //                   } uppercase 2xl:text-2xl sm:text-sm text-xs`}
+    //                 >
+    //                   {item.content}
+    //                 </p>
+    //               </div>
+    //             ))}
+    //           </div>
+    //         </div>
+    //       </SwiperSlide>
+    //     ))}
+    //   </Swiper> */}
+    //   </div>
+    // </Swiper>
   );
 };
 

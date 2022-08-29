@@ -1,22 +1,26 @@
 import { Transition } from "@headlessui/react";
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Nav({
-  bg_color,
-}) {
+function Nav({ bg_color, setNavbarZindex }) {
   const [isOpen, setIsOpen] = useState(false);
   // const [switchPage, setSwitchPage] = useState('');
   let route = "";
   if (typeof window !== `undefined`) {
-    route = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    route = window.location.pathname.replace(/^\/+|\/+$/g, "");
   }
-
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     if (typeof window !== `undefined`) {
+  //       document.getElementsByClassName("swiper").style.zIndex=-1;
+  //     }
+  //   }
+  // }, [isOpen]);
   return (
-    <div>
+    <div className="nav">
       <nav
         // md:fixed fixed top-0 lg:top-auto lg:bottom-0 w-full z-50
-        className={`bg-navbar`}
+        className={`bg-navbar `}
       >
         <div className="max-w-[1980px] mx-auto w-full">
           <div className="lg:h-20 lg:max-w-4/5 lg:mx-auto">

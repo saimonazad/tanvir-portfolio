@@ -135,12 +135,12 @@
   transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-/* .cardInfo h1 {
+.cardInfo h1 {
   font-family: "Playfair Display";
   font-size: 36px;
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-} */
+}
 
 .cardTitle {
   font-size: 20px !important;

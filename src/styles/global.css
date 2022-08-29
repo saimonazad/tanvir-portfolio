@@ -253,33 +253,38 @@ body::-webkit-scrollbar {
   }
 }
 
-.swiper-slide {
+/* .swiper-slide {
   width: 100% !important;
   
-}
-.swiper{
-  z-index: -2 !important;
-}
+} */
+
 .swiper-button-next {
   position: absolute;
-  top: 7% !important;
+  top: 2% !important;
+  z-index: 5;
 }
 .swiper-button-prev {
   position: absolute;
-  top: 7% !important;
-  right: 7% !important;
+  top: 2% !important;
+  right: 8% !important;
   left: auto !important;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 998px){
   .swiper-button-next {
     top: 4% !important;
     right: 8% !important;
+    /* z-index: 10 !important; */
+    /* z-index: 1 !important; */
   }
+  
   .swiper-button-prev {
     top: 4% !important;
     left: 8% !important;
+    /* z-index: 1 !important; */
+    /* z-index: 10 !important; */
   }
+  
 }
 .swiper-button-next:after {
   content: url("../../public/right_arrow.png") !important;
