@@ -59,7 +59,7 @@ const Contributions = () => {
         keyboard={true}
         modules={[Navigation]}
         className="h-full mt-[15%] lg:mt-0"
-        // id="swiper"
+        id="customSwiper"
       >
         {contributions?.map((contribution, i) => (
           <SwiperSlide>

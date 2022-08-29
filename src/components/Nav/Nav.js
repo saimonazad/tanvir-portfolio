@@ -9,13 +9,17 @@ function Nav({ bg_color, setNavbarZindex }) {
   if (typeof window !== `undefined`) {
     route = window.location.pathname.replace(/^\/+|\/+$/g, "");
   }
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     if (typeof window !== `undefined`) {
-  //       document.getElementsByClassName("swiper").style.zIndex=-1;
-  //     }
-  //   }
-  // }, [isOpen]);
+  useEffect(() => {
+    if (isOpen) {
+      if (typeof window !== `undefined`) {
+        const element = document.getElementById("customSwiper");
+        element.style.zIndex = -1;
+      } 
+    }else if(!isOpen) {
+      const element = document.getElementById("customSwiper");
+      element.style.zIndex = 100;
+    }
+  }, [isOpen]);
   return (
     <div className="nav">
       <nav
