@@ -63,15 +63,23 @@ const Contributions = () => {
       >
         {contributions?.map((contribution, i) => (
           <SwiperSlide>
-            <div className=" w-full h-full flex flex-col lg:flex-row">
-            {<p className="text-black text-4xl text-center lg:hidden block">{contribution.categoryName}</p>}
+            <div className=" w-full h-full flex flex-col lg:flex-row text-center">
+              {
+                <p className="text-black text-4xl text-center lg:hidden block">
+                  {contribution.categoryName}
+                </p>
+              }
               {contribution?.contents.map((item, i) => (
                 <div
                   className={` ${
                     i == 1 ? "bg-aboutSubtitle" : ""
                   }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-3`}
                 >
-                  {i == 1 && <p className="text-white text-4xl absolute top-[4%] lg:block hidden">{contribution.categoryName}</p>}
+                  {i == 1 && (
+                    <p className="text-white text-4xl absolute top-[4%] lg:block hidden">
+                      {contribution.categoryName}
+                    </p>
+                  )}
                   <span className="p-3 md:mb-4 xl:mb-10 ">
                     {i == 2 ? (
                       <LastContributionIcon />

@@ -19,7 +19,7 @@ const About = () => {
           Tanvir Hossain Khan
         </p>
       </div>
-      <div className="md:bg-white md:rounded-t-aboutBorderRadius lg:pb-16 2xl:h-[40rem] py-4 2xl:px-40 sm:px-10 md:shadow-lg">
+      <div className="md:bg-white md:rounded-t-aboutBorderRadius h-[80%] 2xl:h-[30rem] py-4 2xl:px-40 sm:px-10 md:shadow-lg">
         <p className="text-aboutSubtitle tracking-widest md:text-xl text-xs lg:text-base 2xl:text-2xl font-PT_Serif font-bold uppercase xl:py-5 md:py-8 py-2">
           {title}
         </p>

@@ -22,7 +22,7 @@ const Contact = () => {
         <img src={contactImg} alt="" className="md:w-5/6 mx-auto" />
       </div>
       <div className="flex justify-start md:justify-center md:flex-row flex-col 2xl:gap-16 gap-8 2xl:py-6 py-4">
-        <span className="flex gap-5 md:w-1/3 w-auto ">
+        <span className="flex gap-5 md:w-1/3 w-auto">
           <span>
             <Address />
           </span>

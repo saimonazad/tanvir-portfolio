@@ -111,17 +111,15 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
     }
   }, [year]);
 
-  let isMobile
+  let isMobile;
   if (typeof window !== `undefined`) {
     isMobile = window.innerWidth < 640 ? true : false;
   }
   console.log("photos", photos);
   return (
-    <div className="grid grid-cols-6 h-screen md:place-items-center md:items-center space-x-10 lg:space-x-5 px-2 gallery md:h-full ">
-      <div className="md:col-span-5 col-span-5 sm:h-auto h-full w-auto overflow-auto gallery">
-        <div className="w-full h-full 2xl:p-5 ">
-          <GalleryMasonary photos={photos} year={year} />
-        </div>
+    <div className="grid grid-cols-6 md:place-items-center md:items-start space-x-10 lg:space-x-5 gallery overflow-x-hidden md:h-full ">
+      <div className="md:col-span-5 col-span-5 sm:h-auto h-full w-full gallery">
+        <GalleryMasonary photos={photos} year={year} />
       </div>
       <div class="w-1/5 flex my-auto justify-center">
         {slides?.length > 0 && (

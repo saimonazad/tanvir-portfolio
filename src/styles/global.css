@@ -223,7 +223,6 @@
 
 .gallery {
   scrollbar-width: thin;
-  overflow: auto;
   scrollbar-color: #326aff #fff;
 }
 
