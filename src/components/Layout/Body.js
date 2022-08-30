@@ -73,7 +73,7 @@ const Body = ({ children }) => {
             >
               <div
                 className={`${route !== "gallery" &&
-                  "lg:pr-20"} lg:col-span-5 w-full h-full flex justify-center items-center`}
+                  "lg:pr-20"} lg:col-span-5 w-full h-full md:flex justify-center items-center`}
               >
                 <motion.main
                   variants={variants} // Pass the variant object into Framer Motion
