@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import ContributionIcon from "./ContributionIcon";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { graphql, useStaticQuery } from "gatsby";
-import LastContributionIcon from "./LastContributionIcon";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -22,158 +22,145 @@ const responsive = {
     items: 1,
   },
 };
-const ContributionsData = [
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-  {
-    text: "He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.",
-  },
-];
+
 const Contributions = () => {
   const res = useStaticQuery(graphql`
     query ContributionQuery {
       datoCmsContribution {
-        id
         contributions {
-          id
-          text
-          image {
-            size
-            width
-            height
-            path
-            format
-            isImage
-            notes
-            author
-            copyright
-            filename
-            basename
-            exifInfo
-            mimeType
-            blurhash
-            originalId
-            url
-            createdAt
-            gatsbyImageData
-            alt
-            title
-            customData
+          categoryName
+          contents {
+            content
+            image {
+              url
+            }
           }
         }
       }
     }
   `);
-  console.log(res);
+  console.log(res.datoCmsContribution.contributions);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [contributions, setContributions] = useState(
+    res.datoCmsContribution.contributions
+  );
   const chevronWidth = 40;
-
+  console.log("contributions", contributions);
   return (
-    <div className="px-0 font-medium">
-        <div className="xl:h-screen grid md:grid-cols-3 2xl:-mt-32 xl:-mt-36 lg:h-4/5 mt-24 md:mt-0 overflow-auto md:h-fit">
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="#373737" bcolor="white" />
-                  </span>
-                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 bg-aboutSubtitle ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="white" bcolor="#373737"/>
-                  </span>
-                  <p className="text-white uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-            <div className="flex flex-col 2xl:px-20 px-5 text-center justify-center items-center lg:py-8 py-7 ">
-                  <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <LastContributionIcon/>
-                  </span>
-                  <p className="text-contributeFont uppercase 2xl:text-2xl sm:text-sm text-xs">
-                    He always believes any problem can be solved if we can all work as one and from that idea his belief is “Collaboration is Always Better than Competition.”
-                  </p>
-            </div>
-           
-        </div>
-      {/* <Splide
-        options={{
-          rewind: true,
-          gap   : '1rem',
-          perPage: 3,
-          type:"loop",
-          perMove: 1,
-          pagination: false,
-          arrows: true,
-          trimSpace: true,
-          focus: "center",
-          slideFocus: true,
-          perPage: 3,
-          perMove: 1,
-          focus: "center",
-          breakpoints: {
-            768: {
-              perPage: 2,
-            },
-            540: {
-              perPage: 1,
-            },
-          },
-        }}
-        aria-label="My Favorite Images"
+    <>
+      <Swiper
+        cssMode={true}
+        navigation={true}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation]}
+        className="h-full mt-[15%] lg:mt-0"
+        id="customSwiper"
       >
-        {ContributionsData.map((item, i) => {
-          return (
-            <>
-              <SplideSlide>
-                <div className="flex flex-col px-5 text-center justify-center items-center py-5 h-screen">
+        {contributions?.map((contribution, i) => (
+          <SwiperSlide>
+            <div className=" w-full h-full flex flex-col lg:flex-row text-center">
+              {
+                <p className="text-black text-2xl text-center lg:hidden block w-3/5 mx-auto">
+                  {contribution.categoryName}
+                </p>
+              }
+              {contribution?.contents.map((item, i) => (
+                <div
+                  className={` ${
+                    i == 1 ? "bg-aboutSubtitle" : ""
+                  }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-4`}
+                >
+                  {i == 1 && (
+                    <p className="text-white text-2xl absolute top-[4%] lg:block hidden">
+                      {contribution.categoryName}
+                    </p>
+                  )}
                   <span className="p-3 md:mb-4 xl:mb-10 ">
-                    <ContributionIcon color="black" />
+                    {/* {i == 2 ? (
+                      <LastContributionIcon />
+                    ) : (
+                      <ContributionIcon
+                        bcolor={`${i == 1 ? "#373737" : "white"} `}
+                        color={`${i == 1 ? "white" : "#373737"} `}
+                      />
+                    )} */}
+                    <img className="w-20 h-32" src={item.image.url} />
                   </span>
-                  <p className="text-aboutSubtitle dark:text-gray-300 uppercase xl:text-xl lg:text-base sm:text-sm text-xs">
-                    {item.text}
+                  <p
+                    className={`${
+                      i == 1 ? "text-white" : "text-contributeFont"
+                    } uppercase 2xl:text-2xl sm:text-sm text-sm`}
+                  >
+                    {item.content}
                   </p>
                 </div>
-              </SplideSlide>
-            </>
-          );
-        })}
-      </Splide> */}
+              ))}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </>
+    // <Swiper
+    //   cssMode={true}
+    //   navigation={true}
+    //   // pagination={true}
+    //   mousewheel={true}
+    //   keyboard={true}
+    //   modules={[Navigation]}
+    //   className=""
+    // >
 
-      {/* <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlaySpeed={3000}
-        centerMode={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-      >
-        
-      </Carousel> */}
-    </div>
+    //   <div className="flex h-full">
+    //     <p className="bg-red-600 w-[33%]">Test...</p>
+    //     <p className="bg-blue-600 w-[33%]">Test...</p>
+    //     <p className="bg-red-600 w-[33%]">Test...</p>
+    //     {/* <Swiper
+    //     cssMode={true}
+    //     navigation={true}
+    //     // pagination={true}
+    //     mousewheel={true}
+    //     keyboard={true}
+    //     modules={[Navigation]}
+    //     className=""
+    //   >
+
+    //     {contributions?.map((contribution, i) => (
+    //       <SwiperSlide>
+    //         <div className="px-0 font-medium ">
+    //           <div className="flex items-center">
+    //             {contribution?.contents.map((item, i) => (
+    //               <div
+    //                 className={`flex flex-col 2xl:px-20 px-5 text-center justify-center items-center py-5 ${
+    //                   i == 1 ? "bg-aboutSubtitle" : ""
+    //                 }`}
+    //               >
+    //                 <span className="p-3 md:mb-4 xl:mb-10 ">
+    //                   {i == 2 ? (
+    //                     <LastContributionIcon />
+    //                   ) : (
+    //                     <ContributionIcon
+    //                       bcolor={`${i == 1 ? "#373737" : "white"} `}
+    //                       color={`${i == 1 ? "white" : "#373737"} `}
+    //                     />
+    //                   )}
+    //                 </span>
+    //                 <p
+    //                   className={`${
+    //                     i == 1 ? "text-white" : "text-contributeFont"
+    //                   } uppercase 2xl:text-2xl sm:text-sm text-xs`}
+    //                 >
+    //                   {item.content}
+    //                 </p>
+    //               </div>
+    //             ))}
+    //           </div>
+    //         </div>
+    //       </SwiperSlide>
+    //     ))}
+    //   </Swiper> */}
+    //   </div>
+    // </Swiper>
   );
 };
 

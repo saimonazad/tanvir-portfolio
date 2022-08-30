@@ -38,7 +38,7 @@ class VerticalCarousel extends React.Component {
     slides: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.any,
-        content: PropTypes.object,
+        content: PropTypes?.object,
       })
     ).isRequired,
     goToSlide: PropTypes.number,
@@ -105,7 +105,7 @@ class VerticalCarousel extends React.Component {
     let navigationButtons = null;
     if (showNavigation) {
       navigationButtons = (
-        <div className=" cursor-pointer flex flex-col flex-nowrap gap-20 md:gap-20 lg:gap-52  z-50 mx-auto justify-between">
+        <div className=" cursor-pointer flex flex-col flex-nowrap gap-20 md:gap-20 lg:gap-52 mx-auto justify-between">
           <NavBtn
             onClick={(e) => {
               this.getYearData(e, 1);
@@ -152,9 +152,9 @@ class VerticalCarousel extends React.Component {
         <div className="relative flex justify-center w-full h-full">
           {this.getPresentableSlides().map((slide, presentableIndex) => (
             <Slide
-              key={slide.key}
+              key={slide?.key}
               onClick={(e) => console.log("e", e.target.value)}
-              content={slide.content}
+              content={slide?.content}
               moveSlide={this.moveSlide}
               offsetRadius={this.clampOffsetRadius(offsetRadius)}
               index={presentableIndex}

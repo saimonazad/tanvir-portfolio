@@ -11,6 +11,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap");
 @import url("http://fonts.cdnfonts.com/css/maximum-impact");
+@import url("http://fonts.cdnfonts.com/css/gotham");
 
 .profileImage {
   background-image: url("https://www.w3schools.com/howto/img_girl.jpg");
@@ -229,7 +230,10 @@
 .gallery::-webkit-scrollbar {
   width: 2px;
 }
-
+body::-webkit-scrollbar {
+  width: 2px;
+  background: #fff;
+}
 .gallery::-webkit-scrollbar-track {
   background: #fff;
 }
@@ -241,4 +245,55 @@
   .animatedText div {
     margin: 0px !important;
   }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .react-photo-gallery--gallery img {
+    width: 145px !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 2560px) {
+  .react-photo-gallery--gallery img {
+    width: 270px !important;
+  }
+}
+/* .swiper-slide {
+  width: 100% !important;
+  
+} */
+
+.swiper-button-next {
+  position: absolute;
+  top: 3% !important;
+  z-index: 5;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: 3% !important;
+  right: 8% !important;
+  left: auto !important;
+}
+
+@media screen and (max-width: 998px){
+  .swiper-button-next {
+    top: 2% !important;
+    right: 8% !important;
+    /* z-index: 10 !important; */
+    /* z-index: 1 !important; */
+  }
+  
+  .swiper-button-prev {
+    top: 2% !important;
+    left: 8% !important;
+    /* z-index: 1 !important; */
+    /* z-index: 10 !important; */
+  }
+  
+}
+.swiper-button-next:after {
+  content: url("../../public/right_arrow.png") !important;
+}
+.swiper-button-prev:after {
+  content: url("../../public/left_arrow.png") !important;
 }
