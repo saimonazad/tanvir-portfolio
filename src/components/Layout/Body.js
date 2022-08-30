@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import { Facebook, LinkedIn, Twitter, Youtube } from "../../icons";
 import Nav from "../Nav/Nav";
+import { motion } from "framer-motion";
 
 const Body = ({ children }) => {
-  const [navbarZindex, setNavbarZindex] = useState(false)
+  const [navbarZindex, setNavbarZindex] = useState(false);
   let route = "";
   if (typeof window !== `undefined`) {
     route = window.location.pathname.replace(/^\/+|\/+$/g, "");
   }
+  const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+  };
   return (
     <div>
       <div className="lg:hidden block">
-        <Nav setNavbarZindex={setNavbarZindex}/>
+        <Nav setNavbarZindex={setNavbarZindex} />
       </div>
       <div className="lg:h-[calc(100vh-5rem)]">
         <div class="grid lg:grid-cols-8 grid-cols-1 lg:grid-rows-6 h-full px-3">
@@ -48,13 +54,40 @@ const Body = ({ children }) => {
             </div>
           </div>
 
-          <div class={`row-span-5 lg:col-span-7 max-w-[1980px] w-full ${navbarZindex && "-z-10"}`}>
+          {route == "contributions" ? (
             <div
-              className={`${route !== "gallery" && 'lg:pr-20'} lg:col-span-5 w-full h-full flex justify-center items-center`}
+              class={`row-span-5 lg:col-span-7 max-w-[1980px] w-full ${navbarZindex &&
+                "-z-10"}`}
             >
-              {children}
+              <div
+                className={`${route !== "gallery" &&
+                  "lg:pr-20"} lg:col-span-5 w-full h-full flex justify-center items-center`}
+              >
+                {children}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div
+              class={`row-span-5 lg:col-span-7 max-w-[1980px] w-full ${navbarZindex &&
+                "-z-10"}`}
+            >
+              <div
+                className={`${route !== "gallery" &&
+                  "lg:pr-20"} lg:col-span-5 w-full h-full flex justify-center items-center`}
+              >
+                <motion.main
+                  variants={variants} // Pass the variant object into Framer Motion
+                  initial="hidden" // Set the initial state to variants.hidden
+                  animate="enter" // Animated state to variants.enter
+                  exit="exit" // Exit state (used later) to variants.exit
+                  transition={{ type: "linear" }} // Set the transition to linear
+                  className=""
+                >
+                  {children}
+                </motion.main>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div className="lg:block hidden">
