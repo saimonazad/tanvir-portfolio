@@ -9,6 +9,7 @@ import TextAnimationLottie from "./TextAnimationLottie";
 import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
 import NewAnimationMenu from "../NewAnimationMenu/NewAnimationMenu";
+import Fade from "react-reveal/Fade";
 
 const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
   const [page, setPage] = useState(null);
@@ -88,21 +89,26 @@ const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
               className={`grow justify-between flex md:justify-around w-auto md:flex-row items-center flex-col md:px-10 text-center md:text-left`}
             >
               <div className="pt-[10%] md:pt-0">
-                <TextAnimationLottie />
-                <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
-                  Tanvir Hossain Khan
-                </h1>
-                <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-sm font-Montserrat uppercase">
-                  Entrepreneur
-                </p>
+                <Fade left>
+                  <TextAnimationLottie />
+                  <h1 className="tracking-wide md:text-xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-black font-impact text-xl text-heroTitle uppercase py-3">
+                    Tanvir Hossain Khan
+                  </h1>
+                  <p className="text-heroTitle font-semibold xl:text-2xl 2xl:text-4xl lg:text-2xl md:text-xl text-sm font-Montserrat uppercase">
+                    Entrepreneur
+                  </p>
+                </Fade>
               </div>
-              <div className="">
-                <img
-                  className="max-h-max md:h-screen w-auto "
-                  src={ProfilePic}
-                  alt="Profile Pic"
-                />
-              </div>
+
+              <Fade right>
+                <div className="">
+                  <img
+                    className="max-h-max md:h-screen w-auto "
+                    src={ProfilePic}
+                    alt="Profile Pic"
+                  />
+                </div>
+              </Fade>
             </div>
             <div
               className={`absolute md:left-4% bottom-4% cursor-pointer left-4% `}
