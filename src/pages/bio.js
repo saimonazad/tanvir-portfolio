@@ -1,13 +1,13 @@
 import React from 'react';
-import About from '../components/About/About';
+import Bio from '../components/Bio/Bio';
 import Body from '../components/Layout/Body';
 
-const aboutPage = () => {
+const bioPage = () => {
     return (
         <Body>
-            <About/>
+            <Bio/>
         </Body>
     );
 };
 
-export default aboutPage;
+export default bioPage;

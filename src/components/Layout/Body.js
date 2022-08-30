@@ -16,12 +16,12 @@ const Body = ({ children }) => {
       <div className="lg:h-[calc(100vh-5rem)]">
         <div class="grid lg:grid-cols-8 grid-cols-1 lg:grid-rows-6 h-full px-3">
           <div class="lg:col-span-8">
-            <div className="flex lg:justify-start text-center lg:text-left lg:absolute lg:top-[10%] left-[5%] py-3">
+            <div className="flex lg:justify-start text-center lg:text-left lg:absolute lg:top-[9%] left-[5%] py-2">
               <p
                 className={`2xl:text-3xl text-xl tracking-widest font-impact font-black text-heroTitle uppercase lg:bg-inherit w-full`}
               >
                 {/* {route !== "/about" && route?.substr(1, route.length)} */}
-                {route !== "about" && route}
+                {route !== "bio" && route}
               </p>
             </div>
           </div>

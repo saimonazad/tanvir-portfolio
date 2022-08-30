@@ -1,10 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useState } from "react";
-import { Scrollbar, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import ContributionIcon from "./ContributionIcon";
-import LastContributionIcon from "./LastContributionIcon";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 const responsive = {
@@ -65,35 +61,36 @@ const Contributions = () => {
           <SwiperSlide>
             <div className=" w-full h-full flex flex-col lg:flex-row text-center">
               {
-                <marquee className="text-black text-4xl text-center lg:hidden block w-3/5 mx-auto">
+                <p className="text-black text-2xl text-center lg:hidden block w-3/5 mx-auto">
                   {contribution.categoryName}
-                </marquee>
+                </p>
               }
               {contribution?.contents.map((item, i) => (
                 <div
                   className={` ${
                     i == 1 ? "bg-aboutSubtitle" : ""
-                  }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-3`}
+                  }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-4`}
                 >
                   {i == 1 && (
-                    <p className="text-white text-4xl absolute top-[4%] lg:block hidden">
+                    <p className="text-white text-2xl absolute top-[4%] lg:block hidden">
                       {contribution.categoryName}
                     </p>
                   )}
                   <span className="p-3 md:mb-4 xl:mb-10 ">
-                    {i == 2 ? (
+                    {/* {i == 2 ? (
                       <LastContributionIcon />
                     ) : (
                       <ContributionIcon
                         bcolor={`${i == 1 ? "#373737" : "white"} `}
                         color={`${i == 1 ? "white" : "#373737"} `}
                       />
-                    )}
+                    )} */}
+                    <img className="w-20 h-32" src={item.image.url} />
                   </span>
                   <p
                     className={`${
                       i == 1 ? "text-white" : "text-contributeFont"
-                    } uppercase 2xl:text-2xl sm:text-sm text-xs`}
+                    } uppercase 2xl:text-2xl sm:text-sm text-sm`}
                   >
                     {item.content}
                   </p>

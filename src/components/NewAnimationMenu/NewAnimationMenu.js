@@ -13,7 +13,7 @@ const menuItem = [
   {
     title: "Bio",
     subTitle: "Bio",
-    link: "/about",
+    link: "/bio",
     bgImg:
       "https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
   },
@@ -65,8 +65,8 @@ const NewAnimationMenu = () => {
         state.mouseY = ele.pageY - element.offsetTop - state.height / 2;
 
         // parallax angle in card
-        const angleX = (state.mouseX / state.width) * 30;
-        const angleY = (state.mouseY / state.height) * -30;
+        const angleX = (state.mouseX / state.width) * 32;
+        const angleY = (state.mouseY / state.height) * -32;
         card.style.transform = `rotateY(${angleX}deg) rotateX(${angleY}deg) `;
 
         // parallax position of background in card

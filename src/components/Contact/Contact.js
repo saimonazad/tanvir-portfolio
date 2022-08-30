@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="xl:w-4/5 sm:w-4/5 w-5/6 mx-auto">
         <img src={contactImg} alt="" className="md:w-5/6 mx-auto" />
       </div>
-      <div className="flex justify-start md:justify-center md:flex-row flex-col 2xl:gap-16 gap-8 2xl:py-6 py-4">
+      <div className="flex justify-start md:justify-center md:flex-row flex-col 2xl:gap-16 gap-8 2xl:py-6 py-2">
         <span className="flex gap-5 md:w-1/3 w-auto">
           <span>
             <Address />
@@ -48,8 +48,11 @@ const Contact = () => {
           </p>
         </span>
       </div>
-      <div className="flex flex-col justify-center items-center  cursor-pointer mt-5 md:mt-0">
-        <span>
+      <div className="flex flex-col justify-center items-center  cursor-pointer mt-2 md:mt-0">
+        <button className="bg-animationTitle font-Poppins rounded px-4 p-2 md:text-lg text-base outline-none focus:outline-none text-white">
+          Make an appointment
+        </button>
+        {/* <span>
           <svg
             width="67"
             height="29"
@@ -78,7 +81,7 @@ const Contact = () => {
         </span>
         <span className="text-animationTitle text-lg font-bold mt-2">
           Make an appointment
-        </span>
+        </span> */}
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ function Nav({ bg_color, setNavbarZindex }) {
           <div className="lg:h-20 lg:max-w-4/5 lg:mx-auto">
             <div className="">
               <div className="hidden lg:block">
-                <div className=" grid grid-cols-6 pl-20 text-center">
+                <div className=" grid grid-cols-6 pl-20 text-center tracking-wide">
                   <Link to="/">
                     <a
                       href="#"
@@ -51,15 +51,15 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/about">
+                  <Link to="/bio">
                     <a
                       href="#"
                       // onClick={() => setSwitchPage("about")}
                       className={` hover:bg-gray-700 ${
-                        route === "about" && "bg-animationTitle"
+                        route === "bio" && "bg-animationTitle"
                       } hover:bg-animationTitle h-20 flex items-center justify-center text-white px-6 py-2 w-auto text-base font-Poppins font-semibold`}
                     >
-                      About
+                      Bio
                     </a>
                   </Link>
 
@@ -200,7 +200,7 @@ function Nav({ bg_color, setNavbarZindex }) {
                   </a>
                 </Link>
 
-                <Link to="/about">
+                <Link to="/bio">
                   <a
                     href="#"
                     onClick={() => {
@@ -211,7 +211,7 @@ function Nav({ bg_color, setNavbarZindex }) {
                       bg_color === "white" ? "text-black" : "text-white"
                     }  px-3 py-2 block rounded-md text-base font-Poppins font-semibold`}
                   >
-                    About
+                    Bio
                   </a>
                 </Link>
 

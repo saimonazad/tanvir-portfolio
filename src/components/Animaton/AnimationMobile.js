@@ -42,7 +42,7 @@ const AnimationMobile = ({ switchPage, setSwitchPage, setMobileMenu }) => {
             </div>
           </Link>
 
-          <Link to="/about">
+          <Link to="/bio">
             <div className="flex items-center gap-3">
               <img src={two} />
               <p
@@ -51,7 +51,7 @@ const AnimationMobile = ({ switchPage, setSwitchPage, setMobileMenu }) => {
                 }}
                 className="text-aboutSubtitle font-Poppins text-sm font-semibold cursor-pointer"
               >
-                ABOUT
+                Bio
               </p>
             </div>
           </Link>
