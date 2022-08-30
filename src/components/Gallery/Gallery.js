@@ -56,7 +56,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
         console.log(index);
         return {
           key: index + 1,
-          content: item.year,
+          content: item?.year,
         };
       });
       if (!equal(c, slides)) {
@@ -92,7 +92,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
 
   React.useEffect(() => {
     let b = res?.datoCmsGallery?.gallery.filter(
-      (item) => item.year == year.content
+      (item) => item.year == year?.content
     );
     // console.log(b);
     if (b?.length > 0 && b[0]?.imagesgallery?.length > 0) {
