@@ -9,16 +9,25 @@ function Nav({ bg_color, setNavbarZindex }) {
   if (typeof window !== `undefined`) {
     route = window.location.pathname.replace(/^\/+|\/+$/g, "");
   }
-  // useEffect(() => {
-  //   if (typeof window !== `undefined`) {
-  //     if (isOpen) {
-  //       document.getElementById("customSwiper").style.zIndex = -1;
-
-  //     } else if (!isOpen) {
-  //       document.getElementById("customSwiper").style.zIndex = 100;
-  //     }
-  //   }
-  // }, [isOpen]);
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      if (isOpen) {
+        if (document.getElementById("customSwiper")) {
+          document.getElementById("customSwiper").style.zIndex = -1;
+        }
+        if (document.getElementById("custom-gallery")) {
+          document.getElementById("custom-gallery").style.zIndex = -1;
+        }
+      } else if (!isOpen) {
+        if (document.getElementById("customSwiper")) {
+          document.getElementById("customSwiper").style.zIndex = 1;
+        }
+        if (document.getElementById("custom-gallery")) {
+          document.getElementById("custom-gallery").style.zIndex = 1;
+        }
+      }
+    }
+  }, [isOpen]);
   return (
     <div className="nav">
       <nav
@@ -174,7 +183,6 @@ function Nav({ bg_color, setNavbarZindex }) {
             <div className="lg:hidden" id="mobile-menu">
               <div
                 ref={ref}
-                style={{zIndex:10000}}
                 // className="px-2 pt-2 pb-3 space-y-1 sm:px-3 uppercase"
                 className={`origin-top-right absolute z-50 right-0 mt-2 w-full rounded-md shadow-lg bg-navbar`}
               >

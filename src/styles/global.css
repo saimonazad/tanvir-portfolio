@@ -253,6 +253,11 @@ body::-webkit-scrollbar {
   }
 }
 
+@media (min-width: 1025px) and (max-width: 2560px) {
+  .react-photo-gallery--gallery img {
+    width: 270px !important;
+  }
+}
 /* .swiper-slide {
   width: 100% !important;
   
