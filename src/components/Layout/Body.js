@@ -50,9 +50,7 @@ const Body = ({ children }) => {
 
           <div class={`row-span-5 lg:col-span-7 max-w-[1980px] w-full ${navbarZindex && "-z-10"}`}>
             <div
-              className={`${route !== "gallery" && 'lg:pr-20'} lg:col-span-5 w-full h-full flex justify-center ${
-               "items-center"
-              }`}
+              className={`${route !== "gallery" && 'lg:pr-20'} lg:col-span-5 w-full h-full flex justify-center items-center`}
             >
               {children}
             </div>

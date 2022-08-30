@@ -99,11 +99,7 @@ const NewAnimationMenu = () => {
                   }}
                 ></div>
                 <div class="cardInfo text-center">
-                  <h3 class="cardTitle">{item.title}</h3>
-                  <p>
-                    {/* {item.subTitle} */}
-                    In publishing and graphic design.
-                  </p>
+                  <h3 class="text-base 2xl:text-4xl lg:text-xl">{item.title}</h3>
                 </div>
               </div>
             </Link>

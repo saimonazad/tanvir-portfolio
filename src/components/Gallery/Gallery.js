@@ -121,7 +121,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
       <div className="md:col-span-5 col-span-5 sm:h-auto h-[80%] w-full gallery">
         <GalleryMasonary photos={photos} year={year} />
       </div>
-      <div class="w-1/5 2xl:flex my-auto justify-center absolute 2xl:relative right-0 " id="custom-gallery">
+      <div class="w-1/5 2xl:flex my-auto justify-center top-[50%] absolute 2xl:relative right-0 " id="custom-gallery">
         {slides?.length > 0 && (
           <VerticalCarousel
             slides={slides}

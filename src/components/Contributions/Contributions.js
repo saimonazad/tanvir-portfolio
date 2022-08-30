@@ -65,9 +65,9 @@ const Contributions = () => {
           <SwiperSlide>
             <div className=" w-full h-full flex flex-col lg:flex-row text-center">
               {
-                <p className="text-black text-4xl text-center lg:hidden block">
+                <marquee className="text-black text-4xl text-center lg:hidden block w-3/5 mx-auto">
                   {contribution.categoryName}
-                </p>
+                </marquee>
               }
               {contribution?.contents.map((item, i) => (
                 <div
