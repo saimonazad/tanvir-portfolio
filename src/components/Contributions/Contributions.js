@@ -65,17 +65,17 @@ const Contributions = () => {
                   {contribution.categoryName}
                 </p>
               }
+              {
+                <p className="text-black text-2xl absolute 2xl:w-[12%] 2xl:right-[2%] lg:right-[5%] lg:block hidden category">
+                  {contribution.categoryName}
+                </p>
+              }
               {contribution?.contents.map((item, i) => (
                 <div
                   className={` ${
                     i == 1 ? "bg-aboutSubtitle" : ""
                   }  lg:w-[33.5%] flex flex-col items-center justify-center px-5 py-4`}
                 >
-                  {i == 1 && (
-                    <p className="text-white text-2xl absolute top-[4%] lg:block hidden">
-                      {contribution.categoryName}
-                    </p>
-                  )}
                   <span className="p-3 md:mb-4 xl:mb-10 ">
                     {/* {i == 2 ? (
                       <LastContributionIcon />
