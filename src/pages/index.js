@@ -24,7 +24,7 @@ const IndexPage = () => {
           name="description"
           content="Lets connect if you are interested to learn, collaborate, sharing knowledge regarding XR Industry, Gaming Industry & Real Time 3D Render Industry with Dreamerz Lab"
         />
-
+        <link rel="shortcut icon" type="image/x-icon" href="/Fab-Icon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.tanvirhossainkhan.com/" />
         <meta
