@@ -1,49 +1,48 @@
 import { Link } from "gatsby";
 import React from "react";
 import "./menu.css";
-
+import homeBg from "../../images/animate_menu_bg/1.png";
+import bioBg from "../../images/animate_menu_bg/2.png";
+import milestoneBg from "../../images/animate_menu_bg/3.png";
+import contributionBg from "../../images/animate_menu_bg/4.png";
+import galleryBg from "../../images/animate_menu_bg/5.png";
+import contactBg from "../../images/animate_menu_bg/6.png";
 const menuItem = [
   {
     title: "Home",
     subTitle: "Home",
     link: "/home",
-    bgImg:
-      "https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+    bgImg: homeBg,
   },
   {
     title: "Bio",
     subTitle: "Bio",
     link: "/bio",
-    bgImg:
-      "https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+    bgImg: bioBg,
   },
   {
     title: "Milestone",
     subTitle: "Milestone",
     link: "/milestone",
-    bgImg:
-      "https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+    bgImg: milestoneBg,
   },
   {
     title: "Contributions",
     subTitle: "Contributions",
     link: "/contributions",
-    bgImg:
-      "https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=",
+    bgImg: contributionBg,
   },
   {
     title: "Gallery",
     subTitle: "Gallery",
     link: "/gallery",
-    bgImg:
-      "https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+    bgImg: galleryBg,
   },
   {
     title: "Let's get in touch",
     subTitle: "Let's get in touch",
     link: "/contact",
-    bgImg:
-      "https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=",
+    bgImg: contactBg,
   },
 ];
 const NewAnimationMenu = () => {
@@ -99,7 +98,9 @@ const NewAnimationMenu = () => {
                   }}
                 ></div>
                 <div class="cardInfo text-center">
-                  <h3 class="text-base 2xl:text-4xl lg:text-xl">{item.title}</h3>
+                  <h3 class="text-base 2xl:text-3xl lg:text-xl ">
+                    {item.title}
+                  </h3>
                 </div>
               </div>
             </Link>
