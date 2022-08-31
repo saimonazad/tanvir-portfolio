@@ -50,6 +50,11 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
     config: config.gentle,
   });
   const [slides, setslides] = useState();
+  const [year, setYear] = useState({
+    key: 1,
+    content: "2016",
+  });
+
   useEffect(() => {
     if (res?.datoCmsGallery?.gallery?.length > 0) {
       let c = res?.datoCmsGallery?.gallery.map((item, index) => {
@@ -61,6 +66,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
       });
       if (!equal(c, slides)) {
         setslides(c);
+        setYear(c[0]);
       }
     }
   }, [slides]);
@@ -84,17 +90,12 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
     alert(event.target.src);
   };
 
-  const [year, setYear] = useState({
-    key: 1,
-    content: "2022",
-  });
   const [photos, setPhotos] = useState();
 
   React.useEffect(() => {
     let b = res?.datoCmsGallery?.gallery.filter(
       (item) => item.year == year?.content
     );
-    // console.log(b);
     if (b?.length > 0 && b[0]?.imagesgallery?.length > 0) {
       let c = b[0].imagesgallery.map((item) => {
         return {
@@ -121,7 +122,10 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
       <div className="md:col-span-5 col-span-5 sm:h-auto h-[80%] w-full gallery">
         <GalleryMasonary photos={photos} year={year} />
       </div>
-      <div class="w-1/5 2xl:flex my-auto justify-center top-[50%] lg:top-[30%] fixed right-0 " id="custom-gallery">
+      <div
+        class=" col-span-1 2xl:flex my-auto justify-center top-[50%] lg:top-[30%] fixed 2xl:right-[5%] lg:right-[10%] right-[3%]"
+        id="custom-gallery"
+      >
         {slides?.length > 0 && (
           <VerticalCarousel
             slides={slides}

@@ -12,7 +12,7 @@ function Slide({
   down,
   up,
   getYearData,
-  isMobile
+  isMobile,
 }) {
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
@@ -36,7 +36,7 @@ function Slide({
 
   if (offsetFromMiddle === 0 && down) {
     translateY += delta[1] / (offsetRadius + 1);
-    if (translateY > -40) {
+    if (translateY > -30) {
       moveSlide(-1);
     }
     if (translateY < -100) {
@@ -48,14 +48,15 @@ function Slide({
   } else if (offsetFromMiddle < 0) {
     translateY -= translateYoffset;
   }
- 
 
   return (
     <Spring
       to={{
         transform: `translateX(0%) translateY(${translateY}%) scale(${distanceFactor})`,
         top: `${
-          offsetRadius === 0 ? 60 : 50 + (offsetFromMiddle * (isMobile ? 35 : 40)) / offsetRadius
+          offsetRadius === 0
+            ? 60
+            : 50 + (offsetFromMiddle * (isMobile ? 35 : 36)) / offsetRadius
         }%`,
         opacity: distanceFactor * distanceFactor,
       }}
@@ -63,7 +64,7 @@ function Slide({
     >
       {(style) => (
         <div
-          className=" absolute h-4/6 top-4/5 flex items-center justify-center origin-[50%_50%]"
+          className=" absolute top-4/5 flex items-center justify-center origin-[50%_50%]"
           style={{
             ...style,
             zIndex: Math.abs(Math.abs(offsetFromMiddle) - 2),
@@ -71,7 +72,7 @@ function Slide({
         >
           <div
             onClick={() => getYearData()}
-            className=" cursor-pointer absolute max-w-2/4 w-auto h-full lg:text-6xl md:text-4xl text-2xl font-PT_Serif flex items-center justify-center origin-[50%_50%]"
+            className=" cursor-pointer absolute max-w-2/4 w-auto lg:text-6xl md:text-4xl text-2xl font-PT_Serif flex items-center justify-center origin-[50%_50%]"
             // onClick={() => {moveSlide(offsetFromMiddle)}}
           >
             {content}
