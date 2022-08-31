@@ -83,11 +83,11 @@
 }
 
 .cardInfo {
-  padding: 5px;
+  padding: 3px;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 8%;
+  bottom: 5%;
   color: #fff;
   -webkit-transform: translateY(40%);
   transform: translateY(40%);
