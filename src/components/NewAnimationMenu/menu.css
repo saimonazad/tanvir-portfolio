@@ -76,9 +76,9 @@
   background-position: center;
   background-size: cover;
   -webkit-transition: 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-    opacity 0.1s 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transition: 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-    opacity 0.1s 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    opacity 1.6s 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    opacity 1.6s 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   pointer-events: none;
 }
 
