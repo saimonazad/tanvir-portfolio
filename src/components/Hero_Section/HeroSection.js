@@ -40,7 +40,8 @@ const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
   `);
   const [snackbar, setSnackbar] = useState(false);
   useEffect(() => {
-    if (news?.datoCmsNews?.title && news?.datoCmsNews?.title == '') {
+    if (news?.datoCmsNews?.title && news?.datoCmsNews?.title?.value?.document?.children[0]?.children[0]
+        ?.value !== "") {
       setSnackbar(true);
     }
   }, [news]);
