@@ -123,7 +123,7 @@ const PhotoGallery = ({ switchPage, setSwitchPage, setAnimation }) => {
         <GalleryMasonary photos={photos} year={year} />
       </div>
       <div
-        class=" col-span-1 2xl:flex my-auto justify-center top-[50%] lg:top-[30%] fixed 2xl:right-[5%] lg:right-[10%] right-[3%]"
+        class=" col-span-1 2xl:flex my-auto justify-center top-[50%] lg:top-[30%] fixed 2xl:right-[7%] lg:right-[4%] right-[3%]"
         id="custom-gallery"
       >
         {slides?.length > 0 && (
