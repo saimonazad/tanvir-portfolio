@@ -1,1 +1,1 @@
-{"data":{"datoCmsNews":{"title":{"value":{"schema":"dast","document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"span","value":"Hello World! This is a "},{"url":"https://www.google.com/","meta":[{"id":"target","value":"_blank"}],"type":"link","children":[{"type":"span","marks":["strong","underline"],"value":"link"}]}]}]}}}}}}
+{"data":{"datoCmsNews":{"title":{"value":{"schema":"dast","document":{"type":"root","children":[{"type":"paragraph","children":[{"type":"span","value":""}]}]}}}}}}
