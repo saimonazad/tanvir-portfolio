@@ -50,7 +50,13 @@ const Contact = () => {
       </div>
       <div className="flex flex-col justify-center items-center  cursor-pointer mt-2 md:mt-0">
         <button className="bg-animationTitle font-Poppins rounded px-4 p-2 md:text-lg text-base outline-none focus:outline-none text-white">
-          Make an appointment
+          <a
+            className="no-underline"
+            href="https://calendly.com/tanvirkhandll/60min?back=1&month=2022-09"
+            target="_blank"
+          >
+            Make an appointment
+          </a>
         </button>
         {/* <span>
           <svg
