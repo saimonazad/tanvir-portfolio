@@ -25,7 +25,7 @@ module.exports = {
       },
      
       borderRadius:{
-        aboutBorderRadius: '30px'
+        aboutBorderRadius: '50px'
       },
       margin:{
         "40%":"20%"

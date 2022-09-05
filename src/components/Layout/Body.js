@@ -15,11 +15,11 @@ const Body = ({ children }) => {
     exit: { opacity: 0, x: 0, y: -100 },
   };
   return (
-    <div>
-      <div className="lg:hidden block">
+    <div className="bg-bodyBg">
+      <div className="lg:hidden block ">
         <Nav setNavbarZindex={setNavbarZindex} />
       </div>
-      <div className="lg:h-[calc(100vh-5rem)]">
+      <div className={`lg:h-[calc(100vh-5rem)]`}>
         <div class="grid lg:grid-cols-8 grid-cols-1 lg:grid-rows-6 h-full px-3">
           <div class="lg:col-span-8">
             <div className="flex lg:justify-start text-center lg:text-left lg:absolute lg:top-[9%] left-[5%] py-2">
