@@ -39,9 +39,10 @@ function Nav({ bg_color, setNavbarZindex }) {
             <div className="">
               <div className="hidden lg:block">
                 <div className=" grid grid-cols-6 pl-20 text-center tracking-wide">
-                  <Link to="/">
+                  <Link>
                     <a
-                      href="#"
+                      href="/"
+                      target="_blank"
                       // onClick={() => {setSwitchPage("home");}}
                       className={` hover:bg-gray-700 ${
                         route === "home" && "bg-animationTitle"
@@ -51,9 +52,10 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/bio">
+                  <Link >
                     <a
-                      href="#"
+                      href="/bio"
+                      target="_blank"
                       // onClick={() => setSwitchPage("about")}
                       className={` hover:bg-gray-700 ${
                         route === "bio" && "bg-animationTitle"
@@ -63,9 +65,10 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/milestone">
+                  <Link>
                     <a
-                      href="#"
+                      href="/milestone"
+                      target="_blank"
                       // onClick={() => setSwitchPage("milestone")}
                       className={` hover:bg-gray-700 ${
                         route === "milestone" && "bg-animationTitle"
@@ -75,9 +78,10 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/contributions">
+                  <Link>
                     <a
-                      href="#"
+                      href="/contributions"
+                      target="_blank"
                       // onClick={() => setSwitchPage("contribution")}
                       className={` hover:bg-gray-700 ${
                         route === "contributions" && "bg-animationTitle"
@@ -87,9 +91,10 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/gallery">
+                  <Link>
                     <a
-                      href="#"
+                      href="/gallery"
+                      target="_blank"
                       // onClick={() => setSwitchPage("gallery")}
                       className={` hover:bg-gray-700 ${
                         route === "gallery" && "bg-animationTitle"
@@ -99,9 +104,10 @@ function Nav({ bg_color, setNavbarZindex }) {
                     </a>
                   </Link>
 
-                  <Link to="/contact">
+                  <Link>
                     <a
-                      href="#"
+                      href="/contact"
+                      target="_blank"
                       // onClick={() => setSwitchPage("contact me")}
                       className={` hover:bg-gray-700 ${
                         route === "contact" && "bg-animationTitle"
