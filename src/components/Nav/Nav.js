@@ -258,7 +258,7 @@ function Nav({ bg_color, setNavbarZindex }) {
                   </a>
                 </Link>
 
-                <Link to="/contact">
+                <Link to="/contact" target="_blank">
                   <a
                     href="#"
                     onClick={() => {
