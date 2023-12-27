@@ -67,23 +67,23 @@ const HeroSection = ({ successMessage, setSuccessMessage, setMobileMenu }) => {
             <div className="grow-0 md:absolute md:top-6% md:left-4% top-4% mx-auto flex justify-center my-5 md:my-0">
               <div className="flex gap-5">
                 <span>
-                  <a href="https://www.facebook.com/dreamerz.tanvir">
+                  <a href="https://www.facebook.com/dreamerz.tanvir" target="_blank">
                     <Facebook color={"#2D3038"} />
                   </a>
                 </span>
                 <span>
-                  <a href="https://www.linkedin.com/in/tanvirkhandll/">
+                  <a href="https://www.linkedin.com/in/tanvirkhandll/" target="_blank">
                     <LinkedIn color={"#2D3038"} />
                   </a>
                 </span>
                 <span>
-                  <a href="https://twitter.com/Tanvir_dreamerz">
+                  <a href="https://twitter.com/Tanvir_dreamerz" target="_blank">
                     <Twitter color={"#2D3038"} />
                   </a>
                 </span>
-                <span>
+                {/* <span>
                   <Youtube color={"#2D3038"} pathColor={"#F6F6F6"} />
-                </span>
+                </span> */}
               </div>
             </div>
             <div

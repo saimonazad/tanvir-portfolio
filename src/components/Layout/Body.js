@@ -34,23 +34,23 @@ const Body = ({ children }) => {
           <div class=" lg:flex justify-center text-center row-span-6 hidden">
             <div className="lg:flex hidden flex-col space-y-7 w-[8%] justify-center items-center">
               <span>
-                <a href="https://www.facebook.com/dreamerz.tanvir">
+                <a href="https://www.facebook.com/dreamerz.tanvir" target="_blank">
                   <Facebook color={"#326AFF"} />
                 </a>
               </span>
               <span>
-                <a href="https://www.linkedin.com/in/tanvirkhandll/">
+                <a href="https://www.linkedin.com/in/tanvirkhandll/" target="_blank">
                   <LinkedIn color={"#326AFF"} />
                 </a>
               </span>
               <span>
-                <a href="https://twitter.com/Tanvir_dreamerz">
+                <a href="https://twitter.com/Tanvir_dreamerz" target="_blank">
                   <Twitter color={"#326AFF"} />
                 </a>
               </span>
-              <span>
+              {/* <span>
                 <Youtube color={"#326AFF"} pathColor={"#F6F6F6"} />
-              </span>
+              </span> */}
             </div>
           </div>
 
