@@ -91,20 +91,22 @@ const NewAnimationMenu = () => {
       <div className="w-full grid grid-cols-6 lg:pt-20 lg:pb-10 xl:px-14 px-5 md:pt-20 md:pb-24 bg-white min-h-screen">
         {menuItem.map((item, i) => (
           <div class="cardWrap" key={i}>
-            <Link to={item.link}>
-              <div class="card">
-                <div
-                  class="cardBg"
-                  style={{
-                    backgroundImage: `url(${item.bgImg})`,
-                  }}
-                ></div>
-                <div class="cardInfo text-center">
-                  <h3 class="text-base 2xl:text-3xl lg:text-xl ">
-                    {item.title}
-                  </h3>
+            <Link>
+              <a href={item.link} target={item.title != "Home" && "_blank"}>
+                <div class="card">
+                  <div
+                    class="cardBg"
+                    style={{
+                      backgroundImage: `url(${item.bgImg})`,
+                    }}
+                  ></div>
+                  <div class="cardInfo text-center">
+                    <h3 class="text-base 2xl:text-3xl lg:text-xl ">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </a>
             </Link>
           </div>
         ))}
